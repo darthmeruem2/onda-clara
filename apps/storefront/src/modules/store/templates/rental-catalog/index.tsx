@@ -1,8 +1,10 @@
 import { listCategories } from "@lib/data/categories"
 import { listProducts } from "@lib/data/products"
+import { ArrowRightMini, MagnifyingGlass } from "@medusajs/icons"
 import { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ProductPreview from "@modules/products/components/product-preview"
+import styles from "./catalog.module.css"
 
 const pageSize = 24
 type QueryValue = string | string[] | undefined
@@ -33,7 +35,8 @@ export default async function RentalCatalog({
 }) {
   const q = readParam(search.q)
   const category = categoryHandle ?? readParam(search.categoria)
-  const page = Math.max(1, Number.parseInt(readParam(search.page), 10) || 1)
+  const requestedPage = Number.parseInt(readParam(search.page), 10)
+  const page = Number.isSafeInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1
   const categories = (await listCategories({ fields: "id,name,handle,parent_category_id", limit: 100 }))
     .filter((item) => !item.parent_category_id)
   const selected = categories.find(({ handle }) => handle === category)
@@ -60,49 +63,64 @@ export default async function RentalCatalog({
   }
 
   return (
-    <section className="content-container py-9 md:py-14" aria-labelledby="catalogo-titulo">
-      <h1 id="catalogo-titulo" className="oc-display text-4xl text-[var(--brand-ink)] md:text-6xl">
-        {title ?? "Equipamentos para locação"}
-      </h1>
-      <p className="mt-3 max-w-2xl text-[var(--brand-muted)]">
-        {description ?? "Encontre o equipamento para sua obra e consulte disponibilidade e valores pelo WhatsApp."}
-      </p>
-      <form className="mt-6 flex w-full max-w-xl gap-2" action={`/${countryCode}${path}`} method="get" role="search">
-        {selected && <input type="hidden" name="categoria" value={selected.handle} />}
-        <label htmlFor="equipamento-q" className="sr-only">Buscar equipamentos</label>
-        <input className="min-w-0 flex-1 rounded-md border border-ui-border-base px-3" id="equipamento-q" name="q" type="search" defaultValue={q} placeholder="Buscar equipamento" />
-        <button className="oc-primary rounded-md" type="submit">Buscar</button>
-      </form>
-      <nav className="mt-5 flex flex-wrap gap-2" aria-label="Filtrar por categoria">
-        {[{ id: "all", name: "Todos", handle: "" }, ...categories].map(({ id, name, handle }) => (
-          <LocalizedClientLink
-            key={id}
-            href={link(handle, 1, collectionHandle ? path : "/store")}
-            aria-current={(selected?.handle ?? "") === handle ? "page" : undefined}
-            className="flex min-h-11 items-center rounded-md border border-ui-border-base px-3 text-sm text-[var(--brand-ink)] aria-[current=page]:border-current aria-[current=page]:bg-[var(--brand-sand)]"
-          >
-            {name}
-          </LocalizedClientLink>
-        ))}
-      </nav>
-      <p className="my-5 text-sm text-[var(--brand-muted)]">
-        {response.count === 1 ? "1 equipamento" : `${response.count} equipamentos`}
-      </p>
-      {response.products.length ? (
-        <ul className="grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-5 md:grid-cols-3 xl:grid-cols-4" data-testid="rental-catalog">
-          {response.products.map((product) => (
-            <li key={product.id}><ProductPreview product={product} region={region} /></li>
-          ))}
-        </ul>
-      ) : (
-        <p className="py-8">Nenhum equipamento encontrado. Tente outro termo ou <LocalizedClientLink href="/store" className="underline">veja todo o catálogo</LocalizedClientLink>.</p>
-      )}
-      {(page > 1 || nextPage) && (
-        <nav className="mt-7 flex gap-3" aria-label="Paginação">
-          {page > 1 && <LocalizedClientLink className="underline" href={link(categoryHandle ? undefined : selected?.handle, page - 1, path)}>Página anterior</LocalizedClientLink>}
-          {nextPage && <LocalizedClientLink className="underline" href={link(categoryHandle ? undefined : selected?.handle, nextPage, path)}>Próxima página</LocalizedClientLink>}
-        </nav>
-      )}
+    <section className={styles.catalog} aria-labelledby="catalogo-titulo">
+      <header className={styles.heading}>
+        <h1 id="catalogo-titulo">{title ?? "Equipamentos para locação"}</h1>
+        <p>{description ?? "Escolha a categoria da sua obra ou busque pelo nome do equipamento. Consulte valores e disponibilidade pelo WhatsApp."}</p>
+      </header>
+
+      <div className={styles.content}>
+        <aside className={styles.sidebar}>
+          <h2 className={styles.categoryTitle}>Categorias</h2>
+          <nav className={styles.filters} aria-label="Filtrar por categoria">
+            {[{ id: "all", name: "Todos", handle: "" }, ...categories].map(({ id, name, handle }) => {
+              const active = (selected?.handle ?? "") === handle
+              return (
+                <LocalizedClientLink
+                  key={id}
+                  href={link(handle, 1, collectionHandle ? path : "/store")}
+                  aria-current={active ? "page" : undefined}
+                  className={styles.filter}
+                >
+                  {name}
+                  {active && <ArrowRightMini aria-hidden="true" />}
+                </LocalizedClientLink>
+              )
+            })}
+          </nav>
+        </aside>
+
+        <div className={styles.main}>
+          <form className={styles.form} action={`/${countryCode}${path}`} method="get" role="search">
+            {selected && <input type="hidden" name="categoria" value={selected.handle} />}
+            <label htmlFor="equipamento-q" className={styles.search}>
+              <MagnifyingGlass aria-hidden="true" />
+              <span className="sr-only">Buscar equipamentos</span>
+              <input id="equipamento-q" name="q" type="search" defaultValue={q} placeholder="Ex.: betoneira" />
+            </label>
+            <button className="oc-primary" type="submit">Buscar</button>
+          </form>
+          <div className={styles.results}>
+            <p>{response.count === 1 ? "1 equipamento" : `${response.count} equipamentos`}</p>
+            {(q || selected) && <LocalizedClientLink href="/store" className={styles.clear}>Limpar filtros</LocalizedClientLink>}
+          </div>
+          {response.products.length ? (
+            <ul className={styles.products} data-testid="rental-catalog">
+              {response.products.map((product) => (
+                <li key={product.id}><ProductPreview product={product} region={region} /></li>
+              ))}
+            </ul>
+          ) : (
+            <p className={styles.empty}>Nenhum equipamento encontrado. Tente outro termo ou <LocalizedClientLink href="/store" className="underline">veja todo o catálogo</LocalizedClientLink>.</p>
+          )}
+          {(page > 1 || nextPage) && (
+            <nav className={styles.pagination} aria-label="Paginação">
+              {page > 1 && <LocalizedClientLink href={link(categoryHandle ? undefined : selected?.handle, page - 1, path)}>Página anterior</LocalizedClientLink>}
+              {nextPage && <LocalizedClientLink href={link(categoryHandle ? undefined : selected?.handle, nextPage, path)}>Próxima página</LocalizedClientLink>}
+            </nav>
+          )}
+        </div>
+      </div>
     </section>
   )
 }

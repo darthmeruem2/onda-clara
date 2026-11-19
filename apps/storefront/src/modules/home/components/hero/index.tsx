@@ -5,20 +5,25 @@ import { rentalQuoteUrl } from "@lib/util/rental"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import styles from "../../home.module.css"
 
-export default function Hero({ hasFeaturedProduct }: { hasFeaturedProduct: boolean }) {
-  const { campaign } = brand
+export default function Hero() {
   const quote = rentalQuoteUrl()
 
   return (
     <section className={styles.hero} aria-labelledby="campaign-title">
       <div className={styles.heroInner}>
         <div className={styles.heroContent}>
-          <p className={styles.heroLocation}><MapPin aria-hidden="true" /> {brand.region}</p>
-          <h1 id="campaign-title">{campaign.headline}</h1>
-          <p className={styles.heroDescription}>{campaign.description}</p>
-          <div className={styles.heroActions}>
+          <p className={styles.heroLocation} data-intro-copy>
+            <MapPin aria-hidden="true" /> Locação em {brand.region}
+          </p>
+          <h1 id="campaign-title">
+            {brand.campaign.headline.map((line) => (
+              <span key={line} className={styles.titleLine}><span data-intro-line>{line}</span>{" "}</span>
+            ))}
+          </h1>
+          <p className={styles.heroDescription} data-intro-copy>{brand.campaign.description}</p>
+          <div className={styles.heroActions} data-intro-copy>
             <LocalizedClientLink href="/store" className={styles.heroButton}>
-              Ver equipamentos
+              Ver equipamentos <ArrowUpRightMini aria-hidden="true" />
             </LocalizedClientLink>
             {quote && (
               <a href={quote} className={styles.heroSecondary} target="_blank" rel="noreferrer">
@@ -27,25 +32,16 @@ export default function Hero({ hasFeaturedProduct }: { hasFeaturedProduct: boole
             )}
           </div>
         </div>
-        {hasFeaturedProduct && (
-          <figure className={styles.heroFigure}>
-            <div className={styles.heroMedia}>
-              <Image
-                src={campaign.image}
-                alt={campaign.imageAlt}
-                fill
-                preload
-                sizes="(max-width: 767px) 90vw, 40vw"
-                className={styles.heroImage}
-              />
-            </div>
-            <figcaption>
-              <LocalizedClientLink href={`/products/${campaign.productHandle}`}>
-                <span>{campaign.productTitle}</span><ArrowUpRightMini aria-hidden="true" />
-              </LocalizedClientLink>
-            </figcaption>
-          </figure>
-        )}
+        <div className={styles.heroMedia} data-intro-photo>
+          <Image
+            src={brand.campaign.image}
+            alt={brand.campaign.imageAlt}
+            fill
+            preload
+            sizes="(max-width: 767px) 94vw, 43vw"
+            className={styles.heroImage}
+          />
+        </div>
       </div>
     </section>
   )

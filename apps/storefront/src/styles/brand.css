@@ -33,6 +33,8 @@
 :root {
   --brand-ink: #09264f;
   --brand-paper: #f7f9fd;
+  --brand-editorial: #fcfbf8;
+  --brand-editorial-border: #d9d8cf;
   --brand-action: #075bc3;
   --brand-accent: #f2c500;
   --brand-muted: #53647a;
@@ -68,7 +70,7 @@ body {
   padding: 0.75rem 1rem;
   background: var(--brand-paper);
   color: var(--brand-ink);
-  outline: 2px solid var(--brand-olive);
+  outline: 2px solid var(--brand-action);
 }
 
 #conteudo-principal {

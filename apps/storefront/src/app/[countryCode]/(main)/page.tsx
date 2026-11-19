@@ -2,7 +2,6 @@ import { Metadata } from "next"
 import { brand } from "@lib/brand"
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
-import { listProducts } from "@lib/data/products"
 import { getRegion, listRegions } from "@lib/data/regions"
 import { toJsonLd } from "@lib/util/product-structured-data"
 import { getSiteOrigin } from "@lib/util/site"
@@ -11,6 +10,8 @@ import RentalProcess from "@modules/home/components/rental-process"
 import FeaturedCategories from "@modules/home/components/featured-categories"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
+import RentalEditorial from "@modules/home/components/rental-editorial"
+import CampaignMotion from "@modules/home/components/campaign-motion"
 import styles from "@modules/home/home.module.css"
 
 export const dynamic = "force-static"
@@ -44,26 +45,17 @@ export default async function Home(props: {
   params: Promise<{ countryCode: string }>
 }) {
   const { countryCode } = await props.params
-  const [region, { collections }, categories, origin, regions, featuredResult] =
+  const [region, { collections }, categories, origin, regions] =
     await Promise.all([
       getRegion(countryCode),
       listCollections({ fields: "id,handle,title" }),
       listCategories({ fields: "id,name,handle,parent_category_id" }),
       getSiteOrigin(),
       listRegions(),
-      listProducts({
-        countryCode,
-        queryParams: {
-          handle: brand.campaign.productHandle,
-          fields: "id,handle",
-          limit: 1,
-        },
-      }),
     ])
 
   const collection = collections.find(({ handle }) => handle === brand.campaign.collectionHandle)
   const primaryCategories = categories.filter(({ parent_category_id }) => !parent_category_id).slice(0, 8)
-  const [featuredProduct] = featuredResult.response.products
   const homeUrl = `${origin}/${countryCode}`
   const returnPolicies = brand.rentalCatalog ? [] : buildRegionsReturnPolicies(regions)
   const structuredData = [
@@ -91,7 +83,10 @@ export default async function Home(props: {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(structuredData) }}
       />
-      <Hero hasFeaturedProduct={Boolean(featuredProduct)} />
+      <CampaignMotion>
+        <Hero />
+        <RentalEditorial />
+      </CampaignMotion>
       <FeaturedCategories categories={primaryCategories} />
       {region && <FeaturedProducts collection={collection} region={region} />}
       <RentalProcess />

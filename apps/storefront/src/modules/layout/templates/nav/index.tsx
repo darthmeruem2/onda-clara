@@ -19,9 +19,9 @@ export default async function Nav() {
 
   return (
     <header className="oc-header sticky top-0 z-40">
-      <div className="oc-header-message">
-        {brand.rentalCatalog ? "Locação de equipamentos em Santo André, SP" : showroom ? "Vitrine demonstrativa" : brand.tagline}
-      </div>
+      {!brand.rentalCatalog && (
+        <div className="oc-header-message">{showroom ? "Vitrine demonstrativa" : brand.tagline}</div>
+      )}
       <nav className="oc-nav" aria-label="Navegação principal">
         <div className="oc-nav-menu">
           <div className="md:hidden">

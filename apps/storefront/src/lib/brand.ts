@@ -1,10 +1,12 @@
 const name = process.env.NEXT_PUBLIC_STORE_NAME?.trim() || "Casa da Reforma Iguaí"
+const originalLogo = "/images/casa/logo-casa-da-reforma-iguai.webp"
 const whatsapp = (process.env.NEXT_PUBLIC_STORE_WHATSAPP || "5511958061464").replace(/\D/g, "")
 
 export const brand = {
   name,
   wordmark: name,
-  logo: process.env.NEXT_PUBLIC_STORE_LOGO || "/images/casa/logo-casa-da-reforma-iguai.webp",
+  logo: process.env.NEXT_PUBLIC_STORE_LOGO || originalLogo,
+  originalLogo,
   tagline: "Locação de equipamentos e depósito de materiais de construção.",
   pageTitle: "Locação de equipamentos para obra em Santo André",
   description: "Catálogo de ferramentas e equipamentos para construção e reforma em Santo André, SP. Consulte disponibilidade, retirada e entrega pelo WhatsApp.",
@@ -16,12 +18,18 @@ export const brand = {
   rentalCatalog: process.env.NEXT_PUBLIC_STORE_MODE !== "retail",
   campaign: {
     collectionHandle: "equipamentos-para-locacao",
-    headline: "Equipamentos para sua obra.",
-    description: "Ferramentas e máquinas para construção, reforma e manutenção. Consulte disponibilidade e peça seu orçamento de locação em Santo André.",
-    image: "/images/casa/betoneira.webp",
-    imageAlt: "Betoneira para locação na Casa da Reforma Iguaí",
-    productHandle: "betoneira",
-    productTitle: "Betoneira",
+    headline: ["Equipamento", "para a sua obra."],
+    description: "Da betoneira à lavadora, alugue o que sua obra precisa e combine os detalhes pelo WhatsApp.",
+    image: "/images/casa/campanha/obra-betoneira.webp",
+    imageAlt: "Trabalhador ao lado de uma betoneira em uma obra residencial",
+    editorial: {
+      heading: "Do solo ao acabamento.",
+      description: "Prepare a base, misture o concreto e faça os cortes com o equipamento da sua etapa. O catálogo cobre também demolição, trabalho em altura e limpeza.",
+      image: "/images/casa/campanha/andaime-obra.webp",
+      imageAlt: "Andaimes metálicos instalados ao lado de uma parede de tijolos em construção",
+      detailImage: "/images/casa/campanha/compactador-detalhe.webp",
+      detailImageAlt: "Detalhe de um compactador de placa no solo de uma obra",
+    },
     featuredHandles: [
       "escada-de-fibra-de-vidro",
       "betoneira",

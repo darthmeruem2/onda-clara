@@ -102,3 +102,48 @@
   .oc-nav-quote { padding-inline: .75rem; color: #fff; background: var(--brand-action); }
   .oc-nav-quote:hover { background: #03499e; }
 }
+
+.oc-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: .48rem;
+  color: var(--brand-ink);
+  vertical-align: middle;
+}
+
+.oc-brand-symbol {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 2.43rem;
+  height: 2.48rem;
+  overflow: hidden;
+}
+
+.oc-brand-symbol img {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 200%;
+  height: auto;
+  max-width: none;
+  transform: translateX(-25%);
+}
+
+.oc-brand-lettering {
+  display: grid;
+  gap: .13rem;
+  font-size: .89rem;
+  line-height: .97;
+  letter-spacing: -.037em;
+}
+
+.oc-brand-lettering strong {
+  color: var(--brand-action);
+  font-size: 1.24rem;
+}
+
+@media (min-width: 768px) {
+  .oc-brand-symbol { width: 2.65rem; height: 2.73rem; }
+  .oc-brand-lettering { font-size: 1.02rem; }
+  .oc-brand-lettering strong { font-size: 1.38rem; }
+}
