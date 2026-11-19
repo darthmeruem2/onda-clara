@@ -19,6 +19,8 @@
 - Verifiquei a logo, as 20 fotos, a busca, o filtro por categoria e a página de equipamento em um navegador com viewport de celular. O link de orçamento aponta para o número publicado e preenche o nome do equipamento.
 - Confirmei no Medusa os 20 equipamentos publicados, seis categorias, quatro itens antigos em rascunho e os pedidos de teste preservados. O painel exibiu o catálogo em português. TypeScript passou no storefront e backend.
 
+- A Vercel publicou o commit `3f58843`. As 20 páginas de equipamento responderam HTTP 200. Repeti no domínio público o teste móvel da logo, das imagens, do catálogo, da busca, do filtro e do orçamento.
+
 ## Como continuar
 
 A Vercel usa a exportação do catálogo do Medusa. Para publicar alterações feitas no painel nessa arquitetura, reexporte o catálogo e faça um novo deploy. Para sincronizar alterações automaticamente, use uma instância Medusa persistente conectada ao storefront. O painel desta sessão é local.
