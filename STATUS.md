@@ -20,7 +20,7 @@
 - Mercado Pago Checkout Pro via Orders API. Testes com provedor simulado em Medusa, PostgreSQL e Redis verificaram pendência, recusa, expiração, assinatura inválida, valor divergente e dois webhooks concorrentes. O pagamento aprovado produziu uma captura.
 - O checkout completo passou no Chromium móvel, com sacola lateral, variação, cupom, CEP, entrega e confirmação de pedido sem cobrança. A interface do provedor de pagamento também foi verificada até a confirmação com API simulada.
 - O build de produção do Medusa e do painel executou no Cloud e respondeu no health check. O build da imagem Docker esgotou o armazenamento local durante a instalação. A inicialização pelo artefato compilado passou. O build remoto pelo Railway continua por validar.
-- A vitrine compilou e foi publicada na Vercel. O domínio de produção respondeu HTTP 200 sem credenciais. Chromium móvel verificou homepage, catálogo, coleção, categoria, busca, produto e bloqueio de checkout. Cadastro e histórico autenticado também passaram no ambiente local. A proteção de autenticação do projeto continuou ativa.
+- A vitrine compilou e foi publicada na Vercel. O domínio de produção respondeu HTTP 200 sem credenciais. Chromium móvel verificou homepage, catálogo, coleção, categoria, busca, produto e bloqueio de checkout. Cadastro e histórico autenticado também passaram no ambiente local. A proteção de autenticação do projeto continuou ativa. A busca instantânea do catálogo conectado ao Medusa passou com o índice refeito em BRL.
 
 ## Pendências e continuidade
 

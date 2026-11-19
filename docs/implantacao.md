@@ -12,6 +12,8 @@ Use Node 24, Corepack e Docker Compose no diretório do repositório.
 
 Em produção use uma base nova, deixe `MEDUSA_DEMO_MODE=false` ou ausente antes da primeira migration e cadastre os produtos definitivos no painel. Uma base já iniciada fica com os provedores, produtos, tarifas e cupons gravados. Use o painel para trocas posteriores. O comando `corepack pnpm exec medusa exec ./src/scripts/seed-onda-clara.ts` repõe produtos, categorias, níveis de estoque e cupom faltantes na demonstração, sem sobrescrever os existentes.
 
+Se reaproveitar um banco de demonstração criado com o starter original e o catálogo retornar erro de filtro em BRL, reindexe o produto depois de iniciar o backend atualizado. Use a API administrativa autenticada `POST /admin/search-indexes/product/reindex` com `{"strategy":"swap"}`. O Medusa prepara o novo índice antes de trocar a versão ativa.
+
 ## Painel da loja
 
 - **Produtos** reúne título, fotos, categorias, coleções, combinações de cor e tamanho, preço em BRL e status de publicação.
