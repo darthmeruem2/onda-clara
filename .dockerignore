@@ -7,4 +7,5 @@
 **/.medusa
 **/.turbo
 **/uploads
+apps/backend/static
 apps/storefront

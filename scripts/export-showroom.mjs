@@ -1,4 +1,4 @@
-import { writeFile } from "node:fs/promises"
+import { readdir, writeFile } from "node:fs/promises"
 
 const backend = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL ?? "http://localhost:9000"
 const key = process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY
@@ -29,13 +29,21 @@ if (!products.length) throw new Error("Cadastre o catálogo da demonstração no
 
 const storefront = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:8000"
 const storefrontOrigin = new URL(storefront).origin
+const backendOrigin = new URL(backend).origin
+const productMedia = await readdir(new URL("../apps/storefront/public/images/products/", import.meta.url))
 const portable = (value) => {
   if (Array.isArray(value)) return value.map(portable)
   if (value && typeof value === "object") {
     return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, portable(item)]))
   }
-  if (typeof value === "string" && value.startsWith(`${storefrontOrigin}/images/`)) {
-    return value.slice(storefrontOrigin.length)
+  if (typeof value === "string") {
+    if (value.startsWith(`${storefrontOrigin}/images/`)) return value.slice(storefrontOrigin.length)
+    if (value.startsWith(`${backendOrigin}/static/`)) {
+      const upload = new URL(value).pathname.split("/").at(-1)
+      const bundled = productMedia.find((name) => upload === name || upload?.endsWith(`-${name}`))
+      if (!bundled) throw new Error(`Inclua a foto de demonstração ${upload} em public/images/products.`)
+      return `/images/products/${bundled}`
+    }
   }
   return value
 }

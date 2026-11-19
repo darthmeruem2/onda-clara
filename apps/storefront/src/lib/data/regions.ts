@@ -9,6 +9,7 @@ export const listRegions = async () => {
   if (showroom) return showroomCatalog.regions
   const next = {
     ...(await getCacheOptions("regions")),
+    revalidate: 60,
   }
 
   return await sdk.client

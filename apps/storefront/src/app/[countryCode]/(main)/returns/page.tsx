@@ -2,7 +2,7 @@ import { policyCopy } from "@lib/policy-copy"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { Metadata } from "next"
 
-import { getStorePolicies } from "@lib/data/store-policies"
+import { getPolicyParagraphs, getStorePolicies } from "@lib/data/store-policies"
 import { PoliciesUnavailable, PolicyPage } from "@modules/policies/templates"
 
 export const dynamic = "force-static"
@@ -17,11 +17,14 @@ export default async function ReturnsPage(props: {
   params: Promise<{ countryCode: string }>
 }) {
   const { countryCode } = await props.params
-  const { current } = await getStorePolicies(countryCode)
+  const [{ current }, paragraphs] = await Promise.all([
+    getStorePolicies(countryCode),
+    getPolicyParagraphs(countryCode, "returns_copy", policyCopy.returns),
+  ])
 
   return (
     <PolicyPage title="Trocas e devoluções">
-      {policyCopy.returns.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+      {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       {current ? (
         <>
           <p>

@@ -8,7 +8,7 @@ No Medusa Admin, a seção Produtos permite editar fotos, descrições, preços,
 
 ## Políticas e atendimento
 
-Revise os textos institucionais em `apps/storefront/src/lib/policy-copy.ts` antes de vender. Confira razão social, CNPJ, canais de contato, prazos e conteúdo com o lojista. As páginas de entrega e devolução consultam os dados da região Brasil pelo Medusa. Mantenha esses dados alinhados com as opções de frete e as regras vigentes da loja.
+No painel Medusa, em **Configurações → Regiões → Brasil → Metadados**, preencha `privacy_copy`, `terms_copy` e `returns_copy` para publicar os textos da loja. Use uma linha em branco entre parágrafos. Os textos demonstrativos ficam em `apps/storefront/src/lib/policy-copy.ts`. Confira razão social, CNPJ, canais de contato, prazos e conteúdo com o lojista. As páginas de entrega e devolução consultam os dados da região Brasil pelo Medusa. Mantenha esses dados alinhados com as opções de frete e as regras vigentes da loja.
 
 ## Vercel
 

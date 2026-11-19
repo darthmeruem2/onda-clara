@@ -9,6 +9,7 @@ export const retrieveCollection = async (id: string) => {
   if (showroom) return showroomCatalog.collections.find((collection) => collection.id === id)
   const next = {
     ...(await getCacheOptions("collections")),
+    revalidate: 60,
   }
 
   return await sdk.client
@@ -27,6 +28,7 @@ export const listCollections = async (
 ): Promise<{ collections: HttpTypes.StoreCollection[]; count: number }> => {
   const next = {
     ...(await getCacheOptions("collections")),
+    revalidate: 60,
   }
 
   if (showroom) {
@@ -55,6 +57,7 @@ export const getCollectionByHandle = async (
   if (showroom) return showroomCatalog.collections.find((collection) => collection.handle === handle) ?? null
   const next = {
     ...(await getCacheOptions("collections")),
+    revalidate: 60,
   }
 
   return await sdk.client

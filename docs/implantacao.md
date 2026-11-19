@@ -43,7 +43,7 @@ Configure `SENDGRID_API_KEY` com permissão de envio e `SENDGRID_FROM` com um re
 
 ## Cotação e expedição
 
-Sem Melhor Envio, cadastre tarifas fixas reais em **Configurações → Locais e envio**, com as regras e regiões da loja. O Medusa inclui o frete selecionado no total do pedido. 
+Sem Melhor Envio, cadastre tarifas fixas reais em **Configurações → Locais e envio**, com as regras e regiões da loja. O Medusa inclui o frete selecionado no total do pedido.
 
 Para cotar por CEP, cadastre o aplicativo no sandbox do Melhor Envio e configure `MELHOR_ENVIO_MODE=sandbox`, `MELHOR_ENVIO_TOKEN`, `MELHOR_ENVIO_USER_AGENT` com o nome da loja e e-mail de suporte, e os IDs em `MELHOR_ENVIO_SERVICES`. No painel, abra **Configurações → Locais e envio → Estoque principal**. Cadastre o CEP de origem, habilite o provedor **melhor-envio_br** e crie opções de preço calculado na zona Brasil, escolhendo uma modalidade habilitada por opção. Faça um pedido de teste com o CEP de destino e os pesos e medidas já cadastrados. Se usar token OAuth com validade, renove-o no provedor e atualize o segredo antes da expiração. Para produção, use credenciais do ambiente de produção e `MELHOR_ENVIO_MODE=production`.
 

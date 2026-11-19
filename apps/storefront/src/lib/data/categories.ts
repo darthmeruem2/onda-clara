@@ -7,6 +7,7 @@ export const listCategories = async (query?: Record<string, unknown>) => {
   if (showroom) return showroomCatalog.categories
   const next = {
     ...(await getCacheOptions("categories")),
+    revalidate: 60,
   }
 
   const limit = query?.limit || 100
@@ -34,6 +35,7 @@ export const getCategoryByHandle = async (categoryHandle: string[]) => {
 
   const next = {
     ...(await getCacheOptions("categories")),
+    revalidate: 60,
   }
 
   return sdk.client

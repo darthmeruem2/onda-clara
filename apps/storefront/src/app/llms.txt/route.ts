@@ -11,7 +11,7 @@ import {
 } from "@lib/util/site"
 
 export async function GET(request: Request) {
-  if (showroom) return new Response("# Onda Clara\n\nVitrine com catálogo fictício. Compras indisponíveis.\n")
+  if (showroom) return new Response(`# ${STORE_NAME}\n\nVitrine com catálogo fictício. Compras indisponíveis.\n`)
 
   const origin = getRequestOrigin(request)
 
