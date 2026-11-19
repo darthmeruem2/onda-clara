@@ -6,9 +6,9 @@ export default function Wordmark() {
     <Image
       src={brand.logo}
       alt={brand.name}
-      width={180}
-      height={48}
-      className="h-9 w-auto max-w-36 object-contain sm:h-11 sm:max-w-44"
+      width={160}
+      height={120}
+      className="h-16 w-auto max-w-32 object-contain md:h-[72px] md:max-w-40"
     />
   ) : (
     <span translate="no">{brand.wordmark}</span>

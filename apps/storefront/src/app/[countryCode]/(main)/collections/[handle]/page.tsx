@@ -1,3 +1,6 @@
+import { brand } from "@lib/brand"
+import { getRegion } from "@lib/data/regions"
+import RentalCatalog from "@modules/store/templates/rental-catalog"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
@@ -21,7 +24,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
   const collection = await getCollectionByHandle(params.handle)
 
-  if (!collection) {
+  if (!collection || (brand.rentalCatalog && collection.handle === "entre-mares")) {
     notFound()
   }
 
@@ -44,8 +47,14 @@ export default async function CollectionPage(props: Props) {
     (collection) => collection,
   )
 
-  if (!collection) {
+  if (!collection || (brand.rentalCatalog && collection.handle === "entre-mares")) {
     notFound()
+  }
+
+  if (brand.rentalCatalog) {
+    const region = await getRegion(params.countryCode)
+    if (!region) notFound()
+    return <RentalCatalog countryCode={params.countryCode} region={region} search={searchParams} collectionId={collection.id} collectionHandle={collection.handle} title={collection.title} />
   }
 
   return (

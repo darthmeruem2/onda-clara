@@ -90,8 +90,9 @@ async function getCountryCode(
 export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
   const demo = process.env.OC_SHOWROOM === "1"
+  const rental = process.env.NEXT_PUBLIC_STORE_MODE !== "retail"
   if (/^\/(?:api|buy|ucp|\.well-known\/ucp)(?:\/|$)/.test(path)) {
-    return demo ? new NextResponse(null, { status: 404 }) : NextResponse.next()
+    return demo || rental ? new NextResponse(null, { status: 404 }) : NextResponse.next()
   }
 
   if (path.includes(".")) {
@@ -101,8 +102,10 @@ export async function proxy(request: NextRequest) {
   const cacheIdCookie = request.cookies.get("_medusa_cache_id")
   const cacheId = cacheIdCookie?.value || crypto.randomUUID()
 
-  if (demo && /^\/(?:[a-z]{2}\/)?(?:checkout|account|cart|order|pagamento|verify-account)(?:\/|$)/i.test(path)) {
-    return NextResponse.redirect(new URL("/br/sobre", request.url), 307)
+  if ((demo || rental) && /^\/(?:[a-z]{2}\/)?(?:checkout|account|cart|order|pagamento|verify-account)(?:\/|$)/i.test(path)) {
+    return request.method === "GET" || request.method === "HEAD"
+      ? NextResponse.redirect(new URL(rental ? "/br/store" : "/br/sobre", request.url), 307)
+      : new NextResponse(null, { status: 404 })
   }
   const countryCode = demo ? "br" : await getCountryCode(request, await getRegionMap(cacheId))
 

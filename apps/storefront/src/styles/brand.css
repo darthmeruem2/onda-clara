@@ -1,31 +1,49 @@
 @font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/dm-sans.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Instrument Serif";
-  src: url("/fonts/instrument-serif.woff2") format("woff2");
+  font-family: Barlow;
+  src: url("/fonts/barlow-400.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
+@font-face {
+  font-family: Barlow;
+  src: url("/fonts/barlow-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url("/fonts/barlow-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url("/fonts/barlow-800.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
 :root {
-  --brand-ink: #292b21;
-  --brand-paper: #faf8f1;
-  --brand-olive: #393e2a;
-  --brand-muted: #5f6254;
-  --brand-sand: #ece8da;
-  --brand-tide: #dedfd2;
-  --brand-display: "Instrument Serif", Georgia, serif;
-  --brand-body: "DM Sans", Arial, sans-serif;
+  --brand-ink: #09264f;
+  --brand-paper: #f7f9fd;
+  --brand-action: #075bc3;
+  --brand-accent: #f2c500;
+  --brand-muted: #53647a;
+  --brand-sand: #eef3fc;
+  --brand-tide: #dce7f6;
+  --brand-border: #c6d5e9;
+  --brand-display: Barlow, "Arial Narrow", sans-serif;
+  --brand-body: Barlow, Arial, sans-serif;
   --oc-ink: var(--brand-ink);
   --oc-paper: var(--brand-paper);
-  --oc-olive: var(--brand-olive);
+  --oc-olive: var(--brand-action);
   --oc-display-font: var(--brand-display);
 }
 

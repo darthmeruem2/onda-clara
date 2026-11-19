@@ -1,3 +1,5 @@
+import { brand } from "@lib/brand"
+import RentalProduct from "./rental-product"
 import { Suspense } from "react"
 import { showroom } from "@lib/showroom/catalog"
 import { notFound } from "next/navigation"
@@ -24,6 +26,7 @@ export default function ProductTemplate({ product, region, countryCode }: Produc
 
   return (
     <>
+      {brand.rentalCatalog ? <RentalProduct product={product} /> : (
       <div className="content-container py-5 md:py-8" data-testid="product-container">
         <nav aria-label="Localização na loja" className="mb-5 flex flex-wrap gap-2 text-sm text-ui-fg-subtle">
           <LocalizedClientLink href="/store" className="underline underline-offset-4">Loja</LocalizedClientLink>
@@ -41,6 +44,7 @@ export default function ProductTemplate({ product, region, countryCode }: Produc
           </div>
         </div>
       </div>
+      )}
       <div className="content-container my-14 md:my-24" data-testid="related-products-container">
         <Suspense fallback={<SkeletonRelatedProducts />}>
           <RelatedProducts product={product} countryCode={countryCode} />

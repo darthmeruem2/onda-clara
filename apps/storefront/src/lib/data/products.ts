@@ -9,6 +9,9 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 import { getAuthHeaders, getCacheOptions } from "./cookies"
 import { getRegion, retrieveRegion } from "./regions"
 
+const normalizeSearch = (value: string) =>
+  value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR")
+
 type ProductListQueryParams = (HttpTypes.FindParams &
   HttpTypes.StoreProductListParams) & {
   options?: string[]
@@ -54,13 +57,13 @@ export const listProducts = async ({
   }
 
   if (showroom) {
-    const query = queryParams?.q?.toLocaleLowerCase("pt-BR")
+    const query = normalizeSearch(queryParams?.q ?? "")
     const products = showroomCatalog.products.filter((product) =>
-      (!queryParams?.handle || queryParams.handle === product.handle) &&
+      (!queryParams?.handle || [queryParams.handle].flat().includes(product.handle)) &&
       (!queryParams?.id?.length || queryParams.id.includes(product.id)) &&
       (!queryParams?.collection_id?.length || queryParams.collection_id.includes(product.collection_id ?? "")) &&
       (!queryParams?.category_id?.length || product.categories?.some(({ id }) => queryParams.category_id?.includes(id))) &&
-      (!query || `${product.title} ${product.description ?? ""}`.toLocaleLowerCase("pt-BR").includes(query))
+      (!query || normalizeSearch(`${product.title} ${product.description ?? ""} ${String(product.metadata?.keywords ?? "")}`).includes(query))
     )
 
     return {
@@ -89,7 +92,7 @@ export const listProducts = async ({
           offset,
           region_id: region?.id,
           fields:
-            "*variants.calculated_price,+variants.inventory_quantity,*variants.images,*variants.options,+metadata,+tags,",
+            "*variants.calculated_price,+variants.inventory_quantity,*variants.images,*variants.options,+metadata,+tags,*categories,",
           ...queryParams,
         },
         headers,

@@ -9,6 +9,7 @@ type ThumbnailProps = {
   images?: { url?: string }[] | null
   size?: "small" | "medium" | "large" | "full" | "square"
   isFeatured?: boolean
+  contain?: boolean
   className?: string
   alt?: string
   "data-testid"?: string
@@ -19,6 +20,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   images,
   size = "small",
   isFeatured,
+  contain,
   className,
   alt = "",
   "data-testid": dataTestid,
@@ -31,8 +33,9 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
         "relative w-full overflow-hidden rounded-none bg-[var(--brand-sand)] p-0 shadow-none",
         className,
         {
-          "aspect-[2/3]": isFeatured,
-          "aspect-[4/5]": !isFeatured && size !== "square",
+          "aspect-[4/3] rounded-lg border border-ui-border-base": contain,
+          "aspect-[2/3]": !contain && isFeatured,
+          "aspect-[4/5]": !contain && !isFeatured && size !== "square",
           "aspect-[1/1]": size === "square",
           "w-[180px]": size === "small",
           "w-[290px]": size === "medium",
@@ -42,7 +45,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
       )}
       data-testid={dataTestid}
     >
-      <ImageOrPlaceholder image={initialImage} size={size} alt={alt} />
+      <ImageOrPlaceholder image={initialImage} size={size} alt={alt} contain={contain} />
     </Container>
   )
 }
@@ -51,12 +54,13 @@ const ImageOrPlaceholder = ({
   image,
   size,
   alt,
-}: Pick<ThumbnailProps, "size" | "alt"> & { image?: string }) => {
+  contain,
+}: Pick<ThumbnailProps, "size" | "alt" | "contain"> & { image?: string }) => {
   return image ? (
     <Image
       src={image}
       alt={alt ?? ""}
-      className="absolute inset-0 object-cover object-center motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.025]"
+      className={clx("absolute inset-0 object-center motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-[1.025]", contain ? "object-contain p-2 md:p-3" : "object-cover")}
       draggable={false}
       sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
       fill

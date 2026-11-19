@@ -1,3 +1,4 @@
+import { ArrowUpRightMini } from "@medusajs/icons"
 import { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import styles from "../../home.module.css"
@@ -13,12 +14,12 @@ export default function FeaturedCategories({
 
   return (
     <section className={styles.categories} aria-labelledby="category-title">
-      <h2 id="category-title">Compre por categoria</h2>
+      <h2 id="category-title">Explore por categoria</h2>
       <ul>
         {categories.map(({ id, name, handle }) => (
           <li key={id}>
             <LocalizedClientLink href={`/categories/${handle}`}>
-              {name}
+              <span>{name}</span><ArrowUpRightMini aria-hidden="true" />
             </LocalizedClientLink>
           </li>
         ))}

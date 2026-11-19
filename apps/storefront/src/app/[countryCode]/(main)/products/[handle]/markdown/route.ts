@@ -1,3 +1,5 @@
+import { brand } from "@lib/brand"
+import { rentalQuoteUrl } from "@lib/util/rental"
 import { listProducts } from "@lib/data/products"
 import { getRegion } from "@lib/data/regions"
 import { renderProductMarkdown } from "@lib/util/product-markdown"
@@ -24,6 +26,15 @@ export async function GET(
 
   if (!region || !product) {
     return new Response("# Product not found\n", { status: 404, headers: HEADERS })
+  }
+
+  if (brand.rentalCatalog) {
+    const quote = rentalQuoteUrl(product.title)
+    const message = quote ? `[Solicitar orçamento pelo WhatsApp](${quote})` : "Entre em contato com a loja."
+    return new Response(
+      `# ${product.title} para locação\n\n${product.description ?? ""}\n\nValores e disponibilidade sob consulta.\n\n${message}\n`,
+      { headers: HEADERS }
+    )
   }
 
   return new Response(

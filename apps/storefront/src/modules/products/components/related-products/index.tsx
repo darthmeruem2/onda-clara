@@ -1,3 +1,4 @@
+import { brand } from "@lib/brand"
 import { listProducts } from "@lib/data/products"
 import { getRegion } from "@lib/data/regions"
 import { HttpTypes } from "@medusajs/types"
@@ -23,10 +24,12 @@ export default async function RelatedProducts({
   if (region?.id) {
     queryParams.region_id = region.id
   }
-  if (product.collection_id) {
+  if (brand.rentalCatalog && product.categories?.[0]) {
+    queryParams.category_id = [product.categories[0].id]
+  } else if (product.collection_id) {
     queryParams.collection_id = [product.collection_id]
   }
-  if (product.tags) {
+  if (!brand.rentalCatalog && product.tags) {
     queryParams.tag_id = product.tags
       .map((t) => t.id)
       .filter(Boolean) as string[]
@@ -34,12 +37,12 @@ export default async function RelatedProducts({
   queryParams.is_giftcard = false
 
   const products = await listProducts({
-    queryParams,
+    queryParams: { ...queryParams, limit: brand.rentalCatalog ? 5 : 12 },
     countryCode,
   }).then(({ response }) => {
     return response.products.filter(
       (responseProduct) => responseProduct.id !== product.id
-    )
+    ).slice(0, brand.rentalCatalog ? 4 : 12)
   })
 
   if (!products.length) {
@@ -48,7 +51,7 @@ export default async function RelatedProducts({
 
   return (
     <div className="product-page-constraint">
-      <h2 className="oc-display mb-7 text-4xl md:text-5xl">Combine com</h2>
+      <h2 className="oc-display mb-7 text-4xl md:text-5xl">{brand.rentalCatalog ? "Outros equipamentos da categoria" : "Combine com"}</h2>
 
       <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
         {products.map((product) => (

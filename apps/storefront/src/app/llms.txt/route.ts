@@ -1,3 +1,4 @@
+import { brand } from "@lib/brand"
 import { showroom } from "@lib/showroom/catalog"
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
@@ -11,6 +12,13 @@ import {
 } from "@lib/util/site"
 
 export async function GET(request: Request) {
+  if (brand.rentalCatalog) {
+    const base = `${getRequestOrigin(request)}/br`
+    return new Response(`# ${STORE_NAME}\n\nCatálogo de locação de equipamentos. Valores e disponibilidade sob consulta.\n\n- Catálogo: ${base}/store\n- Busca: ${base}/store?q={termo}\n- Atendimento: ${base}/contact\n`, {
+      headers: { "Content-Type": "text/markdown; charset=utf-8" },
+    })
+  }
+
   if (showroom) return new Response(`# ${STORE_NAME}\n\nVitrine com catálogo fictício. Compras indisponíveis.\n`)
 
   const origin = getRequestOrigin(request)

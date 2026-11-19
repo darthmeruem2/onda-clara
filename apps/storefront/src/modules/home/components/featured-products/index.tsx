@@ -1,3 +1,4 @@
+import { brand } from "@lib/brand"
 import { listProducts } from "@lib/data/products"
 import { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -11,31 +12,37 @@ export default async function FeaturedProducts({
   collection?: HttpTypes.StoreCollection
   region: HttpTypes.StoreRegion
 }) {
+  const featuredHandles = brand.campaign.featuredHandles
   const {
     response: { products },
   } = await listProducts({
     regionId: region.id,
     queryParams: {
       ...(collection ? { collection_id: collection.id } : {}),
-      limit: 4,
-      fields: "*variants.calculated_price,*images",
+      ...(brand.rentalCatalog ? { handle: [...featuredHandles] } : {}),
+      limit: featuredHandles.length,
+      fields: "*variants.calculated_price,*images,+metadata",
     },
   })
 
-  if (!products.length) {
+  const featured = brand.rentalCatalog
+    ? featuredHandles.flatMap((handle) => products.filter((product) => product.handle === handle))
+    : products
+
+  if (!featured.length) {
     return null
   }
 
   return (
     <section className={styles.featured} aria-labelledby="featured-title">
       <div className={styles.sectionHeading}>
-        <h2 id="featured-title">Peças da estação</h2>
+        <h2 id="featured-title">Equipamentos em destaque</h2>
         <LocalizedClientLink href="/store" className={styles.textLink}>
-          Ver todas as peças
+          Ver catálogo completo
         </LocalizedClientLink>
       </div>
       <ul className={styles.productGrid}>
-        {products.map((product) => (
+        {featured.map((product) => (
           <li key={product.id}>
             <ProductPreview product={product} region={region} isFeatured />
           </li>

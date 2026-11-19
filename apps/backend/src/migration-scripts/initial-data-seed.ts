@@ -12,14 +12,16 @@ import {
   linkSalesChannelsToStockLocationWorkflow,
 } from "@medusajs/medusa/core-flows"
 import { DEFAULT_REGION_STORE_POLICIES } from "../lib/region-store-policies"
+import seedCasaReforma from "../scripts/seed-casa-reforma"
 import seedOndaClara from "../scripts/seed-onda-clara"
 
 export default async function initialDataSeed({ container }: { container: MedusaContainer }) {
   const query = container.resolve(ContainerRegistrationKeys.QUERY)
   const link = container.resolve(ContainerRegistrationKeys.LINK)
   const fulfillment = container.resolve(Modules.FULFILLMENT)
-  const demo = process.env.MEDUSA_DEMO_MODE === "true"
-  const mercadoPagoEnabled = ["test", "production"].includes(process.env.MERCADO_PAGO_MODE ?? "")
+  const importRentalCatalog = process.env.MEDUSA_IMPORT_CASA_CATALOG === "true"
+  const demo = !importRentalCatalog && process.env.MEDUSA_DEMO_MODE === "true"
+  const mercadoPagoEnabled = !importRentalCatalog && ["test", "production"].includes(process.env.MERCADO_PAGO_MODE ?? "")
   const paymentProviders = mercadoPagoEnabled ? ["pp_mercadopago_br"] : demo ? ["pp_system_default"] : []
   const { result: [channel] } = await createSalesChannelsWorkflow(container).run({
     input: { salesChannelsData: [{ name: "Loja online" }] },
@@ -49,7 +51,7 @@ export default async function initialDataSeed({ container }: { container: Medusa
   await createStoresWorkflow(container).run({
     input: {
       stores: [{
-        name: process.env.STORE_NAME || "Onda Clara",
+        name: process.env.STORE_NAME || "Casa da Reforma Iguaí",
         supported_currencies: [{ currency_code: "brl", is_default: true }],
         default_sales_channel_id: channel.id,
         default_location_id: location.id,
@@ -125,5 +127,9 @@ export default async function initialDataSeed({ container }: { container: Medusa
       }],
     })
     await seedOndaClara({ container, args: [] })
+  }
+
+  if (importRentalCatalog) {
+    await seedCasaReforma({ container, args: [] })
   }
 }

@@ -1,3 +1,6 @@
+import { brand } from "@lib/brand"
+import { getRegion } from "@lib/data/regions"
+import RentalCatalog from "@modules/store/templates/rental-catalog"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
@@ -48,6 +51,12 @@ export default async function CategoryPage(props: Props) {
 
   if (!productCategory) {
     notFound()
+  }
+
+  if (brand.rentalCatalog) {
+    const region = await getRegion(params.countryCode)
+    if (!region) notFound()
+    return <RentalCatalog countryCode={params.countryCode} region={region} search={searchParams} categoryHandle={productCategory.handle} title={productCategory.name} description={productCategory.description ?? undefined} />
   }
 
   return (

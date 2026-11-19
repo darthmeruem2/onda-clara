@@ -7,7 +7,17 @@ import { useState } from "react"
 
 type MenuCategory = { id: string; name: string; handle: string }
 
-export default function SideMenu({ categories, demo }: { categories: MenuCategory[]; demo: boolean }) {
+export default function SideMenu({
+  categories,
+  showAccount,
+  rental,
+  quote,
+}: {
+  categories: MenuCategory[]
+  showAccount: boolean
+  rental: boolean
+  quote?: string
+}) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -20,19 +30,21 @@ export default function SideMenu({ categories, demo }: { categories: MenuCategor
         <div className="fixed inset-0 flex">
           <DialogPanel transition className="oc-drawer mr-auto w-full max-w-sm p-6 data-[closed]:-translate-x-full motion-safe:transition-transform motion-safe:duration-200">
             <div className="flex items-center justify-between border-b border-black/10 pb-3">
-              <DialogTitle className="oc-display text-3xl">Explore</DialogTitle>
+              <DialogTitle className="oc-display text-3xl">Menu</DialogTitle>
               <button type="button" onClick={() => setOpen(false)} className="oc-icon-button" aria-label="Fechar menu"><XMark /></button>
             </div>
             <ul className="mt-5 grid gap-1">
               {[
-                { id: "store", name: "Todas as peças", href: "/store" },
+                { id: "store", name: rental ? "Todos os equipamentos" : "Todos os produtos", href: "/store" },
                 ...categories.map((category) => ({ ...category, href: `/categories/${category.handle}` })),
-                ...(!demo ? [{ id: "account", name: "Minha conta", href: "/account" }] : []),
-                { id: "about", name: "Sobre a marca", href: "/sobre" },
+                ...(showAccount ? [{ id: "account", name: "Minha conta", href: "/account" }] : []),
+                ...(rental ? [{ id: "how", name: "Como funciona", href: "/#como-funciona" }] : []),
+                { id: "about", name: "Sobre", href: "/sobre" },
               ].map(({ id, name, href }) => (
                 <li key={id}><LocalizedClientLink href={href} onClick={() => setOpen(false)} className="block min-h-11 py-3">{name}</LocalizedClientLink></li>
               ))}
             </ul>
+            {quote && <a href={quote} className="oc-primary mt-4" target="_blank" rel="noreferrer">Pedir orçamento no WhatsApp</a>}
           </DialogPanel>
         </div>
       </Dialog>

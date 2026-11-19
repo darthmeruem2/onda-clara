@@ -1,0 +1,629 @@
+{
+  "source": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+  "categories": [
+    {
+      "handle": "acesso-e-estrutura",
+      "name": "Acesso e estrutura",
+      "description": "Escadas, andaimes, escoras e guincho para trabalho em altura e escoramento."
+    },
+    {
+      "handle": "concreto-e-mistura",
+      "name": "Concreto e mistura",
+      "description": "Betoneira, vibrador de concreto e argamassadeira para preparo e adensamento."
+    },
+    {
+      "handle": "solo-e-fundacao",
+      "name": "Solo e fundação",
+      "description": "Compactador e perfurador de solo para aterros, estacas e preparação de base."
+    },
+    {
+      "handle": "demolicao",
+      "name": "Demolição",
+      "description": "Martelos demolidores e rompedores para quebra de pisos, concreto e alvenaria."
+    },
+    {
+      "handle": "corte-e-acabamento",
+      "name": "Corte e acabamento",
+      "description": "Serras, cortadores de piso e parede e politriz para revestimentos e canaletas."
+    },
+    {
+      "handle": "limpeza-e-manutencao",
+      "name": "Limpeza e manutenção",
+      "description": "Lavadora, aspirador, desentupidora e roçadeira para pós-obra e áreas externas."
+    }
+  ],
+  "products": [
+    {
+      "title": "Escada de fibra de vidro",
+      "handle": "escada-de-fibra-de-vidro",
+      "category": "acesso-e-estrutura",
+      "subtitle": "Indicada para serviços em altura com maior segurança em manutenções prediais, instalações elétricas e acabamentos.",
+      "description": "A escada de fibra de vidro é indicada para serviços em altura que exigem estabilidade e apoio seguro em instalações, pintura e manutenção predial. Por ser construída em material não condutivo, é amplamente adotada em trabalhos próximos a redes elétricas. Consulte nossa equipe para confirmar os tamanhos e configurações disponíveis para a sua etapa da obra.",
+      "image": "/images/casa/escada-de-fibra-de-vidro.webp",
+      "imageAlt": "Escada de fibra de vidro para locação na Casa da Reforma Iguaí",
+      "keywords": [
+        "escada",
+        "fibra",
+        "altura",
+        "eletrica",
+        "acesso"
+      ],
+      "specs": [],
+      "applications": [
+        "Instalações e manutenções elétricas residenciais ou comerciais",
+        "Serviços de pintura, gesso e acabamento em paredes altas",
+        "Passagem de cabeamento, iluminação e infraestrutura aérea",
+        "Manutenção predial, limpeza de calhas e pequenos reparos"
+      ],
+      "quoteDetails": [
+        "Informe a altura aproximada do ponto de trabalho na obra",
+        "Diga por quantos dias pretende utilizar a escada",
+        "Combine se prefere retirada no local ou consulta de entrega em Santo André e região"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/escada-de-fibra-de-vidro/index.html"
+    },
+    {
+      "title": "Andaimes",
+      "handle": "andaimes",
+      "category": "acesso-e-estrutura",
+      "subtitle": "Estrutura modular para apoio seguro em serviços de alvenaria, reboco, pintura e manutenção em fachadas ou tetos.",
+      "description": "Os andaimes oferecem uma plataforma firme e elevada para a equipe trabalhar com as duas mãos livres em frentes de fachada, teto ou muro. A montagem modular permite adaptar a torre conforme a necessidade do serviço, trazendo mais agilidade e segurança em comparação ao uso contínuo de escadas. Consulte os módulos e acessórios disponíveis diretamente pelo WhatsApp.",
+      "image": "/images/casa/andaimes.webp",
+      "imageAlt": "Andaimes modulares para serviços em altura disponíveis para locação",
+      "keywords": [
+        "andaime",
+        "andaimes",
+        "fachada",
+        "pintura",
+        "reboco",
+        "altura"
+      ],
+      "specs": [],
+      "applications": [
+        "Execução de alvenaria, chapisco, emboço e reboco externo",
+        "Pintura de fachadas, muros altos e pés-direitos elevados",
+        "Instalação de forros, luminárias e revestimentos em altura",
+        "Reformas e reparos em galpões, sobrados e comércios"
+      ],
+      "quoteDetails": [
+        "Informe a altura aproximada que precisa alcançar na parede ou fachada",
+        "Avise o prazo estimado de uso dos módulos na obra",
+        "Verifique no atendimento os acessórios necessários para montagem segura"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/andaimes/index.html"
+    },
+    {
+      "title": "Escoras metálicas",
+      "handle": "escoras-metalicas",
+      "category": "acesso-e-estrutura",
+      "subtitle": "Utilizadas para escoramento provisório de lajes, vigas e formas durante concretagens e reformas estruturais.",
+      "description": "As escoras metálicas garantem sustentação provisória confiável para lajes, vigas e fôrmas durante a concretagem e o período de cura do concreto. Com regulagem prática de altura, substituem soluções improvisadas com madeira, oferecendo alinhamento uniforme e reaproveitamento limpo no canteiro. Consulte a quantidade disponível para o vão do seu projeto.",
+      "image": "/images/casa/escoras-metalicas.webp",
+      "imageAlt": "Escoras metálicas para escoramento de lajes e vigas para locação",
+      "keywords": [
+        "escora",
+        "escoras",
+        "metalica",
+        "laje",
+        "viga",
+        "escoramento"
+      ],
+      "specs": [],
+      "applications": [
+        "Escoramento de lajes pré-moldadas e maciças em concretagem",
+        "Apoio temporário de vigas e vergas durante reformas",
+        "Sustentação de fôrmas estruturais em obras residenciais e comerciais",
+        "Reforço provisório em aberturas de vãos conforme orientação técnica"
+      ],
+      "quoteDetails": [
+        "Informe a quantidade aproximada de escoras necessária para a área",
+        "Diga o pé-direito aproximado do pavimento onde serão instaladas",
+        "Confirme o período previsto até a desforma para calcular a locação"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/escoras-metalicas/index.html"
+    },
+    {
+      "title": "Guincho elétrico",
+      "handle": "guincho-eletrico",
+      "category": "acesso-e-estrutura",
+      "subtitle": "Auxilia no içamento vertical de materiais e ferramentas entre pavimentos, reduzindo esforço e tempo na obra.",
+      "description": "O guincho elétrico agiliza a movimentação vertical de baldes de massa, blocos, ferragens e insumos entre o térreo e pavimentos superiores. Ele reduz o desgaste físico da equipe e acelera o abastecimento da frente de trabalho em sobrados e pequenas edificações. Confirme com nossa equipe a disponibilidade e as orientações de instalação antes de retirar.",
+      "image": "/images/casa/guincho-eletrico.webp",
+      "imageAlt": "Guincho elétrico para içamento vertical de materiais na obra",
+      "keywords": [
+        "guincho",
+        "eletrico",
+        "icamento",
+        "elevacao",
+        "carga"
+      ],
+      "specs": [],
+      "applications": [
+        "Içamento de argamassa, areia, pedra e cimento para lajes superiores",
+        "Subida de blocos, tijolos e revestimentos em sobrados",
+        "Movimentação de ferramentas e materiais em reformas verticais",
+        "Apoio contínuo no abastecimento de equipes em andares altos"
+      ],
+      "quoteDetails": [
+        "Informe quantos pavimentos a obra possui e o tipo de material a içar",
+        "Confirme a rede elétrica disponível no local da obra",
+        "Combine o período de locação e a data prevista de início"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/guincho-eletrico/index.html"
+    },
+    {
+      "title": "Betoneira",
+      "handle": "betoneira",
+      "category": "concreto-e-mistura",
+      "subtitle": "Essencial para mistura uniforme de concreto e argamassa em fundações, contrapisos, lajes e alvenaria.",
+      "description": "A betoneira proporciona mistura homogênea de cimento, areia, pedra e água com muito mais rendimento do que o preparo manual no traço. É indispensável para manter o padrão de resistência em fundações, contrapisos, pilares e assentamento de alvenaria. Consulte no WhatsApp a disponibilidade para a data da sua concretagem.",
+      "image": "/images/casa/betoneira.webp",
+      "imageAlt": "Betoneira para mistura de concreto e argamassa disponível para locação",
+      "keywords": [
+        "betoneira",
+        "concreto",
+        "argamassa",
+        "mistura",
+        "massa"
+      ],
+      "specs": [],
+      "applications": [
+        "Preparo de concreto para sapatas, baldrames, pilares e vigas",
+        "Produção contínua de massa para contrapiso e calçadas",
+        "Mistura de argamassa para assentamento de blocos e reboco",
+        "Concretagem de pequenas lajes, rampas e pisos externos"
+      ],
+      "quoteDetails": [
+        "Informe o volume aproximado da obra ou etapa de concretagem",
+        "Avise a rede elétrica disponível no canteiro",
+        "Confirme os dias necessários e se precisa de entrega em obra"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/betoneira/index.html"
+    },
+    {
+      "title": "Vibrador de concreto",
+      "handle": "vibrador-de-concreto",
+      "category": "concreto-e-mistura",
+      "subtitle": "Empregado no adensamento do concreto recém-lançado para eliminar bolhas de ar e aumentar a resistência da peça.",
+      "description": "O vibrador de concreto é fundamental durante o lançamento do concreto em fôrmas para eliminar vazios e bolhas de ar ao redor das ferragens. Seu uso evita falhas conhecidas como bicheiras e melhora o acabamento e a durabilidade de pilares, vigas e lajes. Reserve com antecedência para coincidir com o dia da concretagem.",
+      "image": "/images/casa/vibrador-de-concreto.webp",
+      "imageAlt": "Vibrador de concreto para adensamento em lajes e pilares para locação",
+      "keywords": [
+        "vibrador",
+        "concreto",
+        "adensamento",
+        "laje",
+        "pilar"
+      ],
+      "specs": [],
+      "applications": [
+        "Adensamento de pilares e vigas com alta densidade de armadura",
+        "Vibração de lajes maciças e pré-moldadas na concretagem",
+        "Preenchimento uniforme de muros de arrimo e sapatas",
+        "Melhoria da compactação em concreto usinado ou preparado em obra"
+      ],
+      "quoteDetails": [
+        "Informe a data exata da concretagem para garantir reserva",
+        "Diga o tipo de peça estrutural (pilares, vigas ou laje)",
+        "Confirme a rede elétrica disponível no local"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/vibrador-de-concreto/index.html"
+    },
+    {
+      "title": "Argamassadeira",
+      "handle": "argamassadeira",
+      "category": "concreto-e-mistura",
+      "subtitle": "Indicada para preparo ágil e homogêneo de argamassas, rejuntes, colas e massas para assentamento.",
+      "description": "A argamassadeira facilita o preparo rápido e padronizado de argamassas colantes, massas de assentamento e misturas para revestimento. Ela evita grumos, reduz o esforço do operador e mantém a consistência ideal do material durante toda a aplicação. Consulte nossa equipe para verificar a disponibilidade para a fase de acabamento da sua reforma.",
+      "image": "/images/casa/argamassadeira.webp",
+      "imageAlt": "Argamassadeira para preparo homogêneo de argamassa disponível para locação",
+      "keywords": [
+        "argamassadeira",
+        "misturador",
+        "argamassa",
+        "reboco",
+        "massa"
+      ],
+      "specs": [],
+      "applications": [
+        "Preparo de argamassa colante para assentamento de pisos e porcelanatos",
+        "Homogeneização de massas para reboco fino e regularização",
+        "Mistura de rejuntes e impermeabilizantes cimentícios",
+        "Apoio a equipes de revestimento em reformas internas e externas"
+      ],
+      "quoteDetails": [
+        "Informe o tipo de material que será misturado na obra",
+        "Diga o prazo estimado de utilização do equipamento",
+        "Confirme a disponibilidade de energia elétrica no local"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/argamassadeira/index.html"
+    },
+    {
+      "title": "Compactador de solo",
+      "handle": "compactador-de-solo",
+      "category": "solo-e-fundacao",
+      "subtitle": "Usado para compactação de aterros, valas, pisos industriais e bases antes da execução de contrapisos ou pavimentação.",
+      "description": "O compactador de solo promove o adensamento firme do terreno em aterros, valas de tubulação e áreas que receberão contrapiso ou calçamento. Compactar corretamente a base reduz o risco de recalques, afundamentos e trincas futuras no piso pronto. Consulte no WhatsApp a disponibilidade para a etapa de preparação do seu terreno.",
+      "image": "/images/casa/compactador-de-solo.webp",
+      "imageAlt": "Compactador de solo para aterros e preparação de terreno para locação",
+      "keywords": [
+        "compactador",
+        "solo",
+        "sapo",
+        "aterro",
+        "fundacao"
+      ],
+      "specs": [],
+      "applications": [
+        "Compactação de aterros internos antes da execução do contrapiso",
+        "Fechamento e adensamento de valas hidráulicas e elétricas",
+        "Preparação de sub-base para calçadas, garagens e pátios",
+        "Nivelamento e firmeza de solo em fundações rasas e baldrames"
+      ],
+      "quoteDetails": [
+        "Informe o tamanho aproximado da área ou extensão das valas",
+        "Diga o tipo de solo ou aterro que será compactado",
+        "Avise a data prevista de início e os dias de locação"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/compactador-de-solo/index.html"
+    },
+    {
+      "title": "Perfurador de solo",
+      "handle": "perfurador-de-solo",
+      "category": "solo-e-fundacao",
+      "subtitle": "Facilita a abertura de furos no terreno para instalação de mourões, cercas, estacas e pequenos plantios.",
+      "description": "O perfurador de solo agiliza a escavação vertical de furos em terrenos para cercamentos, postes, pequenas estacas e fundações pontuais. Ele reduz drasticamente o tempo de trabalho em comparação à cavadeira manual, mantendo o diâmetro regular dos furos. Consulte a disponibilidade e as opções de broca compatíveis no atendimento.",
+      "image": "/images/casa/perfurador-de-solo.webp",
+      "imageAlt": "Perfurador de solo para abertura de furos de mourões e estacas para locação",
+      "keywords": [
+        "perfurador",
+        "solo",
+        "broca",
+        "mourao",
+        "cerca",
+        "estaca"
+      ],
+      "specs": [],
+      "applications": [
+        "Abertura de furos para instalação de mourões e cercas",
+        "Perfuração de base para pequenas estacas e pilares de muro",
+        "Fixação de postes de iluminação externa ou pergolados",
+        "Abertura de covas para paisagismo e plantio em terrenos"
+      ],
+      "quoteDetails": [
+        "Informe a quantidade aproximada de furos e a profundidade desejada",
+        "Diga se o terreno tem solo comum, argiloso ou com cascalho",
+        "Confirme os dias de uso para reservar o equipamento"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/perfurador-de-solo/index.html"
+    },
+    {
+      "title": "Martelo demolidor de 15, 20 e 30 kg",
+      "handle": "martelo-demolidor-15-20-30-kg",
+      "category": "demolicao",
+      "subtitle": "Indicado para demolições pesadas de pisos de concreto, calçadas, vigas e estruturas em reformas de maior porte.",
+      "description": "O martelo demolidor nas faixas de 15, 20 e 30 kg é indicado para quebra de concreto espesso, pisos industriais, calçadas e elementos estruturais que exigem alta energia de impacto. Escolher o peso adequado evita sobrecarga no operador e acelera a remoção do material. Fale com nossa equipe para indicar a faixa mais compatível com a sua demolição.",
+      "image": "/images/casa/martelo-demolidor-15-20-30-kg.webp",
+      "imageAlt": "Martelo demolidor de 15, 20 e 30 kg para demolição de concreto",
+      "keywords": [
+        "martelo",
+        "demolidor",
+        "15",
+        "20",
+        "30",
+        "kg",
+        "martelete",
+        "concreto"
+      ],
+      "specs": [],
+      "applications": [
+        "Demolição de pisos de concreto armado e contrapisos espessos",
+        "Quebra de calçadas, rampas, sapatas e blocos de fundação",
+        "Remoção de vigas, pilares e estruturas em reformas pesadas",
+        "Abertura de valas em pavimento rígido para passagem de redes"
+      ],
+      "quoteDetails": [
+        "Descreva o que será demolido (piso, calçada, viga ou concreto espesso)",
+        "Informe se prefere avaliação entre as faixas de 15, 20 ou 30 kg",
+        "Avise a rede elétrica do local e os dias previstos de uso"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/martelo-demolidor-15-20-30-kg/index.html"
+    },
+    {
+      "title": "Martelo rompedor de 7 a 11 kg",
+      "handle": "martelo-rompedor-7-a-11-kg",
+      "category": "demolicao",
+      "subtitle": "Ideal para abertura de canaletas, remoção de revestimentos, quebra de alvenaria e demolições médias em paredes e pisos.",
+      "description": "O martelo rompedor de 7 a 11 kg oferece equilíbrio entre potência de impacto e manuseio ágil em paredes, pisos cerâmicos e alvenaria. Por ser mais leve que os demolidores pesados, permite trabalhar na horizontal ou vertical com maior controle em reformas internas. Consulte a disponibilidade de ponteiras e talhadeiras no atendimento.",
+      "image": "/images/casa/martelo-rompedor-7-a-11-kg.webp",
+      "imageAlt": "Martelo rompedor de 7 a 11 kg para alvenaria e revestimentos para locação",
+      "keywords": [
+        "martelo",
+        "rompedor",
+        "7",
+        "11",
+        "kg",
+        "martelete",
+        "alvenaria"
+      ],
+      "specs": [],
+      "applications": [
+        "Remoção de pisos cerâmicos, azulejos e revestimentos antigos",
+        "Abertura de rasgos e canaletas em paredes de alvenaria",
+        "Demolição de paredes não estruturais e muretas",
+        "Quebra de contrapisos leves e regularizações em reformas"
+      ],
+      "quoteDetails": [
+        "Informe se o serviço será em parede, revestimento ou piso leve",
+        "Diga os dias aproximados de utilização na reforma",
+        "Confirme a tensão elétrica disponível no imóvel"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/martelo-rompedor-7-a-11-kg/index.html"
+    },
+    {
+      "title": "Serra mármore",
+      "handle": "serra-marmore",
+      "category": "corte-e-acabamento",
+      "subtitle": "Ferramenta compacta para cortes retos em pisos cerâmicos, porcelanatos, mármores, granitos e telhas.",
+      "description": "A serra mármore é uma ferramenta versátil e compacta para cortes de acabamento em pedras, pisos, azulejos e telhas diretamente no canteiro. Facilita ajustes em recortes de soleiras, bancadas e cantos de parede com rapidez e boa visibilidade da linha de corte. Consulte no WhatsApp os detalhes para locação e discos recomendados para o seu material.",
+      "image": "/images/casa/serra-marmore.webp",
+      "imageAlt": "Serra mármore para cortes em pisos cerâmicos, pedras e telhas para locação",
+      "keywords": [
+        "serra",
+        "marmore",
+        "makita",
+        "piso",
+        "ceramica",
+        "corte"
+      ],
+      "specs": [],
+      "applications": [
+        "Recortes em pisos cerâmicos, porcelanatos e rodapés",
+        "Ajustes em soleiras, pingadeiras de mármore e granito",
+        "Corte de telhas cerâmicas e peças de acabamento",
+        "Pequenos cortes retos em alvenaria e blocos"
+      ],
+      "quoteDetails": [
+        "Informe o tipo de material que precisa cortar (piso, pedra ou telha)",
+        "Diga por quantos dias pretende alugar a ferramenta",
+        "Confirme a rede elétrica e a necessidade de disco compatível"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/serra-marmore/index.html"
+    },
+    {
+      "title": "Cortador de piso",
+      "handle": "cortador-de-piso",
+      "category": "corte-e-acabamento",
+      "subtitle": "Permite cortes precisos e sem poeira em pisos cerâmicos e porcelanatos durante o assentamento.",
+      "description": "O cortador de piso manual garante cortes retos e limpos em placas cerâmicas e porcelanatos sem gerar poeira ou ruído excessivo em ambientes internos. É essencial para acelerar o assentamento mantendo o alinhamento das juntas e evitando desperdício de peças. Consulte os comprimentos de corte disponíveis antes de retirar.",
+      "image": "/images/casa/cortador-de-piso.webp",
+      "imageAlt": "Cortador de piso cerâmico e porcelanato disponível para locação",
+      "keywords": [
+        "cortador",
+        "piso",
+        "porcelanato",
+        "ceramica",
+        "acabamento"
+      ],
+      "specs": [],
+      "applications": [
+        "Assentamento de pisos cerâmicos em salas, quartos e cozinhas",
+        "Corte reto de porcelanatos em reformas residenciais e comerciais",
+        "Execução de rodapés e faixas de acabamento sem poeira",
+        "Serviços rápidos em imóveis ocupados onde há restrição de barulho"
+      ],
+      "quoteDetails": [
+        "Informe a medida máxima das placas de piso ou porcelanato",
+        "Diga o prazo estimado para concluir o assentamento",
+        "Confirme disponibilidade para retirada ou entrega"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/cortador-de-piso/index.html"
+    },
+    {
+      "title": "Cortadora de parede",
+      "handle": "cortadora-de-parede",
+      "category": "corte-e-acabamento",
+      "subtitle": "Indicada para abrir rasgos e canaletas paralelas em alvenaria para passagem de tubulações elétricas e hidráulicas.",
+      "description": "A cortadora de parede realiza cortes paralelos e uniformes em alvenaria e reboco para passagem de eletrodutos e tubulações hidráulicas. Ela substitui a quebra irregular com talhadeira, reduzindo o desperdício de argamassa no fechamento posterior e mantendo a parede mais íntegra. Consulte nossa equipe para verificar a disponibilidade.",
+      "image": "/images/casa/cortadora-de-parede.webp",
+      "imageAlt": "Cortadora de parede para abertura de canaletas em alvenaria para locação",
+      "keywords": [
+        "cortadora",
+        "parede",
+        "rasgo",
+        "canaleta",
+        "eletrica",
+        "hidraulica"
+      ],
+      "specs": [],
+      "applications": [
+        "Abertura de canaletas para conduítes e fiação elétrica",
+        "Rasgos em alvenaria para tubulações de água fria e quente",
+        "Instalação de pontos de ar-condicionado e infraestrutura embutida",
+        "Reformas internas que exigem cortes limpos e alinhados"
+      ],
+      "quoteDetails": [
+        "Informe o tipo de parede (tijolo, bloco cerâmico ou bloco de concreto)",
+        "Avise a extensão aproximada das canaletas e dias de uso",
+        "Verifique a compatibilidade de aspiração de pó e rede elétrica"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/cortadora-de-parede/index.html"
+    },
+    {
+      "title": "Serra clip",
+      "handle": "serra-clip",
+      "category": "corte-e-acabamento",
+      "subtitle": "Equipamento voltado para cortes em pisos, concreto ou alvenaria conforme demanda da frente de obra.",
+      "description": "A serra clip atende frentes de obra que demandam cortes contínuos e precisos em pisos, juntas ou peças de construção. Sua estrutura firme auxilia o operador a manter alinhamento regular durante o trabalho, otimizando o rendimento em reformas e ampliações. Consulte no WhatsApp as aplicações compatíveis e a disponibilidade atual.",
+      "image": "/images/casa/serra-clip.webp",
+      "imageAlt": "Serra clip para corte de pisos, concreto e alvenaria para locação",
+      "keywords": [
+        "serra",
+        "clip",
+        "corte",
+        "piso",
+        "obra"
+      ],
+      "specs": [],
+      "applications": [
+        "Cortes retos e juntas em pisos cimentícios e áreas externas",
+        "Ajustes dimensionais em blocos, peças pré-moldadas e alvenaria",
+        "Cortes de delimitação antes de demolições localizadas em piso",
+        "Apoio em frentes de reforma com alto volume de cortes"
+      ],
+      "quoteDetails": [
+        "Informe o material que será cortado na obra",
+        "Diga o período estimado de locação",
+        "Confirme no atendimento a disponibilidade e orientações de uso"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/serra-clip/index.html"
+    },
+    {
+      "title": "Politriz",
+      "handle": "politriz",
+      "category": "corte-e-acabamento",
+      "subtitle": "Utilizada para polimento, lixamento leve e acabamento fino em superfícies compatíveis durante a finalização da reforma.",
+      "description": "A politriz é indicada na etapa final da reforma para polimento, brilho e nivelamento leve de superfícies compatíveis com os acessórios adequados. Ela entrega acabamento uniforme com menor esforço manual em bancadas, pedras ou superfícies preparadas. Confirme com nossa equipe os acessórios e a disponibilidade para o seu cronograma.",
+      "image": "/images/casa/politriz.webp",
+      "imageAlt": "Politriz para polimento e acabamento fino de superfícies para locação",
+      "keywords": [
+        "politriz",
+        "polimento",
+        "acabamento",
+        "superficie",
+        "lixamento"
+      ],
+      "specs": [],
+      "applications": [
+        "Polimento de bordas e acabamentos em pedras e bancadas",
+        "Lixamento fino e remoção de marcas leves em superfícies compatíveis",
+        "Acabamento final em serviços de marcenaria, serralheria ou reforma",
+        "Manutenção estética e renovação de brilho em superfícies tratadas"
+      ],
+      "quoteDetails": [
+        "Informe em qual superfície ou material a politriz será usada",
+        "Diga por quantos dias precisa do equipamento",
+        "Confirme a rede elétrica e os discos ou boinas necessários"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/politriz/index.html"
+    },
+    {
+      "title": "Lavadora de alta pressão",
+      "handle": "lavadora-de-alta-pressao",
+      "category": "limpeza-e-manutencao",
+      "subtitle": "Indicada para lavagem de quintais, calçadas, fachadas, telhados e remoção de sujeira pesada pós-obra.",
+      "description": "A lavadora de alta pressão remove sujeira incrustada, poeira de obra, limo e resíduos de tinta ou massa em áreas externas com grande economia de água e tempo. É muito procurada tanto na entrega final da reforma quanto na manutenção periódica de calçadas, muros e telhados. Consulte a disponibilidade para o dia da sua limpeza.",
+      "image": "/images/casa/lavadora-de-alta-pressao.webp",
+      "imageAlt": "Lavadora de alta pressão para limpeza pesada pós-obra para locação",
+      "keywords": [
+        "lavadora",
+        "alta",
+        "pressao",
+        "limpeza",
+        "pos-obra",
+        "wap"
+      ],
+      "specs": [],
+      "applications": [
+        "Lavagem pesada pós-obra em quintais, garagens e áreas externas",
+        "Limpeza de calçadas, muros, portões e fachadas com limo",
+        "Lavagem de telhados e áreas de serviço antes de pintura ou impermeabilização",
+        "Remoção de poeira acumulada em pisos rústicos e pedras"
+      ],
+      "quoteDetails": [
+        "Informe o tipo de área ou superfície que será lavada",
+        "Confirme ponto de água e energia elétrica próximos ao local",
+        "Avise a data desejada e quantos dias pretende utilizar"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/lavadora-de-alta-pressao/index.html"
+    },
+    {
+      "title": "Aspirador de pó e água",
+      "handle": "aspirador-de-po-e-agua",
+      "category": "limpeza-e-manutencao",
+      "subtitle": "Auxilia na limpeza de resíduos secos e líquidos em obras, reformas, garagens e áreas comerciais.",
+      "description": "O aspirador de pó e água profissional é projetado para recolher poeira fina de lixamento, pequenos resíduos secos e líquidos acumulados durante a reforma. Ele agiliza a limpeza interna antes da instalação de móveis e pode ser usado em conjunto com ferramentas de corte. Consulte nossa equipe para reservar para a etapa pós-obra.",
+      "image": "/images/casa/aspirador-de-po-e-agua.webp",
+      "imageAlt": "Aspirador de pó e água profissional para limpeza de obras para locação",
+      "keywords": [
+        "aspirador",
+        "po",
+        "agua",
+        "limpeza",
+        "residuos"
+      ],
+      "specs": [],
+      "applications": [
+        "Aspiração de poeira fina após lixamento de massa e gesso",
+        "Limpeza pós-obra de pisos, rodapés, trilhos de esquadrias e cantos",
+        "Recolhimento de água acumulada após lavagens internas",
+        "Manutenção de limpeza em oficinas, garagens e áreas comerciais"
+      ],
+      "quoteDetails": [
+        "Informe se o uso será para pó fino de obra, resíduos secos ou líquidos",
+        "Diga por quantos dias pretende alugar o equipamento",
+        "Confirme a rede elétrica do imóvel e a disponibilidade para retirada"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/aspirador-de-po-e-agua/index.html"
+    },
+    {
+      "title": "Desentupidora",
+      "handle": "desentupidora",
+      "category": "limpeza-e-manutencao",
+      "subtitle": "Equipamento específico para desobstrução de tubulações, ralos e redes de esgoto em imóveis residenciais e comerciais.",
+      "description": "A desentupidora facilita a desobstrução mecânica de encanamentos, ralos e caixas de passagem sem a necessidade imediata de quebrar pisos ou paredes. É uma solução prática para resolver entupimentos em reformas ou manutenções prediais com agilidade. Converse com nossa equipe no WhatsApp para confirmar o tipo de tubulação e a disponibilidade.",
+      "image": "/images/casa/desentupidora.webp",
+      "imageAlt": "Desentupidora para tubulações, ralos e redes de esgoto para locação",
+      "keywords": [
+        "desentupidora",
+        "tubulacao",
+        "esgoto",
+        "ralo",
+        "manutencao"
+      ],
+      "specs": [],
+      "applications": [
+        "Desobstrução de ralos de banheiro, quintal e área de serviço",
+        "Limpeza de ramais de esgoto e caixas de gordura em imóveis",
+        "Desentupimento de tubulações em reformas antes da entrega da obra",
+        "Manutenção corretiva em redes hidráulicas residenciais e comerciais"
+      ],
+      "quoteDetails": [
+        "Informe qual ponto está obstruído (ralo, pia, ramal ou rede de esgoto)",
+        "Diga o diâmetro aproximado ou acesso disponível na tubulação",
+        "Confirme a disponibilidade imediata pelo WhatsApp"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/desentupidora/index.html"
+    },
+    {
+      "title": "Roçadeira a gasolina",
+      "handle": "rocadeira-a-gasolina",
+      "category": "limpeza-e-manutencao",
+      "subtitle": "Indicada para corte de mato alto, limpeza de terrenos, chácaras, lotes e áreas externas antes ou depois da obra.",
+      "description": "A roçadeira a gasolina oferece autonomia total de deslocamento em terrenos sem ponto de energia elétrica, sendo ideal para limpeza de lotes, quintais amplos e áreas com vegetação alta. Facilita a preparação do terreno antes da marcação da obra ou a manutenção externa após a reforma. Consulte a disponibilidade e os itens de corte no atendimento.",
+      "image": "/images/casa/rocadeira-a-gasolina.webp",
+      "imageAlt": "Roçadeira a gasolina para corte de mato e limpeza de terrenos para locação",
+      "keywords": [
+        "rocadeira",
+        "gasolina",
+        "mato",
+        "terreno",
+        "limpeza",
+        "jardim"
+      ],
+      "specs": [],
+      "applications": [
+        "Roçagem de mato alto em lotes e terrenos antes de iniciar a obra",
+        "Limpeza periódica de quintais, taludes e áreas verdes externas",
+        "Manutenção de chácaras, pátios e arredores de galpões",
+        "Corte de vegetação invasora próximo a muros e calçadas"
+      ],
+      "quoteDetails": [
+        "Informe o tamanho aproximado do terreno e a altura do mato",
+        "Diga por quantos dias pretende utilizar a roçadeira",
+        "Verifique no atendimento as orientações de uso e combustível adequado"
+      ],
+      "sourceUrl": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/rocadeira-a-gasolina/index.html"
+    }
+  ]
+}

@@ -14,9 +14,10 @@ const S3_PATHNAME = process.env.MEDUSA_CLOUD_S3_PATHNAME
 const nextConfig = {
   reactStrictMode: true,
   agentRules: false,
+  devIndicators: false,
   async headers() {
     return [
-      ...(process.env.OC_SHOWROOM === "1" ? [] : [{
+      ...((process.env.OC_SHOWROOM === "1" || process.env.NEXT_PUBLIC_STORE_MODE !== "retail") ? [] : [{
         source: "/:path*",
         headers: [{ key: "Link", value: '</.well-known/ucp>; rel="ucp"' }],
       }]),

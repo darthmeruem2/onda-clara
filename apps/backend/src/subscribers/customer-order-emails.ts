@@ -45,7 +45,7 @@ export default async function sendOrderEmail({
   })
   if (!order?.email) return
 
-  const storeName = process.env.STORE_NAME || "Onda Clara"
+  const storeName = process.env.STORE_NAME || "Casa da Reforma Iguaí"
   const displayId = String(order.display_id ?? "")
   const accountUrl = new URL("/br/account/orders", process.env.STOREFRONT_PUBLIC_URL || "http://localhost:8000").href
   const trackingNumbers = shipment?.labels

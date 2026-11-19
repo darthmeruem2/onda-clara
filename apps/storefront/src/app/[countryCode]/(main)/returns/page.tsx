@@ -1,4 +1,5 @@
-import { policyCopy } from "@lib/policy-copy"
+import { brand } from "@lib/brand"
+import { policyCopy, rentalPolicyCopy } from "@lib/policy-copy"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { Metadata } from "next"
 
@@ -9,13 +10,22 @@ export const dynamic = "force-static"
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: "Trocas e devoluções",
-  description: "Como solicitar uma troca ou devolução.",
+  title: brand.rentalCatalog ? "Devolução dos equipamentos" : "Trocas e devoluções",
+  description: brand.rentalCatalog ? "Como combinar a devolução de um equipamento alugado." : "Como solicitar uma troca ou devolução.",
 }
 
 export default async function ReturnsPage(props: {
   params: Promise<{ countryCode: string }>
 }) {
+  if (brand.rentalCatalog) {
+    return (
+      <PolicyPage title="Devolução dos equipamentos">
+        {rentalPolicyCopy.returns.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        <LocalizedClientLink href="/contact" className="underline underline-offset-4">Falar com o atendimento</LocalizedClientLink>
+      </PolicyPage>
+    )
+  }
+
   const { countryCode } = await props.params
   const [{ current }, paragraphs] = await Promise.all([
     getStorePolicies(countryCode),

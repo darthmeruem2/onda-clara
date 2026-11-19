@@ -1,3 +1,4 @@
+import { brand } from "@lib/brand"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { listProducts } from "@lib/data/products"
@@ -43,13 +44,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const description = product.description || product.title
 
   return {
-    title: `${product.title} | ${STORE_NAME}`,
+    title: brand.rentalCatalog ? `${product.title} para locação` : product.title,
     description,
     alternates: {
       canonical: productUrl,
       languages: Object.fromEntries(
         listCountryCodes(regions).map((code) => [
-          `en-${code.toUpperCase()}`,
+          code === "br" ? "pt-BR" : `en-${code.toUpperCase()}`,
           `${origin}/${code}${path}`,
         ])
       ),
@@ -59,6 +60,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: `${product.title} | ${STORE_NAME}`,
       description,
       url: productUrl,
+      type: brand.rentalCatalog ? "website" : undefined,
+      locale: "pt_BR",
       images: product.thumbnail ? [product.thumbnail] : [],
     },
   }
@@ -121,16 +124,22 @@ export default async function ProductPage(props: Props) {
   }
 
   const origin = await getSiteOrigin()
-  const structuredData = buildProductStructuredData({
-    product: pricedProduct,
-    region,
-    countryCode: params.countryCode,
-    productUrl: `${origin}/${params.countryCode}/products/${pricedProduct.handle}`,
-  })
+  const productUrl = `${origin}/${params.countryCode}/products/${pricedProduct.handle}`
+  const structuredData = brand.rentalCatalog
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: `Locação de ${pricedProduct.title}`,
+        description: pricedProduct.description,
+        url: productUrl,
+        provider: { "@type": "Organization", name: STORE_NAME, url: origin },
+        ...(pricedProduct.thumbnail ? { image: new URL(pricedProduct.thumbnail, origin).toString() } : {}),
+      }
+    : buildProductStructuredData({ product: pricedProduct, region, countryCode: params.countryCode, productUrl })
 
   return (
     <>
-      <ProductMetaTags product={pricedProduct} region={region} />
+      {!brand.rentalCatalog && <ProductMetaTags product={pricedProduct} region={region} />}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(structuredData) }}

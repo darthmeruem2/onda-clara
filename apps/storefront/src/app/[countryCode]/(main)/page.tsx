@@ -7,7 +7,7 @@ import { getRegion, listRegions } from "@lib/data/regions"
 import { toJsonLd } from "@lib/util/product-structured-data"
 import { getSiteOrigin } from "@lib/util/site"
 import { buildRegionsReturnPolicies } from "@lib/util/store-policies"
-import CampaignEditorial from "@modules/home/components/campaign-editorial"
+import RentalProcess from "@modules/home/components/rental-process"
 import FeaturedCategories from "@modules/home/components/featured-categories"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
@@ -44,7 +44,7 @@ export default async function Home(props: {
   params: Promise<{ countryCode: string }>
 }) {
   const { countryCode } = await props.params
-  const [region, { collections }, categories, origin, regions, editorialResult] =
+  const [region, { collections }, categories, origin, regions, featuredResult] =
     await Promise.all([
       getRegion(countryCode),
       listCollections({ fields: "id,handle,title" }),
@@ -54,7 +54,7 @@ export default async function Home(props: {
       listProducts({
         countryCode,
         queryParams: {
-          handle: brand.campaign.editorial.productHandle,
+          handle: brand.campaign.productHandle,
           fields: "id,handle",
           limit: 1,
         },
@@ -62,17 +62,18 @@ export default async function Home(props: {
     ])
 
   const collection = collections.find(({ handle }) => handle === brand.campaign.collectionHandle)
-  const catalogHref = collection ? `/collections/${collection.handle}` : "/store"
   const primaryCategories = categories.filter(({ parent_category_id }) => !parent_category_id).slice(0, 8)
-  const [editorial] = editorialResult.response.products
+  const [featuredProduct] = featuredResult.response.products
   const homeUrl = `${origin}/${countryCode}`
-  const returnPolicies = buildRegionsReturnPolicies(regions)
+  const returnPolicies = brand.rentalCatalog ? [] : buildRegionsReturnPolicies(regions)
   const structuredData = [
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: brand.name,
       url: origin,
+      logo: new URL(brand.logo, origin).toString(),
+      ...(brand.instagram ? { sameAs: [brand.instagram] } : {}),
       ...(returnPolicies.length ? { hasMerchantReturnPolicy: returnPolicies } : {}),
     },
     {
@@ -90,10 +91,10 @@ export default async function Home(props: {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(structuredData) }}
       />
-      <Hero href={catalogHref} />
-      {region && <FeaturedProducts collection={collection} region={region} />}
+      <Hero hasFeaturedProduct={Boolean(featuredProduct)} />
       <FeaturedCategories categories={primaryCategories} />
-      {editorial && <CampaignEditorial href={`/products/${editorial.handle}`} />}
+      {region && <FeaturedProducts collection={collection} region={region} />}
+      <RentalProcess />
     </div>
   )
 }

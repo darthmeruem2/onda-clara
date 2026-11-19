@@ -1,3 +1,5 @@
+import { brand } from "@lib/brand"
+import RentalCatalog, { RentalSearch } from "@modules/store/templates/rental-catalog"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
@@ -7,18 +9,23 @@ import PaginatedProducts from "@modules/store/templates/paginated-products"
 import StoreTemplate from "@modules/store/templates"
 
 export const metadata: Metadata = {
-  title: "Todas as peças",
-  description: "Explore a coleção de linho e alfaiataria.",
+  title: brand.rentalCatalog ? "Equipamentos para locação" : "Catálogo",
+  description: brand.description,
 }
 
 export default async function StorePage(props: {
   params: Promise<{ countryCode: string }>
+  searchParams: Promise<RentalSearch>
 }) {
   const { countryCode } = await props.params
   const region = await getRegion(countryCode)
 
   if (!region) {
     notFound()
+  }
+
+  if (brand.rentalCatalog) {
+    return <RentalCatalog countryCode={countryCode} region={region} search={await props.searchParams} />
   }
 
   if (showroom) {

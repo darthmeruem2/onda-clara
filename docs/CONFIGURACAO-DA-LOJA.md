@@ -1,17 +1,20 @@
-# Configuração da loja
+# Configuração da Casa da Reforma Iguaí
 
-## Identidade e catálogo
+## Catálogo e atendimento
 
-A identidade da Onda Clara é demonstrativa. Use as variáveis em `apps/storefront/.env.template` para substituir o nome, o logotipo, o WhatsApp, o e-mail e o Instagram. A paleta e as fontes estão em `apps/storefront/src/styles/brand.css`. Edite a campanha em `apps/storefront/src/lib/brand.ts` e substitua as imagens em `apps/storefront/public/images`. Configure `NEXT_PUBLIC_BASE_URL` com o domínio final.
+A vitrine usa a logo, as cores e as informações do [site da Casa da Reforma Iguaí](https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/). O catálogo inclui 20 equipamentos em seis categorias. A descrição, as aplicações e as informações úteis para o orçamento estão nas páginas de cada item.
 
-No Medusa Admin, a seção Produtos permite editar fotos, descrições, preços, variações e estoque, além de organizar coleções e categorias. Use Pedidos para confirmar expedições e cadastrar rastreio e Promoções para configurar descontos. A chave usada na Vercel deve estar ligada ao canal de vendas da loja.
+O modo `NEXT_PUBLIC_STORE_MODE=rental` direciona as consultas ao WhatsApp publicado pelo cliente. O link de cada equipamento abre uma mensagem com o nome do item preenchido. Preços, disponibilidade, retirada e entrega são combinados no atendimento. Mude os contatos pelo arquivo de ambiente ou pelas variáveis do projeto na Vercel.
 
-## Políticas e atendimento
+- **Identidade e textos** em `apps/storefront/src/lib/brand.ts` e `apps/storefront/src/styles/brand.css`.
+- **Logo e fotos** em `apps/storefront/public/images/casa/`. A logo PNG original está junto da versão WebP usada na página.
+- **Dados usados na importação** em `apps/backend/src/data/casa-reforma-catalog.json`. Use o [guia de implantação](implantacao.md) para carregar os equipamentos no Medusa.
+- **Edição do catálogo** pelo menu **Produtos** do Medusa Admin. Em **Categorias** e **Coleções**, é possível reorganizar os equipamentos.
 
-No painel Medusa, em **Configurações → Regiões → Brasil → Metadados**, preencha `privacy_copy`, `terms_copy` e `returns_copy` para publicar os textos da loja. Use uma linha em branco entre parágrafos. Os textos demonstrativos ficam em `apps/storefront/src/lib/policy-copy.ts`. Confira razão social, CNPJ, canais de contato, prazos e conteúdo com o lojista. As páginas de entrega e devolução consultam os dados da região Brasil pelo Medusa. Mantenha esses dados alinhados com as opções de frete e as regras vigentes da loja.
+## Publicação na Vercel
 
-## Vercel
+A vitrine publicada lê uma exportação dos produtos do Medusa. Depois de editar o catálogo no painel, execute `node --env-file=apps/storefront/.env.local scripts/export-showroom.mjs` na raiz e publique a exportação atualizada. O script inclui os equipamentos marcados como `quote_only` nos metadados e usa apenas informações públicas do catálogo.
 
-Importe o repositório como um projeto Next.js e defina o diretório raiz como `apps/storefront`, com acesso aos arquivos da raiz do monorepo. Use Node.js 24. Para operar com o Medusa, defina `NEXT_PUBLIC_MEDUSA_BACKEND_URL`, `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY`, `NEXT_PUBLIC_BASE_URL` e `NEXT_PUBLIC_DEFAULT_REGION=br` na Vercel. Configure a origem do frontend no backend.
+Para que as edições no painel apareçam diretamente na vitrine, hospede a API do Medusa e configure `NEXT_PUBLIC_MEDUSA_BACKEND_URL`, `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY`, `NEXT_PUBLIC_BASE_URL` e `NEXT_PUBLIC_DEFAULT_REGION=br` na Vercel. Remova `OC_SHOWROOM` e mantenha `NEXT_PUBLIC_STORE_MODE=rental`.
 
-A vitrine de apresentação usa `OC_SHOWROOM=1` e o catálogo fictício exportado do Medusa. Para exportar de novo, execute `node --env-file=apps/storefront/.env.local scripts/export-showroom.mjs` na raiz. Use este modo exclusivamente com um catálogo fictício sem dados de clientes. Para a loja operacional, remova `OC_SHOWROOM`.
+No painel Medusa, use **Configurações → Regiões → Brasil → Metadados** para personalizar `privacy_copy`, `terms_copy` e `returns_copy`. Use uma linha em branco entre parágrafos e confirme os textos com o lojista.

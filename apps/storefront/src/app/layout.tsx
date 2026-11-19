@@ -17,8 +17,8 @@ export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" data-mode="light">
       <head>
-        {!showroom && <link rel="ucp" href="/.well-known/ucp" />}
-        <link rel="preload" href="/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {!showroom && !brand.rentalCatalog && <link rel="ucp" href="/.well-known/ucp" />}
+        <link rel="preload" href="/fonts/barlow-800.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>
         <div className="relative">{props.children}</div>

@@ -1,3 +1,5 @@
+import { brand } from "@lib/brand"
+import RentalCatalog from "@modules/store/templates/rental-catalog"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
@@ -31,6 +33,10 @@ export default async function SearchPage(props: Props) {
   const region = await getRegion(countryCode)
   if (!region) {
     notFound()
+  }
+
+  if (brand.rentalCatalog) {
+    return <RentalCatalog countryCode={countryCode} region={region} search={{ q: query }} title="Buscar equipamentos" />
   }
 
   const { response } = query
