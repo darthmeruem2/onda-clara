@@ -1,0 +1,78 @@
+@font-face {
+  font-family: Barlow;
+  src: url("/fonts/barlow-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url("/fonts/barlow-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url("/fonts/barlow-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url("/fonts/barlow-800.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  --brand-ink: #09264f;
+  --brand-paper: #f7f9fd;
+  --brand-editorial: #fcfbf8;
+  --brand-editorial-border: #d9d8cf;
+  --brand-action: #075bc3;
+  --brand-accent: #f2c500;
+  --brand-muted: #53647a;
+  --brand-sand: #eef3fc;
+  --brand-tide: #dce7f6;
+  --brand-border: #c6d5e9;
+  --brand-display: Barlow, "Arial Narrow", sans-serif;
+  --brand-body: Barlow, Arial, sans-serif;
+  --oc-ink: var(--brand-ink);
+  --oc-paper: var(--brand-paper);
+  --oc-olive: var(--brand-action);
+  --oc-display-font: var(--brand-display);
+}
+
+body {
+  font-family: var(--brand-body);
+}
+
+.oc-skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.oc-skip-link:focus {
+  position: fixed;
+  z-index: 60;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+  outline: 2px solid var(--brand-action);
+}
+
+#conteudo-principal {
+  scroll-margin-top: 6.25rem;
+}

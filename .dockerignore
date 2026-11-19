@@ -1,0 +1,11 @@
+.git
+.agents
+**/node_modules
+**/.env
+**/.env.*
+**/.next
+**/.medusa
+**/.turbo
+**/uploads
+apps/backend/static
+apps/storefront

@@ -1,0 +1,3665 @@
+{
+  "regions": [
+    {
+      "id": "reg_01M7SP61TY2JQBVFKG0NTY8NM8",
+      "name": "Brasil",
+      "currency_code": "brl",
+      "created_at": "2026-11-19T10:38:35.874Z",
+      "updated_at": "2026-11-19T10:38:35.874Z",
+      "deleted_at": null,
+      "metadata": {
+        "free_returns": true,
+        "shipping_rate": 24.9,
+        "transit_days_max": 8,
+        "transit_days_min": 4,
+        "handling_days_max": 2,
+        "handling_days_min": 1,
+        "return_window_days": 7
+      },
+      "countries": [
+        {
+          "iso_2": "br",
+          "iso_3": "bra",
+          "num_code": "076",
+          "name": "BRAZIL",
+          "display_name": "Brazil",
+          "region_id": "reg_01M7SP61TY2JQBVFKG0NTY8NM8",
+          "metadata": null,
+          "created_at": "2026-11-19T10:38:31.790Z",
+          "updated_at": "2026-11-19T10:38:35.875Z",
+          "deleted_at": null
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+      "name": "Acesso e estrutura",
+      "description": "Escadas, andaimes, escoras e guincho para trabalho em altura e escoramento.",
+      "handle": "acesso-e-estrutura",
+      "rank": 4,
+      "external_id": null,
+      "parent_category_id": null,
+      "created_at": "2026-11-19T13:19:08.995Z",
+      "updated_at": "2026-11-19T13:19:08.995Z",
+      "metadata": null,
+      "parent_category": null,
+      "category_children": []
+    },
+    {
+      "id": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+      "name": "Corte e acabamento",
+      "description": "Serras, cortadores de piso e parede e politriz para revestimentos e canaletas.",
+      "handle": "corte-e-acabamento",
+      "rank": 8,
+      "external_id": null,
+      "parent_category_id": null,
+      "created_at": "2026-11-19T13:19:08.996Z",
+      "updated_at": "2026-11-19T13:19:08.996Z",
+      "metadata": null,
+      "parent_category": null,
+      "category_children": []
+    },
+    {
+      "id": "pcat_01M7SZC163JBNDV87MAY3HZRMR",
+      "name": "Solo e fundação",
+      "description": "Compactador e perfurador de solo para aterros, estacas e preparação de base.",
+      "handle": "solo-e-fundacao",
+      "rank": 6,
+      "external_id": null,
+      "parent_category_id": null,
+      "created_at": "2026-11-19T13:19:08.996Z",
+      "updated_at": "2026-11-19T13:19:08.996Z",
+      "metadata": null,
+      "parent_category": null,
+      "category_children": []
+    },
+    {
+      "id": "pcat_01M7SZC163MB72J4HRHWY9THQ7",
+      "name": "Demolição",
+      "description": "Martelos demolidores e rompedores para quebra de pisos, concreto e alvenaria.",
+      "handle": "demolicao",
+      "rank": 7,
+      "external_id": null,
+      "parent_category_id": null,
+      "created_at": "2026-11-19T13:19:08.996Z",
+      "updated_at": "2026-11-19T13:19:08.996Z",
+      "metadata": null,
+      "parent_category": null,
+      "category_children": []
+    },
+    {
+      "id": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+      "name": "Limpeza e manutenção",
+      "description": "Lavadora, aspirador, desentupidora e roçadeira para pós-obra e áreas externas.",
+      "handle": "limpeza-e-manutencao",
+      "rank": 9,
+      "external_id": null,
+      "parent_category_id": null,
+      "created_at": "2026-11-19T13:19:08.996Z",
+      "updated_at": "2026-11-19T13:19:08.996Z",
+      "metadata": null,
+      "parent_category": null,
+      "category_children": []
+    },
+    {
+      "id": "pcat_01M7SZC163RQH3T2SNC80CDDW7",
+      "name": "Concreto e mistura",
+      "description": "Betoneira, vibrador de concreto e argamassadeira para preparo e adensamento.",
+      "handle": "concreto-e-mistura",
+      "rank": 5,
+      "external_id": null,
+      "parent_category_id": null,
+      "created_at": "2026-11-19T13:19:08.996Z",
+      "updated_at": "2026-11-19T13:19:08.996Z",
+      "metadata": null,
+      "parent_category": null,
+      "category_children": []
+    }
+  ],
+  "collections": [
+    {
+      "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "title": "Equipamentos para locação",
+      "handle": "equipamentos-para-locacao",
+      "external_id": null,
+      "created_at": "2026-11-19T13:19:08.969Z",
+      "updated_at": "2026-11-19T13:19:08.969Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_01M7SZC17217JSYXQBWR3X7GKK",
+      "title": "Serra mármore",
+      "subtitle": "Ferramenta compacta para cortes retos em pisos cerâmicos, porcelanatos, mármores, granitos e telhas.",
+      "description": "A serra mármore é uma ferramenta versátil e compacta para cortes de acabamento em pedras, pisos, azulejos e telhas diretamente no canteiro. Facilita ajustes em recortes de soleiras, bancadas e cantos de parede com rapidez e boa visibilidade da linha de corte. Consulte no WhatsApp os detalhes para locação e discos recomendados para o seu material.",
+      "handle": "serra-marmore",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/serra-marmore.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "serra",
+          "marmore",
+          "makita",
+          "piso",
+          "ceramica",
+          "corte"
+        ],
+        "image_alt": "Serra mármore para cortes em pisos cerâmicos, pedras e telhas para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/serra-marmore/index.html",
+        "applications": [
+          "Recortes em pisos cerâmicos, porcelanatos e rodapés",
+          "Ajustes em soleiras, pingadeiras de mármore e granito",
+          "Corte de telhas cerâmicas e peças de acabamento",
+          "Pequenos cortes retos em alvenaria e blocos"
+        ],
+        "quote_details": [
+          "Informe o tipo de material que precisa cortar (piso, pedra ou telha)",
+          "Diga por quantos dias pretende alugar a ferramenta",
+          "Confirme a rede elétrica e a necessidade de disco compatível"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CTENBK4N227Y3G7NBC",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC17217JSYXQBWR3X7GKK",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17AK5PV1997E76CWYYB",
+              "url": "/images/casa/serra-marmore.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC17217JSYXQBWR3X7GKK",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17G1J76MT7JA3KJ608K",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173EQ34C4Z5JJZP03WJ",
+              "option": {
+                "id": "opt_01M7SZC173EQ34C4Z5JJZP03WJ",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173EQ34C4Z5JJZP03WJ",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17G1J76MT7JA3KJ608K",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173EQ34C4Z5JJZP03WJ",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17AK5PV1997E76CWYYB",
+          "url": "/images/casa/serra-marmore.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC17217JSYXQBWR3X7GKK",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "name": "Corte e acabamento",
+          "description": "Serras, cortadores de piso e parede e politriz para revestimentos e canaletas.",
+          "handle": "corte-e-acabamento",
+          "mpath": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 8,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1721MHZX8PBH8CSP06P",
+      "title": "Lavadora de alta pressão",
+      "subtitle": "Indicada para lavagem de quintais, calçadas, fachadas, telhados e remoção de sujeira pesada pós-obra.",
+      "description": "A lavadora de alta pressão remove sujeira incrustada, poeira de obra, limo e resíduos de tinta ou massa em áreas externas com grande economia de água e tempo. É muito procurada tanto na entrega final da reforma quanto na manutenção periódica de calçadas, muros e telhados. Consulte a disponibilidade para o dia da sua limpeza.",
+      "handle": "lavadora-de-alta-pressao",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/lavadora-de-alta-pressao.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "lavadora",
+          "alta",
+          "pressao",
+          "limpeza",
+          "pos-obra",
+          "wap"
+        ],
+        "image_alt": "Lavadora de alta pressão para limpeza pesada pós-obra para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/lavadora-de-alta-pressao/index.html",
+        "applications": [
+          "Lavagem pesada pós-obra em quintais, garagens e áreas externas",
+          "Limpeza de calçadas, muros, portões e fachadas com limo",
+          "Lavagem de telhados e áreas de serviço antes de pintura ou impermeabilização",
+          "Remoção de poeira acumulada em pisos rústicos e pedras"
+        ],
+        "quote_details": [
+          "Informe o tipo de área ou superfície que será lavada",
+          "Confirme ponto de água e energia elétrica próximos ao local",
+          "Avise a data desejada e quantos dias pretende utilizar"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CVHSGCE7HMCTXP5HY1",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1721MHZX8PBH8CSP06P",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17BZRSG0K1VTND5H82P",
+              "url": "/images/casa/lavadora-de-alta-pressao.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1721MHZX8PBH8CSP06P",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17G9RGMKCJS8ZAZ8VGK",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173THEP07VC7XAVGTFG",
+              "option": {
+                "id": "opt_01M7SZC173THEP07VC7XAVGTFG",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173THEP07VC7XAVGTFG",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17G9RGMKCJS8ZAZ8VGK",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173THEP07VC7XAVGTFG",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17BZRSG0K1VTND5H82P",
+          "url": "/images/casa/lavadora-de-alta-pressao.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1721MHZX8PBH8CSP06P",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+          "name": "Limpeza e manutenção",
+          "description": "Lavadora, aspirador, desentupidora e roçadeira para pós-obra e áreas externas.",
+          "handle": "limpeza-e-manutencao",
+          "mpath": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 9,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1723EH2NKCFD2HR73WD",
+      "title": "Serra clip",
+      "subtitle": "Equipamento voltado para cortes em pisos, concreto ou alvenaria conforme demanda da frente de obra.",
+      "description": "A serra clip atende frentes de obra que demandam cortes contínuos e precisos em pisos, juntas ou peças de construção. Sua estrutura firme auxilia o operador a manter alinhamento regular durante o trabalho, otimizando o rendimento em reformas e ampliações. Consulte no WhatsApp as aplicações compatíveis e a disponibilidade atual.",
+      "handle": "serra-clip",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/serra-clip.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "serra",
+          "clip",
+          "corte",
+          "piso",
+          "obra"
+        ],
+        "image_alt": "Serra clip para corte de pisos, concreto e alvenaria para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/serra-clip/index.html",
+        "applications": [
+          "Cortes retos e juntas em pisos cimentícios e áreas externas",
+          "Ajustes dimensionais em blocos, peças pré-moldadas e alvenaria",
+          "Cortes de delimitação antes de demolições localizadas em piso",
+          "Apoio em frentes de reforma com alto volume de cortes"
+        ],
+        "quote_details": [
+          "Informe o material que será cortado na obra",
+          "Diga o período estimado de locação",
+          "Confirme no atendimento a disponibilidade e orientações de uso"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CVAAVS57ASABFZDNTS",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1723EH2NKCFD2HR73WD",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17AZ45XR10PKKC2C82H",
+              "url": "/images/casa/serra-clip.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1723EH2NKCFD2HR73WD",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17G71GDTW072NVDDX7W",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC1739JQGC7WDCH7YDCK5",
+              "option": {
+                "id": "opt_01M7SZC1739JQGC7WDCH7YDCK5",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC1739JQGC7WDCH7YDCK5",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17G71GDTW072NVDDX7W",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC1739JQGC7WDCH7YDCK5",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17AZ45XR10PKKC2C82H",
+          "url": "/images/casa/serra-clip.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1723EH2NKCFD2HR73WD",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "name": "Corte e acabamento",
+          "description": "Serras, cortadores de piso e parede e politriz para revestimentos e canaletas.",
+          "handle": "corte-e-acabamento",
+          "mpath": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 8,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1724VR2092YFNSSH95H",
+      "title": "Escoras metálicas",
+      "subtitle": "Utilizadas para escoramento provisório de lajes, vigas e formas durante concretagens e reformas estruturais.",
+      "description": "As escoras metálicas garantem sustentação provisória confiável para lajes, vigas e fôrmas durante a concretagem e o período de cura do concreto. Com regulagem prática de altura, substituem soluções improvisadas com madeira, oferecendo alinhamento uniforme e reaproveitamento limpo no canteiro. Consulte a quantidade disponível para o vão do seu projeto.",
+      "handle": "escoras-metalicas",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/escoras-metalicas.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "escora",
+          "escoras",
+          "metalica",
+          "laje",
+          "viga",
+          "escoramento"
+        ],
+        "image_alt": "Escoras metálicas para escoramento de lajes e vigas para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/escoras-metalicas/index.html",
+        "applications": [
+          "Escoramento de lajes pré-moldadas e maciças em concretagem",
+          "Apoio temporário de vigas e vergas durante reformas",
+          "Sustentação de fôrmas estruturais em obras residenciais e comerciais",
+          "Reforço provisório em aberturas de vãos conforme orientação técnica"
+        ],
+        "quote_details": [
+          "Informe a quantidade aproximada de escoras necessária para a área",
+          "Diga o pé-direito aproximado do pavimento onde serão instaladas",
+          "Confirme o período previsto até a desforma para calcular a locação"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CSR103C6J42CGBYY1T",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1724VR2092YFNSSH95H",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC177SFH2CN33G0SY6ZGQ",
+              "url": "/images/casa/escoras-metalicas.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1724VR2092YFNSSH95H",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17FYQPYPFJ70XVW5PP3",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173BRP96485DMAXDTNQ",
+              "option": {
+                "id": "opt_01M7SZC173BRP96485DMAXDTNQ",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173BRP96485DMAXDTNQ",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17FYQPYPFJ70XVW5PP3",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173BRP96485DMAXDTNQ",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC177SFH2CN33G0SY6ZGQ",
+          "url": "/images/casa/escoras-metalicas.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1724VR2092YFNSSH95H",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+          "name": "Acesso e estrutura",
+          "description": "Escadas, andaimes, escoras e guincho para trabalho em altura e escoramento.",
+          "handle": "acesso-e-estrutura",
+          "mpath": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 4,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.995Z",
+          "updated_at": "2026-11-19T13:19:08.995Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1725D4NQF6H1HGY9M6S",
+      "title": "Martelo rompedor de 7 a 11 kg",
+      "subtitle": "Ideal para abertura de canaletas, remoção de revestimentos, quebra de alvenaria e demolições médias em paredes e pisos.",
+      "description": "O martelo rompedor de 7 a 11 kg oferece equilíbrio entre potência de impacto e manuseio ágil em paredes, pisos cerâmicos e alvenaria. Por ser mais leve que os demolidores pesados, permite trabalhar na horizontal ou vertical com maior controle em reformas internas. Consulte a disponibilidade de ponteiras e talhadeiras no atendimento.",
+      "handle": "martelo-rompedor-7-a-11-kg",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/martelo-rompedor-7-a-11-kg.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "martelo",
+          "rompedor",
+          "7",
+          "11",
+          "kg",
+          "martelete",
+          "alvenaria"
+        ],
+        "image_alt": "Martelo rompedor de 7 a 11 kg para alvenaria e revestimentos para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/martelo-rompedor-7-a-11-kg/index.html",
+        "applications": [
+          "Remoção de pisos cerâmicos, azulejos e revestimentos antigos",
+          "Abertura de rasgos e canaletas em paredes de alvenaria",
+          "Demolição de paredes não estruturais e muretas",
+          "Quebra de contrapisos leves e regularizações em reformas"
+        ],
+        "quote_details": [
+          "Informe se o serviço será em parede, revestimento ou piso leve",
+          "Diga os dias aproximados de utilização na reforma",
+          "Confirme a tensão elétrica disponível no imóvel"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CT1YNJ4AV1ZS5TFCDA",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1725D4NQF6H1HGY9M6S",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17AWSXDSC02RMR0X8NF",
+              "url": "/images/casa/martelo-rompedor-7-a-11-kg.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1725D4NQF6H1HGY9M6S",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17FFXDFV073RP3PR6XT",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173VN5CTSXP86QJ575Y",
+              "option": {
+                "id": "opt_01M7SZC173VN5CTSXP86QJ575Y",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173VN5CTSXP86QJ575Y",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17FFXDFV073RP3PR6XT",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173VN5CTSXP86QJ575Y",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17AWSXDSC02RMR0X8NF",
+          "url": "/images/casa/martelo-rompedor-7-a-11-kg.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1725D4NQF6H1HGY9M6S",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163MB72J4HRHWY9THQ7",
+          "name": "Demolição",
+          "description": "Martelos demolidores e rompedores para quebra de pisos, concreto e alvenaria.",
+          "handle": "demolicao",
+          "mpath": "pcat_01M7SZC163MB72J4HRHWY9THQ7",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 7,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1726GN41EVAS3F33MCE",
+      "title": "Martelo demolidor de 15, 20 e 30 kg",
+      "subtitle": "Indicado para demolições pesadas de pisos de concreto, calçadas, vigas e estruturas em reformas de maior porte.",
+      "description": "O martelo demolidor nas faixas de 15, 20 e 30 kg é indicado para quebra de concreto espesso, pisos industriais, calçadas e elementos estruturais que exigem alta energia de impacto. Escolher o peso adequado evita sobrecarga no operador e acelera a remoção do material. Fale com nossa equipe para indicar a faixa mais compatível com a sua demolição.",
+      "handle": "martelo-demolidor-15-20-30-kg",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/martelo-demolidor-15-20-30-kg.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "martelo",
+          "demolidor",
+          "15",
+          "20",
+          "30",
+          "kg",
+          "martelete",
+          "concreto"
+        ],
+        "image_alt": "Martelo demolidor de 15, 20 e 30 kg para demolição de concreto",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/martelo-demolidor-15-20-30-kg/index.html",
+        "applications": [
+          "Demolição de pisos de concreto armado e contrapisos espessos",
+          "Quebra de calçadas, rampas, sapatas e blocos de fundação",
+          "Remoção de vigas, pilares e estruturas em reformas pesadas",
+          "Abertura de valas em pavimento rígido para passagem de redes"
+        ],
+        "quote_details": [
+          "Descreva o que será demolido (piso, calçada, viga ou concreto espesso)",
+          "Informe se prefere avaliação entre as faixas de 15, 20 ou 30 kg",
+          "Avise a rede elétrica do local e os dias previstos de uso"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CT4EZACYRSCBV0WNY6",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1726GN41EVAS3F33MCE",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC179E9KNY244JHQA71AY",
+              "url": "/images/casa/martelo-demolidor-15-20-30-kg.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1726GN41EVAS3F33MCE",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17F2Z4KJZMKTRJRQHT9",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173T4DPP942SMEQWJE9",
+              "option": {
+                "id": "opt_01M7SZC173T4DPP942SMEQWJE9",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173T4DPP942SMEQWJE9",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17F2Z4KJZMKTRJRQHT9",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173T4DPP942SMEQWJE9",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC179E9KNY244JHQA71AY",
+          "url": "/images/casa/martelo-demolidor-15-20-30-kg.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1726GN41EVAS3F33MCE",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163MB72J4HRHWY9THQ7",
+          "name": "Demolição",
+          "description": "Martelos demolidores e rompedores para quebra de pisos, concreto e alvenaria.",
+          "handle": "demolicao",
+          "mpath": "pcat_01M7SZC163MB72J4HRHWY9THQ7",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 7,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1726W9NQ5KQN95PHGR3",
+      "title": "Escada de fibra de vidro",
+      "subtitle": "Indicada para serviços em altura com maior segurança em manutenções prediais, instalações elétricas e acabamentos.",
+      "description": "A escada de fibra de vidro é indicada para serviços em altura que exigem estabilidade e apoio seguro em instalações, pintura e manutenção predial. Por ser construída em material não condutivo, é amplamente adotada em trabalhos próximos a redes elétricas. Consulte nossa equipe para confirmar os tamanhos e configurações disponíveis para a sua etapa da obra.",
+      "handle": "escada-de-fibra-de-vidro",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/escada-de-fibra-de-vidro.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.041Z",
+      "updated_at": "2026-11-19T13:19:09.041Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "escada",
+          "fibra",
+          "altura",
+          "eletrica",
+          "acesso"
+        ],
+        "image_alt": "Escada de fibra de vidro para locação na Casa da Reforma Iguaí",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/escada-de-fibra-de-vidro/index.html",
+        "applications": [
+          "Instalações e manutenções elétricas residenciais ou comerciais",
+          "Serviços de pintura, gesso e acabamento em paredes altas",
+          "Passagem de cabeamento, iluminação e infraestrutura aérea",
+          "Manutenção predial, limpeza de calhas e pequenos reparos"
+        ],
+        "quote_details": [
+          "Informe a altura aproximada do ponto de trabalho na obra",
+          "Diga por quantos dias pretende utilizar a escada",
+          "Combine se prefere retirada no local ou consulta de entrega em Santo André e região"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CR2SC8XDZ1NGX1GCBT",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1726W9NQ5KQN95PHGR3",
+          "created_at": "2026-11-19T13:19:09.211Z",
+          "updated_at": "2026-11-19T13:19:09.211Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC176S5VGP2CH0FM113P9",
+              "url": "/images/casa/escada-de-fibra-de-vidro.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1726W9NQ5KQN95PHGR3",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17DKAYY26VNVYVC2F8D",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173DKR9W6MB1407Y9ES",
+              "option": {
+                "id": "opt_01M7SZC173DKR9W6MB1407Y9ES",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.042Z",
+                "updated_at": "2026-11-19T13:19:09.042Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173DKR9W6MB1407Y9ES",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.042Z",
+          "updated_at": "2026-11-19T13:19:09.042Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17DKAYY26VNVYVC2F8D",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173DKR9W6MB1407Y9ES",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC176S5VGP2CH0FM113P9",
+          "url": "/images/casa/escada-de-fibra-de-vidro.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1726W9NQ5KQN95PHGR3",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+          "name": "Acesso e estrutura",
+          "description": "Escadas, andaimes, escoras e guincho para trabalho em altura e escoramento.",
+          "handle": "acesso-e-estrutura",
+          "mpath": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 4,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.995Z",
+          "updated_at": "2026-11-19T13:19:08.995Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1726WV617XA7EYGTXS9",
+      "title": "Andaimes",
+      "subtitle": "Estrutura modular para apoio seguro em serviços de alvenaria, reboco, pintura e manutenção em fachadas ou tetos.",
+      "description": "Os andaimes oferecem uma plataforma firme e elevada para a equipe trabalhar com as duas mãos livres em frentes de fachada, teto ou muro. A montagem modular permite adaptar a torre conforme a necessidade do serviço, trazendo mais agilidade e segurança em comparação ao uso contínuo de escadas. Consulte os módulos e acessórios disponíveis diretamente pelo WhatsApp.",
+      "handle": "andaimes",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/andaimes.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "andaime",
+          "andaimes",
+          "fachada",
+          "pintura",
+          "reboco",
+          "altura"
+        ],
+        "image_alt": "Andaimes modulares para serviços em altura disponíveis para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/andaimes/index.html",
+        "applications": [
+          "Execução de alvenaria, chapisco, emboço e reboco externo",
+          "Pintura de fachadas, muros altos e pés-direitos elevados",
+          "Instalação de forros, luminárias e revestimentos em altura",
+          "Reformas e reparos em galpões, sobrados e comércios"
+        ],
+        "quote_details": [
+          "Informe a altura aproximada que precisa alcançar na parede ou fachada",
+          "Avise o prazo estimado de uso dos módulos na obra",
+          "Verifique no atendimento os acessórios necessários para montagem segura"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CS31EFJFX8X7JAS1TM",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1726WV617XA7EYGTXS9",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC1772C2BBB2JVPSYKED1",
+              "url": "/images/casa/andaimes.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1726WV617XA7EYGTXS9",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17EENFWVQA80GVMH3XY",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173WNSDSGN4S89AG8KQ",
+              "option": {
+                "id": "opt_01M7SZC173WNSDSGN4S89AG8KQ",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173WNSDSGN4S89AG8KQ",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17EENFWVQA80GVMH3XY",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173WNSDSGN4S89AG8KQ",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC1772C2BBB2JVPSYKED1",
+          "url": "/images/casa/andaimes.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1726WV617XA7EYGTXS9",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+          "name": "Acesso e estrutura",
+          "description": "Escadas, andaimes, escoras e guincho para trabalho em altura e escoramento.",
+          "handle": "acesso-e-estrutura",
+          "mpath": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 4,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.995Z",
+          "updated_at": "2026-11-19T13:19:08.995Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC17279CZMEDJDQZC82HY",
+      "title": "Cortadora de parede",
+      "subtitle": "Indicada para abrir rasgos e canaletas paralelas em alvenaria para passagem de tubulações elétricas e hidráulicas.",
+      "description": "A cortadora de parede realiza cortes paralelos e uniformes em alvenaria e reboco para passagem de eletrodutos e tubulações hidráulicas. Ela substitui a quebra irregular com talhadeira, reduzindo o desperdício de argamassa no fechamento posterior e mantendo a parede mais íntegra. Consulte nossa equipe para verificar a disponibilidade.",
+      "handle": "cortadora-de-parede",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/cortadora-de-parede.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "cortadora",
+          "parede",
+          "rasgo",
+          "canaleta",
+          "eletrica",
+          "hidraulica"
+        ],
+        "image_alt": "Cortadora de parede para abertura de canaletas em alvenaria para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/cortadora-de-parede/index.html",
+        "applications": [
+          "Abertura de canaletas para conduítes e fiação elétrica",
+          "Rasgos em alvenaria para tubulações de água fria e quente",
+          "Instalação de pontos de ar-condicionado e infraestrutura embutida",
+          "Reformas internas que exigem cortes limpos e alinhados"
+        ],
+        "quote_details": [
+          "Informe o tipo de parede (tijolo, bloco cerâmico ou bloco de concreto)",
+          "Avise a extensão aproximada das canaletas e dias de uso",
+          "Verifique a compatibilidade de aspiração de pó e rede elétrica"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CT1NSY22CRVZXW44GS",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC17279CZMEDJDQZC82HY",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17ANNMRTJFGWGZPTBDN",
+              "url": "/images/casa/cortadora-de-parede.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC17279CZMEDJDQZC82HY",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17G2RF42KBG4XSM1ZNE",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC1737R3K63GD12QF5XTD",
+              "option": {
+                "id": "opt_01M7SZC1737R3K63GD12QF5XTD",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC1737R3K63GD12QF5XTD",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17G2RF42KBG4XSM1ZNE",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC1737R3K63GD12QF5XTD",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17ANNMRTJFGWGZPTBDN",
+          "url": "/images/casa/cortadora-de-parede.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC17279CZMEDJDQZC82HY",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "name": "Corte e acabamento",
+          "description": "Serras, cortadores de piso e parede e politriz para revestimentos e canaletas.",
+          "handle": "corte-e-acabamento",
+          "mpath": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 8,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1729B95316CVEMBBPEP",
+      "title": "Politriz",
+      "subtitle": "Utilizada para polimento, lixamento leve e acabamento fino em superfícies compatíveis durante a finalização da reforma.",
+      "description": "A politriz é indicada na etapa final da reforma para polimento, brilho e nivelamento leve de superfícies compatíveis com os acessórios adequados. Ela entrega acabamento uniforme com menor esforço manual em bancadas, pedras ou superfícies preparadas. Confirme com nossa equipe os acessórios e a disponibilidade para o seu cronograma.",
+      "handle": "politriz",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/politriz.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "politriz",
+          "polimento",
+          "acabamento",
+          "superficie",
+          "lixamento"
+        ],
+        "image_alt": "Politriz para polimento e acabamento fino de superfícies para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/politriz/index.html",
+        "applications": [
+          "Polimento de bordas e acabamentos em pedras e bancadas",
+          "Lixamento fino e remoção de marcas leves em superfícies compatíveis",
+          "Acabamento final em serviços de marcenaria, serralheria ou reforma",
+          "Manutenção estética e renovação de brilho em superfícies tratadas"
+        ],
+        "quote_details": [
+          "Informe em qual superfície ou material a politriz será usada",
+          "Diga por quantos dias precisa do equipamento",
+          "Confirme a rede elétrica e os discos ou boinas necessários"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CVKTRMW6AZ16GZ28XM",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1729B95316CVEMBBPEP",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17A9MS057A3WAD081HJ",
+              "url": "/images/casa/politriz.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1729B95316CVEMBBPEP",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17G24HXPQPZ40YCERQ3",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173J26BYFX91W17Y3S8",
+              "option": {
+                "id": "opt_01M7SZC173J26BYFX91W17Y3S8",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173J26BYFX91W17Y3S8",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17G24HXPQPZ40YCERQ3",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173J26BYFX91W17Y3S8",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17A9MS057A3WAD081HJ",
+          "url": "/images/casa/politriz.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1729B95316CVEMBBPEP",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "name": "Corte e acabamento",
+          "description": "Serras, cortadores de piso e parede e politriz para revestimentos e canaletas.",
+          "handle": "corte-e-acabamento",
+          "mpath": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 8,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1729CB7E41N5NZGNF7P",
+      "title": "Argamassadeira",
+      "subtitle": "Indicada para preparo ágil e homogêneo de argamassas, rejuntes, colas e massas para assentamento.",
+      "description": "A argamassadeira facilita o preparo rápido e padronizado de argamassas colantes, massas de assentamento e misturas para revestimento. Ela evita grumos, reduz o esforço do operador e mantém a consistência ideal do material durante toda a aplicação. Consulte nossa equipe para verificar a disponibilidade para a fase de acabamento da sua reforma.",
+      "handle": "argamassadeira",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/argamassadeira.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "argamassadeira",
+          "misturador",
+          "argamassa",
+          "reboco",
+          "massa"
+        ],
+        "image_alt": "Argamassadeira para preparo homogêneo de argamassa disponível para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/argamassadeira/index.html",
+        "applications": [
+          "Preparo de argamassa colante para assentamento de pisos e porcelanatos",
+          "Homogeneização de massas para reboco fino e regularização",
+          "Mistura de rejuntes e impermeabilizantes cimentícios",
+          "Apoio a equipes de revestimento em reformas internas e externas"
+        ],
+        "quote_details": [
+          "Informe o tipo de material que será misturado na obra",
+          "Diga o prazo estimado de utilização do equipamento",
+          "Confirme a disponibilidade de energia elétrica no local"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CTBEGD5M9FKAS1T2Q8",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1729CB7E41N5NZGNF7P",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC178D8K8F9JPBNFG2RA7",
+              "url": "/images/casa/argamassadeira.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1729CB7E41N5NZGNF7P",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17F832588W76JPRK15D",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173ZHGKYCM6GK4YZQ5D",
+              "option": {
+                "id": "opt_01M7SZC173ZHGKYCM6GK4YZQ5D",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173ZHGKYCM6GK4YZQ5D",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17F832588W76JPRK15D",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173ZHGKYCM6GK4YZQ5D",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC178D8K8F9JPBNFG2RA7",
+          "url": "/images/casa/argamassadeira.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1729CB7E41N5NZGNF7P",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163RQH3T2SNC80CDDW7",
+          "name": "Concreto e mistura",
+          "description": "Betoneira, vibrador de concreto e argamassadeira para preparo e adensamento.",
+          "handle": "concreto-e-mistura",
+          "mpath": "pcat_01M7SZC163RQH3T2SNC80CDDW7",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 5,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC172ECXK222JE40K6TBN",
+      "title": "Perfurador de solo",
+      "subtitle": "Facilita a abertura de furos no terreno para instalação de mourões, cercas, estacas e pequenos plantios.",
+      "description": "O perfurador de solo agiliza a escavação vertical de furos em terrenos para cercamentos, postes, pequenas estacas e fundações pontuais. Ele reduz drasticamente o tempo de trabalho em comparação à cavadeira manual, mantendo o diâmetro regular dos furos. Consulte a disponibilidade e as opções de broca compatíveis no atendimento.",
+      "handle": "perfurador-de-solo",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/perfurador-de-solo.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "perfurador",
+          "solo",
+          "broca",
+          "mourao",
+          "cerca",
+          "estaca"
+        ],
+        "image_alt": "Perfurador de solo para abertura de furos de mourões e estacas para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/perfurador-de-solo/index.html",
+        "applications": [
+          "Abertura de furos para instalação de mourões e cercas",
+          "Perfuração de base para pequenas estacas e pilares de muro",
+          "Fixação de postes de iluminação externa ou pergolados",
+          "Abertura de covas para paisagismo e plantio em terrenos"
+        ],
+        "quote_details": [
+          "Informe a quantidade aproximada de furos e a profundidade desejada",
+          "Diga se o terreno tem solo comum, argiloso ou com cascalho",
+          "Confirme os dias de uso para reservar o equipamento"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CT779QMYSYDE9QHWN1",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC172ECXK222JE40K6TBN",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC1799V3FDT55VK9RJ8Q7",
+              "url": "/images/casa/perfurador-de-solo.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC172ECXK222JE40K6TBN",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17FAJX6W7PW6HEAYGE6",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173HW5JH3CPF1RQ6W3T",
+              "option": {
+                "id": "opt_01M7SZC173HW5JH3CPF1RQ6W3T",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173HW5JH3CPF1RQ6W3T",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17FAJX6W7PW6HEAYGE6",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173HW5JH3CPF1RQ6W3T",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC1799V3FDT55VK9RJ8Q7",
+          "url": "/images/casa/perfurador-de-solo.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC172ECXK222JE40K6TBN",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163JBNDV87MAY3HZRMR",
+          "name": "Solo e fundação",
+          "description": "Compactador e perfurador de solo para aterros, estacas e preparação de base.",
+          "handle": "solo-e-fundacao",
+          "mpath": "pcat_01M7SZC163JBNDV87MAY3HZRMR",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 6,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC172EZS9CWTPKZFFNZ3V",
+      "title": "Aspirador de pó e água",
+      "subtitle": "Auxilia na limpeza de resíduos secos e líquidos em obras, reformas, garagens e áreas comerciais.",
+      "description": "O aspirador de pó e água profissional é projetado para recolher poeira fina de lixamento, pequenos resíduos secos e líquidos acumulados durante a reforma. Ele agiliza a limpeza interna antes da instalação de móveis e pode ser usado em conjunto com ferramentas de corte. Consulte nossa equipe para reservar para a etapa pós-obra.",
+      "handle": "aspirador-de-po-e-agua",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/aspirador-de-po-e-agua.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "aspirador",
+          "po",
+          "agua",
+          "limpeza",
+          "residuos"
+        ],
+        "image_alt": "Aspirador de pó e água profissional para limpeza de obras para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/aspirador-de-po-e-agua/index.html",
+        "applications": [
+          "Aspiração de poeira fina após lixamento de massa e gesso",
+          "Limpeza pós-obra de pisos, rodapés, trilhos de esquadrias e cantos",
+          "Recolhimento de água acumulada após lavagens internas",
+          "Manutenção de limpeza em oficinas, garagens e áreas comerciais"
+        ],
+        "quote_details": [
+          "Informe se o uso será para pó fino de obra, resíduos secos ou líquidos",
+          "Diga por quantos dias pretende alugar o equipamento",
+          "Confirme a rede elétrica do imóvel e a disponibilidade para retirada"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CVSNDGH3YQHQN804E9",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC172EZS9CWTPKZFFNZ3V",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17BX96ZYV4N6DF95BF1",
+              "url": "/images/casa/aspirador-de-po-e-agua.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC172EZS9CWTPKZFFNZ3V",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17GTQR7X1C0X7YCBY0D",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173B2M93HF4BSF1WS1D",
+              "option": {
+                "id": "opt_01M7SZC173B2M93HF4BSF1WS1D",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173B2M93HF4BSF1WS1D",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17GTQR7X1C0X7YCBY0D",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173B2M93HF4BSF1WS1D",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17BX96ZYV4N6DF95BF1",
+          "url": "/images/casa/aspirador-de-po-e-agua.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC172EZS9CWTPKZFFNZ3V",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+          "name": "Limpeza e manutenção",
+          "description": "Lavadora, aspirador, desentupidora e roçadeira para pós-obra e áreas externas.",
+          "handle": "limpeza-e-manutencao",
+          "mpath": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 9,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC172J8G7FGK5TNEZSGPS",
+      "title": "Guincho elétrico",
+      "subtitle": "Auxilia no içamento vertical de materiais e ferramentas entre pavimentos, reduzindo esforço e tempo na obra.",
+      "description": "O guincho elétrico agiliza a movimentação vertical de baldes de massa, blocos, ferragens e insumos entre o térreo e pavimentos superiores. Ele reduz o desgaste físico da equipe e acelera o abastecimento da frente de trabalho em sobrados e pequenas edificações. Confirme com nossa equipe a disponibilidade e as orientações de instalação antes de retirar.",
+      "handle": "guincho-eletrico",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/guincho-eletrico.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "guincho",
+          "eletrico",
+          "icamento",
+          "elevacao",
+          "carga"
+        ],
+        "image_alt": "Guincho elétrico para içamento vertical de materiais na obra",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/guincho-eletrico/index.html",
+        "applications": [
+          "Içamento de argamassa, areia, pedra e cimento para lajes superiores",
+          "Subida de blocos, tijolos e revestimentos em sobrados",
+          "Movimentação de ferramentas e materiais em reformas verticais",
+          "Apoio contínuo no abastecimento de equipes em andares altos"
+        ],
+        "quote_details": [
+          "Informe quantos pavimentos a obra possui e o tipo de material a içar",
+          "Confirme a rede elétrica disponível no local da obra",
+          "Combine o período de locação e a data prevista de início"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CSYPK0GPZCA2P1S7HT",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC172J8G7FGK5TNEZSGPS",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC178RSDX8SFY39V7PH5S",
+              "url": "/images/casa/guincho-eletrico.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC172J8G7FGK5TNEZSGPS",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17FJX9S5MXM87NZKGBD",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173RX7G67NA9GCP5XY5",
+              "option": {
+                "id": "opt_01M7SZC173RX7G67NA9GCP5XY5",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173RX7G67NA9GCP5XY5",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17FJX9S5MXM87NZKGBD",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173RX7G67NA9GCP5XY5",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC178RSDX8SFY39V7PH5S",
+          "url": "/images/casa/guincho-eletrico.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC172J8G7FGK5TNEZSGPS",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+          "name": "Acesso e estrutura",
+          "description": "Escadas, andaimes, escoras e guincho para trabalho em altura e escoramento.",
+          "handle": "acesso-e-estrutura",
+          "mpath": "pcat_01M7SZC162AC8W3ZWD4SYPNZD5",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 4,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.995Z",
+          "updated_at": "2026-11-19T13:19:08.995Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC172M2VYVJZST939GWGY",
+      "title": "Compactador de solo",
+      "subtitle": "Usado para compactação de aterros, valas, pisos industriais e bases antes da execução de contrapisos ou pavimentação.",
+      "description": "O compactador de solo promove o adensamento firme do terreno em aterros, valas de tubulação e áreas que receberão contrapiso ou calçamento. Compactar corretamente a base reduz o risco de recalques, afundamentos e trincas futuras no piso pronto. Consulte no WhatsApp a disponibilidade para a etapa de preparação do seu terreno.",
+      "handle": "compactador-de-solo",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/compactador-de-solo.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "compactador",
+          "solo",
+          "sapo",
+          "aterro",
+          "fundacao"
+        ],
+        "image_alt": "Compactador de solo para aterros e preparação de terreno para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/compactador-de-solo/index.html",
+        "applications": [
+          "Compactação de aterros internos antes da execução do contrapiso",
+          "Fechamento e adensamento de valas hidráulicas e elétricas",
+          "Preparação de sub-base para calçadas, garagens e pátios",
+          "Nivelamento e firmeza de solo em fundações rasas e baldrames"
+        ],
+        "quote_details": [
+          "Informe o tamanho aproximado da área ou extensão das valas",
+          "Diga o tipo de solo ou aterro que será compactado",
+          "Avise a data prevista de início e os dias de locação"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CT1M6J60STFMPZ207J",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC172M2VYVJZST939GWGY",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC178R01HBSMAR8DZGN3B",
+              "url": "/images/casa/compactador-de-solo.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC172M2VYVJZST939GWGY",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17FV12TFJN22HS3VJST",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173TJHXKETKDFRGJK8Q",
+              "option": {
+                "id": "opt_01M7SZC173TJHXKETKDFRGJK8Q",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173TJHXKETKDFRGJK8Q",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17FV12TFJN22HS3VJST",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173TJHXKETKDFRGJK8Q",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC178R01HBSMAR8DZGN3B",
+          "url": "/images/casa/compactador-de-solo.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC172M2VYVJZST939GWGY",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163JBNDV87MAY3HZRMR",
+          "name": "Solo e fundação",
+          "description": "Compactador e perfurador de solo para aterros, estacas e preparação de base.",
+          "handle": "solo-e-fundacao",
+          "mpath": "pcat_01M7SZC163JBNDV87MAY3HZRMR",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 6,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC172X6WEGTJ549N2NFHR",
+      "title": "Betoneira",
+      "subtitle": "Essencial para mistura uniforme de concreto e argamassa em fundações, contrapisos, lajes e alvenaria.",
+      "description": "A betoneira proporciona mistura homogênea de cimento, areia, pedra e água com muito mais rendimento do que o preparo manual no traço. É indispensável para manter o padrão de resistência em fundações, contrapisos, pilares e assentamento de alvenaria. Consulte no WhatsApp a disponibilidade para a data da sua concretagem.",
+      "handle": "betoneira",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/betoneira.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "betoneira",
+          "concreto",
+          "argamassa",
+          "mistura",
+          "massa"
+        ],
+        "image_alt": "Betoneira para mistura de concreto e argamassa disponível para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/betoneira/index.html",
+        "applications": [
+          "Preparo de concreto para sapatas, baldrames, pilares e vigas",
+          "Produção contínua de massa para contrapiso e calçadas",
+          "Mistura de argamassa para assentamento de blocos e reboco",
+          "Concretagem de pequenas lajes, rampas e pisos externos"
+        ],
+        "quote_details": [
+          "Informe o volume aproximado da obra ou etapa de concretagem",
+          "Avise a rede elétrica disponível no canteiro",
+          "Confirme os dias necessários e se precisa de entrega em obra"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CSE5TXQKRH73JPRK1Z",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC172X6WEGTJ549N2NFHR",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC1780MBDR8MYEWFC78EP",
+              "url": "/images/casa/betoneira.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC172X6WEGTJ549N2NFHR",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17FBXPZZY7P5JEQTSYQ",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173ETGZKMYRVWB7QYK4",
+              "option": {
+                "id": "opt_01M7SZC173ETGZKMYRVWB7QYK4",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173ETGZKMYRVWB7QYK4",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17FBXPZZY7P5JEQTSYQ",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173ETGZKMYRVWB7QYK4",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC1780MBDR8MYEWFC78EP",
+          "url": "/images/casa/betoneira.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC172X6WEGTJ549N2NFHR",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163RQH3T2SNC80CDDW7",
+          "name": "Concreto e mistura",
+          "description": "Betoneira, vibrador de concreto e argamassadeira para preparo e adensamento.",
+          "handle": "concreto-e-mistura",
+          "mpath": "pcat_01M7SZC163RQH3T2SNC80CDDW7",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 5,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC172YVRY01T8Z4Y87966",
+      "title": "Cortador de piso",
+      "subtitle": "Permite cortes precisos e sem poeira em pisos cerâmicos e porcelanatos durante o assentamento.",
+      "description": "O cortador de piso manual garante cortes retos e limpos em placas cerâmicas e porcelanatos sem gerar poeira ou ruído excessivo em ambientes internos. É essencial para acelerar o assentamento mantendo o alinhamento das juntas e evitando desperdício de peças. Consulte os comprimentos de corte disponíveis antes de retirar.",
+      "handle": "cortador-de-piso",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/cortador-de-piso.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "cortador",
+          "piso",
+          "porcelanato",
+          "ceramica",
+          "acabamento"
+        ],
+        "image_alt": "Cortador de piso cerâmico e porcelanato disponível para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/cortador-de-piso/index.html",
+        "applications": [
+          "Assentamento de pisos cerâmicos em salas, quartos e cozinhas",
+          "Corte reto de porcelanatos em reformas residenciais e comerciais",
+          "Execução de rodapés e faixas de acabamento sem poeira",
+          "Serviços rápidos em imóveis ocupados onde há restrição de barulho"
+        ],
+        "quote_details": [
+          "Informe a medida máxima das placas de piso ou porcelanato",
+          "Diga o prazo estimado para concluir o assentamento",
+          "Confirme disponibilidade para retirada ou entrega"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CTYEA5ZNPCYCJ7HVGH",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC172YVRY01T8Z4Y87966",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17AR0VJA6YV3SEGWPNT",
+              "url": "/images/casa/cortador-de-piso.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC172YVRY01T8Z4Y87966",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17GS78RQ2YJJJ1GPKYD",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173Y4BJZV63B2EEDX9S",
+              "option": {
+                "id": "opt_01M7SZC173Y4BJZV63B2EEDX9S",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173Y4BJZV63B2EEDX9S",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17GS78RQ2YJJJ1GPKYD",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173Y4BJZV63B2EEDX9S",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17AR0VJA6YV3SEGWPNT",
+          "url": "/images/casa/cortador-de-piso.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC172YVRY01T8Z4Y87966",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "name": "Corte e acabamento",
+          "description": "Serras, cortadores de piso e parede e politriz para revestimentos e canaletas.",
+          "handle": "corte-e-acabamento",
+          "mpath": "pcat_01M7SZC1630CCW180MX9B9N0RX",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 8,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC172ZE56J920E1JX8041",
+      "title": "Vibrador de concreto",
+      "subtitle": "Empregado no adensamento do concreto recém-lançado para eliminar bolhas de ar e aumentar a resistência da peça.",
+      "description": "O vibrador de concreto é fundamental durante o lançamento do concreto em fôrmas para eliminar vazios e bolhas de ar ao redor das ferragens. Seu uso evita falhas conhecidas como bicheiras e melhora o acabamento e a durabilidade de pilares, vigas e lajes. Reserve com antecedência para coincidir com o dia da concretagem.",
+      "handle": "vibrador-de-concreto",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/vibrador-de-concreto.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "vibrador",
+          "concreto",
+          "adensamento",
+          "laje",
+          "pilar"
+        ],
+        "image_alt": "Vibrador de concreto para adensamento em lajes e pilares para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/vibrador-de-concreto/index.html",
+        "applications": [
+          "Adensamento de pilares e vigas com alta densidade de armadura",
+          "Vibração de lajes maciças e pré-moldadas na concretagem",
+          "Preenchimento uniforme de muros de arrimo e sapatas",
+          "Melhoria da compactação em concreto usinado ou preparado em obra"
+        ],
+        "quote_details": [
+          "Informe a data exata da concretagem para garantir reserva",
+          "Diga o tipo de peça estrutural (pilares, vigas ou laje)",
+          "Confirme a rede elétrica disponível no local"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CS4M1ZRTHKJ53GK0A1",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC172ZE56J920E1JX8041",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC178C88GDVZCPJSK4SZ9",
+              "url": "/images/casa/vibrador-de-concreto.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC172ZE56J920E1JX8041",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17FETN5CFJGRT4G4VNR",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173AT3PJQ2W4691KX8T",
+              "option": {
+                "id": "opt_01M7SZC173AT3PJQ2W4691KX8T",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173AT3PJQ2W4691KX8T",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17FETN5CFJGRT4G4VNR",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173AT3PJQ2W4691KX8T",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC178C88GDVZCPJSK4SZ9",
+          "url": "/images/casa/vibrador-de-concreto.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC172ZE56J920E1JX8041",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163RQH3T2SNC80CDDW7",
+          "name": "Concreto e mistura",
+          "description": "Betoneira, vibrador de concreto e argamassadeira para preparo e adensamento.",
+          "handle": "concreto-e-mistura",
+          "mpath": "pcat_01M7SZC163RQH3T2SNC80CDDW7",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 5,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC1731AQWTQC1N4CKK0DZ",
+      "title": "Roçadeira a gasolina",
+      "subtitle": "Indicada para corte de mato alto, limpeza de terrenos, chácaras, lotes e áreas externas antes ou depois da obra.",
+      "description": "A roçadeira a gasolina oferece autonomia total de deslocamento em terrenos sem ponto de energia elétrica, sendo ideal para limpeza de lotes, quintais amplos e áreas com vegetação alta. Facilita a preparação do terreno antes da marcação da obra ou a manutenção externa após a reforma. Consulte a disponibilidade e os itens de corte no atendimento.",
+      "handle": "rocadeira-a-gasolina",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/rocadeira-a-gasolina.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "rocadeira",
+          "gasolina",
+          "mato",
+          "terreno",
+          "limpeza",
+          "jardim"
+        ],
+        "image_alt": "Roçadeira a gasolina para corte de mato e limpeza de terrenos para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/rocadeira-a-gasolina/index.html",
+        "applications": [
+          "Roçagem de mato alto em lotes e terrenos antes de iniciar a obra",
+          "Limpeza periódica de quintais, taludes e áreas verdes externas",
+          "Manutenção de chácaras, pátios e arredores de galpões",
+          "Corte de vegetação invasora próximo a muros e calçadas"
+        ],
+        "quote_details": [
+          "Informe o tamanho aproximado do terreno e a altura do mato",
+          "Diga por quantos dias pretende utilizar a roçadeira",
+          "Verifique no atendimento as orientações de uso e combustível adequado"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CVGT1E1APCKQBCXM5P",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC1731AQWTQC1N4CKK0DZ",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17B5QPSAJ96E7ME3Q19",
+              "url": "/images/casa/rocadeira-a-gasolina.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC1731AQWTQC1N4CKK0DZ",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17GE95V66R26S0RP7PB",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173NQCY67TKTWPKF2PH",
+              "option": {
+                "id": "opt_01M7SZC173NQCY67TKTWPKF2PH",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173NQCY67TKTWPKF2PH",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17GE95V66R26S0RP7PB",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173NQCY67TKTWPKF2PH",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17B5QPSAJ96E7ME3Q19",
+          "url": "/images/casa/rocadeira-a-gasolina.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC1731AQWTQC1N4CKK0DZ",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+          "name": "Limpeza e manutenção",
+          "description": "Lavadora, aspirador, desentupidora e roçadeira para pós-obra e áreas externas.",
+          "handle": "limpeza-e-manutencao",
+          "mpath": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 9,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    },
+    {
+      "id": "prod_01M7SZC173Z1FZPB1KVM6TWHYM",
+      "title": "Desentupidora",
+      "subtitle": "Equipamento específico para desobstrução de tubulações, ralos e redes de esgoto em imóveis residenciais e comerciais.",
+      "description": "A desentupidora facilita a desobstrução mecânica de encanamentos, ralos e caixas de passagem sem a necessidade imediata de quebrar pisos ou paredes. É uma solução prática para resolver entupimentos em reformas ou manutenções prediais com agilidade. Converse com nossa equipe no WhatsApp para confirmar o tipo de tubulação e a disponibilidade.",
+      "handle": "desentupidora",
+      "is_giftcard": false,
+      "discountable": true,
+      "thumbnail": "/images/casa/desentupidora.webp",
+      "collection_id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+      "type_id": null,
+      "weight": null,
+      "length": null,
+      "height": null,
+      "width": null,
+      "hs_code": null,
+      "origin_country": null,
+      "mid_code": null,
+      "material": null,
+      "created_at": "2026-11-19T13:19:09.042Z",
+      "updated_at": "2026-11-19T13:19:09.042Z",
+      "tags": [],
+      "metadata": {
+        "keywords": [
+          "desentupidora",
+          "tubulacao",
+          "esgoto",
+          "ralo",
+          "manutencao"
+        ],
+        "image_alt": "Desentupidora para tubulações, ralos e redes de esgoto para locação",
+        "quote_only": true,
+        "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/equipamentos/desentupidora/index.html",
+        "applications": [
+          "Desobstrução de ralos de banheiro, quintal e área de serviço",
+          "Limpeza de ramais de esgoto e caixas de gordura em imóveis",
+          "Desentupimento de tubulações em reformas antes da entrega da obra",
+          "Manutenção corretiva em redes hidráulicas residenciais e comerciais"
+        ],
+        "quote_details": [
+          "Informe qual ponto está obstruído (ralo, pia, ramal ou rede de esgoto)",
+          "Diga o diâmetro aproximado ou acesso disponível na tubulação",
+          "Confirme a disponibilidade imediata pelo WhatsApp"
+        ],
+        "specifications": []
+      },
+      "variants": [
+        {
+          "id": "variant_01M7SZC1CVNXH0AQGZWH3MBA7A",
+          "title": "Sob consulta",
+          "sku": null,
+          "barcode": null,
+          "ean": null,
+          "upc": null,
+          "allow_backorder": false,
+          "manage_inventory": false,
+          "hs_code": null,
+          "origin_country": null,
+          "mid_code": null,
+          "material": null,
+          "weight": null,
+          "length": null,
+          "height": null,
+          "width": null,
+          "metadata": null,
+          "variant_rank": 0,
+          "thumbnail": null,
+          "product_id": "prod_01M7SZC173Z1FZPB1KVM6TWHYM",
+          "created_at": "2026-11-19T13:19:09.212Z",
+          "updated_at": "2026-11-19T13:19:09.212Z",
+          "deleted_at": null,
+          "images": [
+            {
+              "id": "img_01M7SZC17BT93N220M1WP5309F",
+              "url": "/images/casa/desentupidora.webp",
+              "metadata": null,
+              "rank": 0,
+              "product_id": "prod_01M7SZC173Z1FZPB1KVM6TWHYM",
+              "created_at": "2026-11-19T13:19:09.043Z",
+              "updated_at": "2026-11-19T13:19:09.043Z",
+              "deleted_at": null
+            }
+          ],
+          "options": [
+            {
+              "id": "optval_01M7SZC17GW68YPHSQHYA2XWP1",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173T3AJ5E5TV3DVDRSN",
+              "option": {
+                "id": "opt_01M7SZC173T3AJ5E5TV3DVDRSN",
+                "title": "Locação",
+                "is_exclusive": true,
+                "metadata": null,
+                "created_at": "2026-11-19T13:19:09.043Z",
+                "updated_at": "2026-11-19T13:19:09.043Z",
+                "deleted_at": null
+              },
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ],
+          "calculated_price": null
+        }
+      ],
+      "type": null,
+      "collection": {
+        "id": "pcol_01M7SZC15BDB1W6JC5EGKF4YGA",
+        "title": "Equipamentos para locação",
+        "handle": "equipamentos-para-locacao",
+        "external_id": null,
+        "metadata": {
+          "source_url": "https://feat-identidade-visual-20261.casa-da-reforma-iguai.pages.dev/",
+          "rental_catalog": true
+        },
+        "created_at": "2026-11-19T13:19:08.969Z",
+        "updated_at": "2026-11-19T13:19:08.969Z",
+        "deleted_at": null
+      },
+      "options": [
+        {
+          "id": "opt_01M7SZC173T3AJ5E5TV3DVDRSN",
+          "title": "Locação",
+          "is_exclusive": true,
+          "metadata": null,
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null,
+          "values": [
+            {
+              "id": "optval_01M7SZC17GW68YPHSQHYA2XWP1",
+              "value": "Sob consulta",
+              "rank": null,
+              "metadata": null,
+              "option_id": "opt_01M7SZC173T3AJ5E5TV3DVDRSN",
+              "created_at": "2026-11-19T13:19:09.044Z",
+              "updated_at": "2026-11-19T13:19:09.044Z",
+              "deleted_at": null
+            }
+          ]
+        }
+      ],
+      "images": [
+        {
+          "id": "img_01M7SZC17BT93N220M1WP5309F",
+          "url": "/images/casa/desentupidora.webp",
+          "metadata": null,
+          "rank": 0,
+          "product_id": "prod_01M7SZC173Z1FZPB1KVM6TWHYM",
+          "created_at": "2026-11-19T13:19:09.043Z",
+          "updated_at": "2026-11-19T13:19:09.043Z",
+          "deleted_at": null
+        }
+      ],
+      "categories": [
+        {
+          "id": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+          "name": "Limpeza e manutenção",
+          "description": "Lavadora, aspirador, desentupidora e roçadeira para pós-obra e áreas externas.",
+          "handle": "limpeza-e-manutencao",
+          "mpath": "pcat_01M7SZC163PS34QDCREQ68YVTT",
+          "is_active": true,
+          "is_internal": false,
+          "rank": 9,
+          "external_id": null,
+          "metadata": null,
+          "parent_category_id": null,
+          "parent_category": null,
+          "created_at": "2026-11-19T13:19:08.996Z",
+          "updated_at": "2026-11-19T13:19:08.996Z",
+          "deleted_at": null
+        }
+      ]
+    }
+  ]
+}

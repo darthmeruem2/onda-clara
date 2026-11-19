@@ -1,0 +1,10 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "apps/backend/Dockerfile"
+watchPatterns = ["apps/backend/**", "package.json", "pnpm-lock.yaml", "pnpm-workspace.yaml"]
+
+[deploy]
+preDeployCommand = ["node ../../node_modules/@medusajs/cli/cli.js db:migrate"]
+healthcheckPath = "/health"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"
