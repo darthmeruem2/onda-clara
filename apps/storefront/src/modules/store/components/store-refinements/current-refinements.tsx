@@ -79,7 +79,7 @@ const CurrentRefinements = ({ currencyCode }: { currencyCode: string }) => {
     <div className="flex flex-col gap-y-3" data-testid="current-refinements">
       <div className="flex items-center justify-between gap-x-2 pr-6">
         <span className="txt-compact-small-plus text-ui-fg-subtle">
-          Applied filters
+          Filtros aplicados
         </span>
         {canClearAll && (
           <button

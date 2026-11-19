@@ -17,7 +17,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" data-mode="light">
       <head>
-        <link rel="ucp" href="/.well-known/ucp" />
+        {!showroom && <link rel="ucp" href="/.well-known/ucp" />}
         <link rel="preload" href="/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>

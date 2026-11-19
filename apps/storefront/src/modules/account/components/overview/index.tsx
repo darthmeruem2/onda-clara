@@ -19,7 +19,7 @@ const Overview = ({ customer, orders }: OverviewProps) => {
             Hello {customer?.first_name}
           </span>
           <span className="text-small-regular text-ui-fg-base">
-            Signed in as:{" "}
+            Conta{" "}
             <span
               className="font-semibold"
               data-testid="customer-email"
@@ -91,7 +91,7 @@ const Overview = ({ customer, orders }: OverviewProps) => {
                                 Número do pedido
                               </span>
                               <span className="font-semibold">
-                                Total amount
+                                Valor total
                               </span>
                               <span data-testid="order-created-date">
                                 {new Date(order.created_at).toDateString()}
@@ -114,7 +114,7 @@ const Overview = ({ customer, orders }: OverviewProps) => {
                               data-testid="open-order-button"
                             >
                               <span className="sr-only">
-                                Go to order #{order.display_id}
+                                Ver pedido nº {order.display_id}
                               </span>
                               <ChevronDown className="-rotate-90" />
                             </button>

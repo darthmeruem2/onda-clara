@@ -16,10 +16,10 @@ const nextConfig = {
   agentRules: false,
   async headers() {
     return [
-      {
+      ...(process.env.OC_SHOWROOM === "1" ? [] : [{
         source: "/:path*",
         headers: [{ key: "Link", value: '</.well-known/ucp>; rel="ucp"' }],
-      },
+      }]),
       {
         source: "/:countryCode/products/:handle",
         headers: [{ key: "Vary", value: "Accept" }],

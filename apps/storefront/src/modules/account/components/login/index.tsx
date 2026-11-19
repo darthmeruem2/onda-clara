@@ -27,7 +27,7 @@ const Login = ({ setCurrentView }: Props) => {
           data-testid="login-verification-message"
         >
           Enviamos um link de confirmação para <strong>{message.email}</strong>.
-          Please verify your email, then sign in.
+          Confirme seu e-mail para entrar.
         </div>
       )}
       <form className="w-full" action={formAction}>

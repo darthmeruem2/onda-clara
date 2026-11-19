@@ -1,4 +1,5 @@
 import { sdk } from "@lib/config"
+import { showroom } from "@lib/showroom/catalog"
 import { listRegions } from "@lib/data/regions"
 import { getSiteOrigin, listCountryCodes } from "@lib/util/site"
 import type { MetadataRoute } from "next"
@@ -11,6 +12,7 @@ const STATIC_PATHS = [
   "/terms",
   "/privacy",
   "/contact",
+  "/sobre",
 ]
 const PAGE_SIZE = 200
 
@@ -30,6 +32,8 @@ async function listAll<T>(fetchPage: (offset: number) => Promise<Page<T>>) {
 type Entry = { handle?: string | null; updated_at?: string | Date | null }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  if (showroom) return []
+
   const query = { fields: "handle,updated_at", limit: PAGE_SIZE }
 
   const [origin, regions, products, categories, collections] = await Promise.all([

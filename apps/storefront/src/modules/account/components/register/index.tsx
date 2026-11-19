@@ -32,7 +32,7 @@ const Register = ({ setCurrentView }: Props) => {
           data-testid="register-verification-message"
         >
           Enviamos um link de confirmação para <strong>{message.email}</strong>.
-          Please check your inbox to verify your email, then sign in.
+          Confira sua caixa de entrada, confirme seu e-mail e entre.
         </div>
       )}
       <form className="w-full flex flex-col" action={formAction}>

@@ -32,7 +32,7 @@ const ShippingDetails = ({ order }: ShippingDetailsProps) => {
           </Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_address?.postal_code},{" "}
-            {order.shipping_address?.city}
+            {order.shipping_address?.city}{order.shipping_address?.province ? ` / ${order.shipping_address.province}` : ""}
           </Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {order.shipping_address?.country_code?.toUpperCase()}
@@ -54,7 +54,7 @@ const ShippingDetails = ({ order }: ShippingDetailsProps) => {
           className="flex flex-col w-1/3"
           data-testid="shipping-method-summary"
         >
-          <Text className="txt-medium-plus text-ui-fg-base mb-1">Method</Text>
+          <Text className="txt-medium-plus text-ui-fg-base mb-1">Modalidade</Text>
           <Text className="txt-medium text-ui-fg-subtle">
             {(order.shipping_methods?.[0] as { name?: string })?.name} (
             {convertToLocale({

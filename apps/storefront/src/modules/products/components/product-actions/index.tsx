@@ -13,7 +13,6 @@ import { useParams, usePathname } from "next/navigation"
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react"
 import ProductPrice from "../product-price"
 import MobileActions from "./mobile-actions"
-import { useRouter } from "next/navigation"
 
 type ProductActionsProps = {
   product: HttpTypes.StoreProduct
@@ -37,7 +36,6 @@ export default function ProductActions({
   product,
   disabled,
 }: ProductActionsProps) {
-  const router = useRouter()
   const pathname = usePathname()
   // Preselected on the server so the form posts a valid variant without JavaScript.
   // The page is statically rendered, so `?v_id=` is applied after hydration.
@@ -103,8 +101,8 @@ export default function ProductActions({
       params.delete("v_id")
     }
 
-    router.replace(pathname + (params.size ? "?" + params.toString() : ""), { scroll: false })
-  }, [selectedVariant, isValidVariant, isUrlVariantApplied, pathname, router])
+    window.history.replaceState(null, "", pathname + (params.size ? "?" + params.toString() : ""))
+  }, [selectedVariant, isValidVariant, isUrlVariantApplied, pathname])
 
   const inStock = useMemo(
     () => isVariantInStock(selectedVariant),

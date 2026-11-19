@@ -13,6 +13,7 @@ const fileOptions = {
   region: process.env.S3_REGION,
   bucket: process.env.S3_BUCKET,
   endpoint: process.env.S3_ENDPOINT,
+  acl: process.env.S3_DISABLE_ACL === "true" ? false : undefined,
   additional_client_config: { forcePathStyle: process.env.S3_FORCE_PATH_STYLE === "true" },
 }
 

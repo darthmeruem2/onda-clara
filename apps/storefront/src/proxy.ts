@@ -88,16 +88,20 @@ async function getCountryCode(
  * Middleware to handle region selection and onboarding status.
  */
 export async function proxy(request: NextRequest) {
-  if (request.nextUrl.pathname.includes(".")) {
+  const path = request.nextUrl.pathname
+  const demo = process.env.OC_SHOWROOM === "1"
+  if (/^\/(?:api|buy|ucp|\.well-known\/ucp)(?:\/|$)/.test(path)) {
+    return demo ? new NextResponse(null, { status: 404 }) : NextResponse.next()
+  }
+
+  if (path.includes(".")) {
     return NextResponse.next()
   }
 
   const cacheIdCookie = request.cookies.get("_medusa_cache_id")
   const cacheId = cacheIdCookie?.value || crypto.randomUUID()
 
-  const demo = process.env.OC_SHOWROOM === "1"
-  const path = request.nextUrl.pathname
-  if (demo && /^\/(?:[a-z]{2}\/)?(?:checkout|account|cart|order)(?:\/|$)/i.test(path)) {
+  if (demo && /^\/(?:[a-z]{2}\/)?(?:checkout|account|cart|order|pagamento|verify-account)(?:\/|$)/i.test(path)) {
     return NextResponse.redirect(new URL("/br/sobre", request.url), 307)
   }
   const countryCode = demo ? "br" : await getCountryCode(request, await getRegionMap(cacheId))
@@ -132,6 +136,10 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
+    "/api/:path*",
+    "/buy/:path*",
+    "/ucp/:path*",
+    "/.well-known/ucp",
     "/((?!api|ucp|buy|_next/static|_next/image|favicon.ico|images|assets|png|svg|jpg|jpeg|gif|webp).*)",
   ],
 }

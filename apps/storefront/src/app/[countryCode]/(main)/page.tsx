@@ -44,24 +44,27 @@ export default async function Home(props: {
   params: Promise<{ countryCode: string }>
 }) {
   const { countryCode } = await props.params
-  const [region, { collections }, categories, origin, regions] =
+  const [region, { collections }, categories, origin, regions, editorialResult] =
     await Promise.all([
       getRegion(countryCode),
       listCollections({ fields: "id,handle,title" }),
       listCategories({ fields: "id,name,handle,parent_category_id" }),
       getSiteOrigin(),
       listRegions(),
+      listProducts({
+        countryCode,
+        queryParams: {
+          handle: brand.campaign.editorial.productHandle,
+          fields: "id,handle",
+          limit: 1,
+        },
+      }),
     ])
 
   const collection = collections.find(({ handle }) => handle === brand.campaign.collectionHandle)
   const catalogHref = collection ? `/collections/${collection.handle}` : "/store"
   const primaryCategories = categories.filter(({ parent_category_id }) => !parent_category_id).slice(0, 8)
-  const editorial = region
-    ? (await listProducts({
-        regionId: region.id,
-        queryParams: { handle: brand.campaign.editorial.productHandle, fields: "id,handle", limit: 1 },
-      })).response.products[0]
-    : undefined
+  const [editorial] = editorialResult.response.products
   const homeUrl = `${origin}/${countryCode}`
   const returnPolicies = buildRegionsReturnPolicies(regions)
   const structuredData = [

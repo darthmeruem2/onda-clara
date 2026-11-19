@@ -1,3 +1,4 @@
+import { showroom } from "@lib/showroom/catalog"
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
 import { listRegions } from "@lib/data/regions"
@@ -10,6 +11,8 @@ import {
 } from "@lib/util/site"
 
 export async function GET(request: Request) {
+  if (showroom) return new Response("# Onda Clara\n\nVitrine com catálogo fictício. Compras indisponíveis.\n")
+
   const origin = getRequestOrigin(request)
 
   const [regions, categories, { collections }] = await Promise.all([
