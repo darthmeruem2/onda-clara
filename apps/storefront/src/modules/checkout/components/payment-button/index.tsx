@@ -2,6 +2,7 @@
 
 import { isAdyen, isManual, isStripeLike } from "@lib/constants"
 import { placeOrder } from "@lib/data/cart"
+import { startMercadoPagoCheckout } from "@lib/data/mercado-pago"
 import { HttpTypes } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
@@ -30,6 +31,8 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
   const paymentSession = cart.payment_collection?.payment_sessions?.[0]
 
   switch (true) {
+    case paymentSession?.provider_id === "pp_mercadopago_br":
+      return <MercadoPagoButton notReady={notReady} data-testid={dataTestId} />
     case isStripeLike(paymentSession?.provider_id):
       return (
         <StripePaymentButton
@@ -51,8 +54,47 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
         <ManualTestPaymentButton notReady={notReady} data-testid={dataTestId} />
       )
     default:
-      return <Button disabled>Select a payment method</Button>
+      return <Button disabled>Selecione uma forma de pagamento</Button>
   }
+}
+
+const MercadoPagoButton = ({
+  notReady,
+  "data-testid": dataTestId,
+}: {
+  notReady: boolean
+  "data-testid": string
+}) => {
+  const [processing, setProcessing] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const start = async () => {
+    setProcessing(true)
+    setError(null)
+    try {
+      const { url } = await startMercadoPagoCheckout()
+      window.location.assign(url)
+    } catch {
+      setError("Não foi possível iniciar o pagamento. Confira os dados do pedido e tente novamente.")
+      setProcessing(false)
+    }
+  }
+
+  return (
+    <>
+      <Button
+        type="button"
+        size="large"
+        disabled={notReady || processing}
+        isLoading={processing}
+        onClick={start}
+        data-testid={dataTestId}
+      >
+        Continuar para o Mercado Pago
+      </Button>
+      <ErrorMessage error={error} />
+    </>
+  )
 }
 
 const StripePaymentButton = ({
@@ -160,7 +202,7 @@ const StripePaymentButton = ({
         isLoading={submitting}
         data-testid={dataTestId}
       >
-        Place order
+        Confirmar pedido
       </Button>
       <ErrorMessage
         error={errorMessage}
@@ -199,7 +241,7 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
         size="large"
         data-testid="submit-order-button"
       >
-        Place order
+        Confirmar pedido
       </Button>
       <ErrorMessage
         error={errorMessage}

@@ -46,6 +46,7 @@ export default function ProductActions({
   )
   const [isUrlVariantApplied, setIsUrlVariantApplied] = useState(false)
   const [isAdding, setIsAdding] = useState(false)
+  const [error, setError] = useState<string>()
   const countryCode = useParams().countryCode as string
 
   const selectedVariant = useMemo(() => {
@@ -102,8 +103,8 @@ export default function ProductActions({
       params.delete("v_id")
     }
 
-    router.replace(pathname + "?" + params.toString())
-  }, [selectedVariant, isValidVariant, isUrlVariantApplied])
+    router.replace(pathname + (params.size ? "?" + params.toString() : ""), { scroll: false })
+  }, [selectedVariant, isValidVariant, isUrlVariantApplied, pathname, router])
 
   const inStock = useMemo(
     () => isVariantInStock(selectedVariant),
@@ -119,15 +120,15 @@ export default function ProductActions({
     if (!selectedVariant?.id) return null
 
     setIsAdding(true)
-
-    await addToCart({
-      variantId: selectedVariant.id,
-      quantity: 1,
-      countryCode,
-    })
-    notifyCartUpdated()
-
-    setIsAdding(false)
+    setError(undefined)
+    try {
+      await addToCart({ variantId: selectedVariant.id, quantity: 1, countryCode })
+      notifyCartUpdated()
+    } catch {
+      setError("Não foi possível adicionar esta peça. Confira a disponibilidade e tente novamente.")
+    } finally {
+      setIsAdding(false)
+    }
   }
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -186,7 +187,7 @@ export default function ProductActions({
               className="text-small-regular text-ui-fg-subtle"
               data-testid="product-availability"
             >
-              {inStock ? "In stock" : "Out of stock"}
+              {inStock ? "Em estoque" : "Esgotado"}
             </p>
           )}
 
@@ -200,16 +201,17 @@ export default function ProductActions({
               !isValidVariant
             }
             variant="primary"
-            className="w-full h-10"
+            className="oc-primary w-full"
             isLoading={isAdding}
             data-testid="add-product-button"
           >
             {!selectedVariant
-              ? "Select variant"
+              ? "Selecione uma opção"
               : !inStock || !isValidVariant
-              ? "Out of stock"
-              : "Add to cart"}
+              ? "Esgotado"
+              : "Adicionar à sacola"}
           </Button>
+          {error && <p role="alert" className="text-sm text-red-800">{error}</p>}
         </form>
         <MobileActions
           product={product}

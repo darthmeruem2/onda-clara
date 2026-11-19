@@ -1,5 +1,6 @@
 "use server"
 
+import { estadosBrasileiros, formatCep, isCep } from "@lib/util/br-address"
 import { sdk } from "@lib/config"
 import medusaError from "@lib/util/medusa-error"
 import { HttpTypes } from "@medusajs/types"
@@ -279,7 +280,7 @@ export async function applyPromotions(codes: string[]) {
 }
 
 export async function applyGiftCard(code: string) {
-  //   const cartId = getCartId()
+  //   const cartId = await getCartId()
   //   if (!cartId) return "No cartId cookie found"
   //   try {
   //     await updateCart(cartId, { gift_cards: [{ code }] }).then(() => {
@@ -291,7 +292,7 @@ export async function applyGiftCard(code: string) {
 }
 
 export async function removeDiscount(code: string) {
-  // const cartId = getCartId()
+  // const cartId = await getCartId()
   // if (!cartId) return "No cartId cookie found"
   // try {
   //   await deleteDiscount(cartId, code)
@@ -306,7 +307,7 @@ export async function removeGiftCard(
   giftCards: any[]
   // giftCards: GiftCard[]
 ) {
-  //   const cartId = getCartId()
+  //   const cartId = await getCartId()
   //   if (!cartId) return "No cartId cookie found"
   //   try {
   //     await updateCart(cartId, {
@@ -339,9 +340,19 @@ export async function setAddresses(currentState: unknown, formData: FormData) {
     if (!formData) {
       throw new Error("No form data found when setting addresses")
     }
-    const cartId = getCartId()
+    const cartId = await getCartId()
     if (!cartId) {
       throw new Error("No existing cart found when setting addresses")
+    }
+
+    const sameAsBilling = formData.get("same_as_billing") === "on"
+    const shippingCep = formData.get("shipping_address.postal_code")
+    const billingCep = sameAsBilling ? shippingCep : formData.get("billing_address.postal_code")
+    if (!isCep(shippingCep) || !isCep(billingCep)) return "Informe um CEP com oito dígitos."
+    const shippingState = String(formData.get("shipping_address.province"))
+    const billingState = sameAsBilling ? shippingState : String(formData.get("billing_address.province"))
+    if (!estadosBrasileiros.includes(shippingState) || !estadosBrasileiros.includes(billingState)) {
+      return "Selecione a UF do endereço."
     }
 
     const data = {
@@ -349,9 +360,9 @@ export async function setAddresses(currentState: unknown, formData: FormData) {
         first_name: formData.get("shipping_address.first_name"),
         last_name: formData.get("shipping_address.last_name"),
         address_1: formData.get("shipping_address.address_1"),
-        address_2: "",
+        address_2: formData.get("shipping_address.address_2"),
         company: formData.get("shipping_address.company"),
-        postal_code: formData.get("shipping_address.postal_code"),
+        postal_code: formatCep(shippingCep),
         city: formData.get("shipping_address.city"),
         country_code: formData.get("shipping_address.country_code"),
         province: formData.get("shipping_address.province"),
@@ -360,17 +371,16 @@ export async function setAddresses(currentState: unknown, formData: FormData) {
       email: formData.get("email"),
     } as any
 
-    const sameAsBilling = formData.get("same_as_billing")
-    if (sameAsBilling === "on") data.billing_address = data.shipping_address
+    if (sameAsBilling) data.billing_address = data.shipping_address
 
-    if (sameAsBilling !== "on")
+    if (!sameAsBilling)
       data.billing_address = {
         first_name: formData.get("billing_address.first_name"),
         last_name: formData.get("billing_address.last_name"),
         address_1: formData.get("billing_address.address_1"),
-        address_2: "",
+        address_2: formData.get("billing_address.address_2"),
         company: formData.get("billing_address.company"),
-        postal_code: formData.get("billing_address.postal_code"),
+        postal_code: formatCep(billingCep),
         city: formData.get("billing_address.city"),
         country_code: formData.get("billing_address.country_code"),
         province: formData.get("billing_address.province"),

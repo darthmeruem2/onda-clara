@@ -19,7 +19,7 @@ const getQuery = (q?: string | string[]) =>
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const query = getQuery((await props.searchParams).q)
   return {
-    title: query ? `Search results for "${query}"` : "Search",
+    title: query ? `Resultados para “${query}”` : "Buscar",
     robots: { index: false, follow: true },
   }
 }
@@ -43,17 +43,17 @@ export default async function SearchPage(props: Props) {
   return (
     <div className="content-container py-6" data-testid="search-container">
       <h1 className="text-2xl-semi mb-6">
-        {query ? `Search results for "${query}"` : "Search"}
+        {query ? `Resultados para “${query}”` : "Buscar"}
       </h1>
       <SearchForm countryCode={countryCode} defaultValue={query} className="mb-8 max-w-xl" />
       {query && (
         <p className="text-small-regular text-ui-fg-subtle mb-6">
-          {response.count} {response.count === 1 ? "product" : "products"} found
+          {response.count} {response.count === 1 ? "peça encontrada" : "peças encontradas"}
         </p>
       )}
       {query && response.products.length === 0 ? (
         <p className="text-ui-fg-subtle">
-          No products match your search. Try a different keyword.
+          Nenhuma peça encontrada. Tente outro termo.
         </p>
       ) : (
         <ul

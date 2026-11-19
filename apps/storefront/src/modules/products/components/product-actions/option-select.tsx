@@ -25,7 +25,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
 
   return (
     <fieldset className="flex flex-col gap-y-3" disabled={disabled}>
-      <legend className="text-sm mb-3">Select {title}</legend>
+      <legend className="text-sm mb-3">{title}</legend>
       <div
         className="flex flex-wrap justify-between gap-2"
         data-testid={dataTestId}
@@ -46,7 +46,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
               <label
                 htmlFor={id}
                 className={clx(
-                  "flex items-center justify-center cursor-pointer border-ui-border-base bg-ui-bg-subtle border text-small-regular h-10 rounded-rounded p-2 peer-focus-visible:ring-2 peer-focus-visible:ring-offset-1 peer-disabled:cursor-not-allowed",
+                  "flex items-center justify-center cursor-pointer border-ui-border-base bg-ui-bg-subtle border text-small-regular min-h-11 rounded-rounded p-2 peer-focus-visible:ring-2 peer-focus-visible:ring-offset-1 peer-disabled:cursor-not-allowed",
                   {
                     "border-ui-border-interactive": v === current,
                     "hover:shadow-elevation-card-rest transition-shadow ease-in-out duration-150":

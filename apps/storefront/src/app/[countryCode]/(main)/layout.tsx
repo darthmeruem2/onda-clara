@@ -26,6 +26,7 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
 
   return (
     <>
+      <a href="#conteudo-principal" className="oc-skip-link">Pular para o conteúdo</a>
       <Nav />
       {customer && cart && (
         <CartMismatchBanner customer={customer} cart={cart} />
@@ -38,7 +39,7 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
           shippingOptions={shippingOptions}
         />
       )}
-      {props.children}
+      <main id="conteudo-principal" tabIndex={-1}>{props.children}</main>
       <Footer />
     </>
   )

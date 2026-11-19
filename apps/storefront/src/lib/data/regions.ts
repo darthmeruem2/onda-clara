@@ -1,10 +1,12 @@
 "use server"
 
+import { showroom, showroomCatalog } from "@lib/showroom/catalog"
 import { sdk } from "@lib/config"
 import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
 
 export const listRegions = async () => {
+  if (showroom) return showroomCatalog.regions
   const next = {
     ...(await getCacheOptions("regions")),
   }
@@ -19,6 +21,7 @@ export const listRegions = async () => {
 }
 
 export const retrieveRegion = async (id: string) => {
+  if (showroom) return showroomCatalog.regions.find((region) => region.id === id)
   const next = {
     ...(await getCacheOptions(["regions", id].join("-"))),
   }
@@ -53,7 +56,7 @@ export const getRegion = async (countryCode: string) => {
 
   const region = countryCode
     ? regionMap.get(countryCode)
-    : regionMap.get("us")
+    : regionMap.get("br")
 
   return region
 }

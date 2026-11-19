@@ -1,3 +1,4 @@
+import { estadosBrasileiros, formatCep } from "@lib/util/br-address"
 import { HttpTypes } from "@medusajs/types"
 import { Container } from "@modules/common/components/ui"
 import Checkbox from "@modules/common/components/checkbox"
@@ -22,10 +23,10 @@ const ShippingAddress = ({
     "shipping_address.first_name": cart?.shipping_address?.first_name || "",
     "shipping_address.last_name": cart?.shipping_address?.last_name || "",
     "shipping_address.address_1": cart?.shipping_address?.address_1 || "",
-    "shipping_address.company": cart?.shipping_address?.company || "",
+    "shipping_address.address_2": cart?.shipping_address?.address_2 || "",
     "shipping_address.postal_code": cart?.shipping_address?.postal_code || "",
     "shipping_address.city": cart?.shipping_address?.city || "",
-    "shipping_address.country_code": cart?.shipping_address?.country_code || "",
+    "shipping_address.country_code": cart?.shipping_address?.country_code || "br",
     "shipping_address.province": cart?.shipping_address?.province || "",
     "shipping_address.phone": cart?.shipping_address?.phone || "",
     email: cart?.email || "",
@@ -55,10 +56,10 @@ const ShippingAddress = ({
         "shipping_address.first_name": address?.first_name || "",
         "shipping_address.last_name": address?.last_name || "",
         "shipping_address.address_1": address?.address_1 || "",
-        "shipping_address.company": address?.company || "",
+        "shipping_address.address_2": address?.address_2 || "",
         "shipping_address.postal_code": address?.postal_code || "",
         "shipping_address.city": address?.city || "",
-        "shipping_address.country_code": address?.country_code || "",
+        "shipping_address.country_code": address?.country_code || "br",
         "shipping_address.province": address?.province || "",
         "shipping_address.phone": address?.phone || "",
       }))
@@ -90,7 +91,7 @@ const ShippingAddress = ({
   ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.name.endsWith(".postal_code") ? formatCep(e.target.value) : e.target.value,
     })
   }
 
@@ -99,10 +100,10 @@ const ShippingAddress = ({
       {customer && (addressesInRegion?.length || 0) > 0 && (
         <Container className="mb-6 flex flex-col gap-y-4 p-5">
           <p className="text-small-regular">
-            {`Hi ${customer.first_name}, do you want to use one of your saved addresses?`}
+            {`Olá, ${customer.first_name}. Você pode usar um endereço salvo.`}
           </p>
           <AddressSelect
-            addresses={customer.addresses}
+            addresses={addressesInRegion ?? []}
             addressInput={
               mapKeys(formData, (_, key) =>
                 key.replace("shipping_address.", "")
@@ -114,7 +115,7 @@ const ShippingAddress = ({
       )}
       <div className="grid grid-cols-2 gap-4">
         <Input
-          label="First name"
+          label="Nome"
           name="shipping_address.first_name"
           autoComplete="given-name"
           value={formData["shipping_address.first_name"]}
@@ -123,7 +124,7 @@ const ShippingAddress = ({
           data-testid="shipping-first-name-input"
         />
         <Input
-          label="Last name"
+          label="Sobrenome"
           name="shipping_address.last_name"
           autoComplete="family-name"
           value={formData["shipping_address.last_name"]}
@@ -132,7 +133,7 @@ const ShippingAddress = ({
           data-testid="shipping-last-name-input"
         />
         <Input
-          label="Address"
+          label="Rua e número"
           name="shipping_address.address_1"
           autoComplete="address-line1"
           value={formData["shipping_address.address_1"]}
@@ -141,24 +142,27 @@ const ShippingAddress = ({
           data-testid="shipping-address-input"
         />
         <Input
-          label="Company"
-          name="shipping_address.company"
-          value={formData["shipping_address.company"]}
+          label="Bairro e complemento"
+          name="shipping_address.address_2"
+          value={formData["shipping_address.address_2"]}
           onChange={handleChange}
-          autoComplete="organization"
+          autoComplete="address-line2"
           data-testid="shipping-company-input"
         />
         <Input
-          label="Postal code"
+          label="CEP"
           name="shipping_address.postal_code"
           autoComplete="postal-code"
+          inputMode="numeric"
+          maxLength={9}
+          pattern="[0-9]{5}-?[0-9]{3}"
           value={formData["shipping_address.postal_code"]}
           onChange={handleChange}
           required
           data-testid="shipping-postal-code-input"
         />
         <Input
-          label="City"
+          label="Cidade"
           name="shipping_address.city"
           autoComplete="address-level2"
           value={formData["shipping_address.city"]}
@@ -175,18 +179,25 @@ const ShippingAddress = ({
           required
           data-testid="shipping-country-select"
         />
-        <Input
-          label="State / Province"
-          name="shipping_address.province"
-          autoComplete="address-level1"
-          value={formData["shipping_address.province"]}
-          onChange={handleChange}
-          data-testid="shipping-province-input"
-        />
+        <label className="grid gap-1 text-sm text-ui-fg-subtle">
+          Estado (UF)
+          <select
+            name="shipping_address.province"
+            autoComplete="address-level1"
+            value={formData["shipping_address.province"]}
+            onChange={handleChange}
+            className="min-h-11 rounded-md border border-ui-border-base px-3"
+            required
+            data-testid="shipping-province-input"
+          >
+            <option value="">Selecione</option>
+            {estadosBrasileiros.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
+          </select>
+        </label>
       </div>
       <div className="my-8">
         <Checkbox
-          label="Billing address same as shipping address"
+          label="Usar o endereço de entrega para a cobrança"
           name="same_as_billing"
           checked={checked}
           onChange={onChange}
@@ -195,10 +206,10 @@ const ShippingAddress = ({
       </div>
       <div className="grid grid-cols-2 gap-4 mb-4">
         <Input
-          label="Email"
+          label="E-mail"
           name="email"
           type="email"
-          title="Enter a valid email address."
+          title="Informe um e-mail válido."
           autoComplete="email"
           value={formData.email}
           onChange={handleChange}
@@ -206,9 +217,10 @@ const ShippingAddress = ({
           data-testid="shipping-email-input"
         />
         <Input
-          label="Phone"
+          label="Telefone"
           name="shipping_address.phone"
           autoComplete="tel"
+          type="tel"
           value={formData["shipping_address.phone"]}
           onChange={handleChange}
           data-testid="shipping-phone-input"

@@ -1,3 +1,5 @@
+import { policyCopy } from "@lib/policy-copy"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { Metadata } from "next"
 
 import { getStorePolicies } from "@lib/data/store-policies"
@@ -7,8 +9,8 @@ export const dynamic = "force-static"
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: "Return policy",
-  description: "How to return items and get a refund.",
+  title: "Trocas e devoluções",
+  description: "Como solicitar uma troca ou devolução.",
 }
 
 export default async function ReturnsPage(props: {
@@ -18,22 +20,23 @@ export default async function ReturnsPage(props: {
   const { current } = await getStorePolicies(countryCode)
 
   return (
-    <PolicyPage title="Return policy">
+    <PolicyPage title="Trocas e devoluções">
+      {policyCopy.returns.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       {current ? (
         <>
           <p>
-            You can return items within {current.returnWindowDays} days of
-            delivery. Items are returned by mail.
+            Solicite a devolução em até {current.returnWindowDays} dias após receber o pedido. O envio da peça é feito por postagem.
           </p>
           <p>
             {current.freeReturns
-              ? "Return shipping is free."
-              : "Return shipping costs are paid by the customer."}
+              ? "A postagem de devolução é gratuita."
+              : "Consulte o atendimento para confirmar como será feita a postagem."}
           </p>
         </>
       ) : (
         <PoliciesUnavailable />
       )}
+      <LocalizedClientLink href="/contact" className="underline underline-offset-4">Falar com o atendimento</LocalizedClientLink>
     </PolicyPage>
   )
 }

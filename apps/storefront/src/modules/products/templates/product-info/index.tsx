@@ -20,7 +20,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         )}
         <Heading
           level="h1"
-          className="text-3xl leading-10 text-ui-fg-base"
+          className="oc-display text-4xl leading-tight text-ui-fg-base lg:text-6xl"
           data-testid="product-title"
         >
           {product.title}

@@ -1,8 +1,10 @@
+import { showroom, showroomCatalog } from "@lib/showroom/catalog"
 import { sdk } from "@lib/config"
 import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
 
 export const listCategories = async (query?: Record<string, unknown>) => {
+  if (showroom) return showroomCatalog.categories
   const next = {
     ...(await getCacheOptions("categories")),
   }
@@ -28,6 +30,7 @@ export const listCategories = async (query?: Record<string, unknown>) => {
 
 export const getCategoryByHandle = async (categoryHandle: string[]) => {
   const handle = `${categoryHandle.join("/")}`
+  if (showroom) return showroomCatalog.categories.find((category) => category.handle === handle)
 
   const next = {
     ...(await getCacheOptions("categories")),

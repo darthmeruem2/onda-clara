@@ -231,3 +231,27 @@ claude mcp add --transport http medusa-cloud https://cloud.medusajs.com/mcp # or
 - `.env` / `.env.local` — never commit, print, or copy secret values out of them. Edit `.env.template` instead when documenting a new variable.
 - Existing migrations in `src/modules/*/migrations/` — add a new migration rather than rewriting one that may already have run.
 - Don't run destructive DB commands (drops, resets) against the user's database without explicit confirmation.
+
+## Project Skills
+
+The skills in [`.agents/skills/`](.agents/skills) are checked in with their supporting files. Open the applicable `SKILL.md` directly if the current Codex session has not discovered it yet. The [source inventory](.agents/skills/SOURCES.md) records the upstream revisions.
+
+| Work | Skills to read |
+| --- | --- |
+| Medusa backend, workflows, integrations | `building-with-medusa` and the installed package instructions above |
+| Medusa Admin extension | `building-admin-dashboard-customizations` |
+| Database migrations or admin account setup | `db-generate`, `db-migrate`, or `new-user` as applicable |
+| Storefront API, catalog, cart, checkout, account | `building-storefronts` and `storefront-best-practices` |
+| Visual direction and mobile UI | `frontend-design` and `ui-ux-pro-max` |
+| Storefront copy in Brazilian Portuguese | `copywriting` |
+| React performance and accessibility review | `react-best-practices` and `web-design-guidelines` |
+| Browser journeys and screenshots | `playwright` |
+| Payment, customer data, or security review | `security-best-practices` |
+| PostgreSQL and Supabase hosting | `supabase` and `supabase-postgres-best-practices` |
+| Vercel preview deployments | `deploy-to-vercel` |
+| Work on existing or newly requested GSAP animations | `gsap-core`, `gsap-react`, and `gsap-performance` |
+| Finding a new skill | `find-skills` |
+
+Run UI/UX Pro Max's local e-commerce design lookup from the repository root with `python3 .agents/skills/ui-ux-pro-max/scripts/search.py "<design brief>" --design-system`. For Web Interface Guidelines, use the upstream reference or [the version included for offline review](.agents/skills/web-design-guidelines/references/command.md).
+
+Check the instructions, upstream revision, license, and any executable or network behavior before introducing another skill or updating a vendored skill. Use the repository's tools and connected accounts for deployments. The skills provide implementation guidance and do not authorize releasing changes, spending, running scripts from new sources, or expanding scope.

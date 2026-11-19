@@ -1,10 +1,12 @@
 import "server-only"
+import { brand } from "@lib/brand"
+import { getBaseURL } from "@lib/util/env"
 import { headers } from "next/headers"
 
-export const STORE_NAME = "Medusa Store"
+export const STORE_NAME = brand.name
 
 export const DEFAULT_COUNTRY_CODE = (
-  process.env.NEXT_PUBLIC_DEFAULT_REGION || "dk"
+  process.env.NEXT_PUBLIC_DEFAULT_REGION || "br"
 ).toLowerCase()
 
 const configuredUrl = () => process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/$/, "")
@@ -30,7 +32,7 @@ export const getSiteOrigin = async (): Promise<string> => {
     return configured
   }
   const requestHeaders = await headers()
-  return originFromHeaders((name) => requestHeaders.get(name)) || "http://localhost:8000"
+  return originFromHeaders((name) => requestHeaders.get(name)) || getBaseURL()
 }
 
 export const listCountryCodes = (

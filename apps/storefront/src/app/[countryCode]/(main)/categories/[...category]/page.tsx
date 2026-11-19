@@ -5,6 +5,7 @@ import { getCategoryByHandle } from "@lib/data/categories"
 import CategoryTemplate from "@modules/categories/templates"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { parseOptionValueIds } from "@lib/util/product-option-filters"
+import { getSiteOrigin } from "@lib/util/site"
 
 type Props = {
   params: Promise<{ category: string[]; countryCode: string }>
@@ -18,23 +19,22 @@ type Props = {
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const params = await props.params
-  try {
-    const productCategory = await getCategoryByHandle(params.category)
+  const { category, countryCode } = await props.params
+  const [productCategory, origin] = await Promise.all([
+    getCategoryByHandle(category),
+    getSiteOrigin(),
+  ])
 
-    const title = productCategory.name + " | Medusa Store"
-
-    const description = productCategory.description ?? `${title} category.`
-
-    return {
-      title: `${title} | Medusa Store`,
-      description,
-      alternates: {
-        canonical: `${params.category.join("/")}`,
-      },
-    }
-  } catch {
+  if (!productCategory) {
     notFound()
+  }
+
+  return {
+    title: productCategory.name,
+    description: productCategory.description || `Veja as peças de ${productCategory.name.toLowerCase()} da loja.`,
+    alternates: {
+      canonical: `${origin}/${countryCode}/categories/${category.join("/")}`,
+    },
   }
 }
 

@@ -25,8 +25,12 @@ export const paymentInfoMap: Record<
     title: "PayPal",
     icon: <PayPal />,
   },
+  pp_mercadopago_br: {
+    title: "Pix ou cartão pelo Mercado Pago",
+    icon: <CreditCard />,
+  },
   pp_system_default: {
-    title: "Manual Payment",
+    title: "Pagamento de demonstração",
     icon: <CreditCard />,
   },
   // Add more payment providers here

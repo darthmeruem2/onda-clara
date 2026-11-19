@@ -1,24 +1,20 @@
-import { Metadata } from "next"
+import { brand } from "@lib/brand"
+import { PolicyPage } from "@modules/policies/templates"
 
-import { STORE_NAME } from "@lib/util/site"
-import { PlaceholderNotice, PolicyPage } from "@modules/policies/templates"
-
-export const dynamic = "force-static"
-export const revalidate = 60
-
-export const metadata: Metadata = {
-  title: "Contact",
-  description: `How to contact ${STORE_NAME}.`,
+export const metadata = {
+  title: "Atendimento",
+  description: `Canais de contato da ${brand.name}.`,
 }
 
 export default function ContactPage() {
   return (
-    <PolicyPage title="Contact">
-      <PlaceholderNotice />
-      <p>
-        Questions about an order, shipping or returns? Contact {STORE_NAME}{" "}
-        customer service and include your order number.
-      </p>
+    <PolicyPage title="Atendimento">
+      <p>Para receber ajuda com um pedido, tenha o número da compra em mãos.</p>
+      {brand.whatsapp && (
+        <div><a href={brand.whatsapp} target="_blank" rel="noreferrer" className="oc-primary">Conversar no WhatsApp</a></div>
+      )}
+      {brand.email && <a href={`mailto:${brand.email}`} className="underline underline-offset-4">{brand.email}</a>}
+      {!brand.email && !brand.whatsapp && <p>Os canais de atendimento serão publicados quando a loja abrir.</p>}
     </PolicyPage>
   )
 }

@@ -1,29 +1,14 @@
-import { Metadata } from "next"
+import { policyCopy } from "@lib/policy-copy"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { PolicyPage } from "@modules/policies/templates"
 
-import { STORE_NAME } from "@lib/util/site"
-import { PlaceholderNotice, PolicyPage } from "@modules/policies/templates"
+export const metadata = { title: "Política de privacidade", description: "Como a loja usa os dados de cadastro e compra." }
 
-export const dynamic = "force-static"
-export const revalidate = 60
-
-export const metadata: Metadata = {
-  title: "Privacy policy",
-  description: `How ${STORE_NAME} collects and uses personal data.`,
-}
-
-export default function PrivacyPage() {
+export default function Page() {
   return (
-    <PolicyPage title="Privacy policy">
-      <PlaceholderNotice />
-      <p>
-        {STORE_NAME} collects the information you provide at checkout, such as
-        your name, email address and shipping address, to process and deliver
-        your order.
-      </p>
-      <p>
-        Payment details are handled by our payment provider and are not stored
-        by the store. Cookies are used to keep your cart and sign-in session.
-      </p>
+    <PolicyPage title="Política de privacidade">
+      {policyCopy.privacy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+      <LocalizedClientLink href="/contact" className="underline underline-offset-4">Canais de atendimento</LocalizedClientLink>
     </PolicyPage>
   )
 }

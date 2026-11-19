@@ -1,68 +1,49 @@
 import { Suspense } from "react"
-
-import { listLocales } from "@lib/data/locales"
-import { getLocale } from "@lib/data/locale-actions"
-import { listRegions } from "@lib/data/regions"
-import { StoreRegion } from "@medusajs/types"
+import { MagnifyingGlass, ShoppingBag, User } from "@medusajs/icons"
+import { showroom } from "@lib/showroom/catalog"
+import { listCategories } from "@lib/data/categories"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
-import Search from "@modules/layout/components/search"
 import SideMenu from "@modules/layout/components/side-menu"
+import Wordmark from "@modules/layout/components/wordmark"
 
 export default async function Nav() {
-  const [regions, locales, currentLocale] = await Promise.all([
-    listRegions().then((regions: StoreRegion[]) => regions),
-    listLocales(),
-    getLocale(),
-  ])
+  const categories = (await listCategories({ fields: "id,name,handle,parent_category_id" }))
+    .filter((category) => !category.parent_category_id)
+    .slice(0, 4)
 
   return (
-    <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
-        <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
-          <div className="flex-1 basis-0 h-full flex items-center">
-            <div className="h-full">
-              <SideMenu regions={regions} locales={locales} currentLocale={currentLocale} />
-            </div>
+    <header className="oc-header sticky top-0 z-40">
+      <div className="oc-header-message">{showroom ? "Vitrine demonstrativa · compras indisponíveis" : "Envios para todo o Brasil"}</div>
+      <nav className="oc-nav" aria-label="Navegação principal">
+        <div className="min-w-0">
+          <div className="md:hidden"><SideMenu categories={categories} demo={showroom} /></div>
+          <div className="hidden items-center gap-5 md:flex xl:gap-7">
+            <LocalizedClientLink href="/store" className="oc-nav-link">Loja</LocalizedClientLink>
+            {categories.slice(0, 3).map((category) => (
+              <LocalizedClientLink key={category.id} href={`/categories/${category.handle}`} className="oc-nav-link">
+                {category.name}
+              </LocalizedClientLink>
+            ))}
           </div>
-
-          <div className="flex items-center h-full">
-            <LocalizedClientLink
-              href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
-              data-testid="nav-store-link"
-            >
-              Medusa Store
+        </div>
+        <LocalizedClientLink href="/" className="oc-wordmark" data-testid="nav-store-link">
+          <Wordmark />
+        </LocalizedClientLink>
+        <div className="flex items-center justify-end gap-0 sm:gap-2">
+          <LocalizedClientLink href="/search" aria-label="Buscar produtos" className="oc-icon-button" data-testid="nav-search-button">
+            <MagnifyingGlass aria-hidden="true" />
+          </LocalizedClientLink>
+          {!showroom && <><div className="hidden md:block">
+            <LocalizedClientLink href="/account" aria-label="Minha conta" className="oc-icon-button" data-testid="nav-account-link">
+              <User aria-hidden="true" />
             </LocalizedClientLink>
           </div>
-
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
-            <Search />
-            <div className="hidden small:flex items-center gap-x-6 h-full">
-              <LocalizedClientLink
-                className="hover:text-ui-fg-base"
-                href="/account"
-                data-testid="nav-account-link"
-              >
-                Account
-              </LocalizedClientLink>
-            </div>
-            <Suspense
-              fallback={
-                <LocalizedClientLink
-                  className="hover:text-ui-fg-base flex gap-2"
-                  href="/cart"
-                  data-testid="nav-cart-link"
-                >
-                  Cart (0)
-                </LocalizedClientLink>
-              }
-            >
-              <CartButton />
-            </Suspense>
-          </div>
-        </nav>
-      </header>
-    </div>
+          <Suspense fallback={<LocalizedClientLink href="/cart" aria-label="Sacola" className="oc-icon-button"><ShoppingBag /></LocalizedClientLink>}>
+            <CartButton />
+          </Suspense></>}
+        </div>
+      </nav>
+    </header>
   )
 }

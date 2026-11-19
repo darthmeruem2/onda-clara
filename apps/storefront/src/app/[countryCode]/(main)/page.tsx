@@ -1,12 +1,17 @@
 import { Metadata } from "next"
-
-import FeaturedProducts from "@modules/home/components/featured-products"
-import Hero from "@modules/home/components/hero"
+import { brand } from "@lib/brand"
+import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
+import { listProducts } from "@lib/data/products"
 import { getRegion, listRegions } from "@lib/data/regions"
 import { toJsonLd } from "@lib/util/product-structured-data"
-import { getSiteOrigin, listCountryCodes, STORE_NAME } from "@lib/util/site"
+import { getSiteOrigin } from "@lib/util/site"
 import { buildRegionsReturnPolicies } from "@lib/util/store-policies"
+import CampaignEditorial from "@modules/home/components/campaign-editorial"
+import FeaturedCategories from "@modules/home/components/featured-categories"
+import FeaturedProducts from "@modules/home/components/featured-products"
+import Hero from "@modules/home/components/hero"
+import styles from "@modules/home/home.module.css"
 
 export const dynamic = "force-static"
 export const revalidate = 60
@@ -15,85 +20,77 @@ export async function generateMetadata(props: {
   params: Promise<{ countryCode: string }>
 }): Promise<Metadata> {
   const { countryCode } = await props.params
-  const [origin, regions] = await Promise.all([getSiteOrigin(), listRegions()])
+  const origin = await getSiteOrigin()
+  const canonical = `${origin}/${countryCode}`
+  const title = `${brand.name} | ${brand.pageTitle}`
 
   return {
-    title: "Medusa Next.js Starter Template",
-    description:
-      "A performant frontend ecommerce starter template with Next.js 16 and Medusa.",
-    alternates: {
-      canonical: `${origin}/${countryCode}`,
-      languages: {
-        ...Object.fromEntries(
-          listCountryCodes(regions).map((code) => [
-            `en-${code.toUpperCase()}`,
-            `${origin}/${code}`,
-          ])
-        ),
-        "x-default": origin,
-      },
+    title: { absolute: title },
+    description: brand.description,
+    alternates: { canonical, languages: { "pt-BR": `${origin}/br` } },
+    openGraph: {
+      title,
+      description: brand.description,
+      locale: "pt_BR",
+      type: "website",
+      url: canonical,
+      siteName: brand.name,
     },
+    twitter: { card: "summary_large_image", title, description: brand.description },
   }
 }
 
 export default async function Home(props: {
   params: Promise<{ countryCode: string }>
 }) {
-  const params = await props.params
+  const { countryCode } = await props.params
+  const [region, { collections }, categories, origin, regions] =
+    await Promise.all([
+      getRegion(countryCode),
+      listCollections({ fields: "id,handle,title" }),
+      listCategories({ fields: "id,name,handle,parent_category_id" }),
+      getSiteOrigin(),
+      listRegions(),
+    ])
 
-  const { countryCode } = params
-
-  const region = await getRegion(countryCode)
-
-  const { collections } = await listCollections({
-    fields: "id, handle, title",
-  })
-
-  if (!collections || !region) {
-    return null
-  }
-
-  const [origin, regions] = await Promise.all([getSiteOrigin(), listRegions()])
+  const collection = collections.find(({ handle }) => handle === brand.campaign.collectionHandle)
+  const catalogHref = collection ? `/collections/${collection.handle}` : "/store"
+  const primaryCategories = categories.filter(({ parent_category_id }) => !parent_category_id).slice(0, 8)
+  const editorial = region
+    ? (await listProducts({
+        regionId: region.id,
+        queryParams: { handle: brand.campaign.editorial.productHandle, fields: "id,handle", limit: 1 },
+      })).response.products[0]
+    : undefined
   const homeUrl = `${origin}/${countryCode}`
   const returnPolicies = buildRegionsReturnPolicies(regions)
   const structuredData = [
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: STORE_NAME,
+      name: brand.name,
       url: origin,
-      ...(returnPolicies.length
-        ? { hasMerchantReturnPolicy: returnPolicies }
-        : {}),
+      ...(returnPolicies.length ? { hasMerchantReturnPolicy: returnPolicies } : {}),
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: STORE_NAME,
+      name: brand.name,
       url: homeUrl,
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: `${homeUrl}/search?q={search_term_string}`,
-        },
-        "query-input": "required name=search_term_string",
-      },
+      inLanguage: "pt-BR",
     },
   ]
 
   return (
-    <>
+    <div className={styles.home}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(structuredData) }}
       />
-      <Hero />
-      <div className="py-12">
-        <ul className="flex flex-col gap-x-6">
-          <FeaturedProducts collections={collections} region={region} />
-        </ul>
-      </div>
-    </>
+      <Hero href={catalogHref} />
+      {region && <FeaturedProducts collection={collection} region={region} />}
+      <FeaturedCategories categories={primaryCategories} />
+      {editorial && <CampaignEditorial href={`/products/${editorial.handle}`} />}
+    </div>
   )
 }

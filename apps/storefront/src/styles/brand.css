@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("/fonts/instrument-serif.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --brand-ink: #292b21;
+  --brand-paper: #faf8f1;
+  --brand-olive: #393e2a;
+  --brand-muted: #5f6254;
+  --brand-sand: #ece8da;
+  --brand-tide: #dedfd2;
+  --brand-display: "Instrument Serif", Georgia, serif;
+  --brand-body: "DM Sans", Arial, sans-serif;
+  --oc-ink: var(--brand-ink);
+  --oc-paper: var(--brand-paper);
+  --oc-olive: var(--brand-olive);
+  --oc-display-font: var(--brand-display);
+}
+
+body {
+  font-family: var(--brand-body);
+}
+
+.oc-skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.oc-skip-link:focus {
+  position: fixed;
+  z-index: 60;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+  outline: 2px solid var(--brand-olive);
+}
+
+#conteudo-principal {
+  scroll-margin-top: 6.25rem;
+}

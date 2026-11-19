@@ -1,16 +1,46 @@
+import { listProducts } from "@lib/data/products"
 import { HttpTypes } from "@medusajs/types"
-import ProductRail from "@modules/home/components/featured-products/product-rail"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import ProductPreview from "@modules/products/components/product-preview"
+import styles from "../../home.module.css"
 
 export default async function FeaturedProducts({
-  collections,
+  collection,
   region,
 }: {
-  collections: HttpTypes.StoreCollection[]
+  collection?: HttpTypes.StoreCollection
   region: HttpTypes.StoreRegion
 }) {
-  return collections.map((collection) => (
-    <li key={collection.id}>
-      <ProductRail collection={collection} region={region} />
-    </li>
-  ))
+  const {
+    response: { products },
+  } = await listProducts({
+    regionId: region.id,
+    queryParams: {
+      ...(collection ? { collection_id: collection.id } : {}),
+      limit: 4,
+      fields: "*variants.calculated_price,*images",
+    },
+  })
+
+  if (!products.length) {
+    return null
+  }
+
+  return (
+    <section className={styles.featured} aria-labelledby="featured-title">
+      <div className={styles.sectionHeading}>
+        <h2 id="featured-title">Peças da estação</h2>
+        <LocalizedClientLink href="/store" className={styles.textLink}>
+          Ver todas as peças
+        </LocalizedClientLink>
+      </div>
+      <ul className={styles.productGrid}>
+        {products.map((product) => (
+          <li key={product.id}>
+            <ProductPreview product={product} region={region} isFeatured />
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
 }

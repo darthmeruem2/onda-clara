@@ -4,6 +4,8 @@ import { updateRegionsWorkflow } from "@medusajs/medusa/core-flows";
 import { DEFAULT_REGION_STORE_POLICIES } from "../lib/region-store-policies";
 
 export default async function regionStorePolicies({ container }: { container: MedusaContainer }) {
+  if (process.env.MEDUSA_DEMO_MODE !== "true") return;
+
   const logger = container.resolve(ContainerRegistrationKeys.LOGGER);
   const query = container.resolve(ContainerRegistrationKeys.QUERY);
 

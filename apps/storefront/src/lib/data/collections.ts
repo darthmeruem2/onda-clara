@@ -1,10 +1,12 @@
 "use server"
 
+import { showroom, showroomCatalog } from "@lib/showroom/catalog"
 import { sdk } from "@lib/config"
 import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
 
 export const retrieveCollection = async (id: string) => {
+  if (showroom) return showroomCatalog.collections.find((collection) => collection.id === id)
   const next = {
     ...(await getCacheOptions("collections")),
   }
@@ -27,6 +29,11 @@ export const listCollections = async (
     ...(await getCacheOptions("collections")),
   }
 
+  if (showroom) {
+    const collections = showroomCatalog.collections
+    return { collections, count: collections.length }
+  }
+
   queryParams.limit = queryParams.limit || "100"
   queryParams.offset = queryParams.offset || "0"
 
@@ -45,6 +52,7 @@ export const listCollections = async (
 export const getCollectionByHandle = async (
   handle: string
 ): Promise<HttpTypes.StoreCollection | null> => {
+  if (showroom) return showroomCatalog.collections.find((collection) => collection.handle === handle) ?? null
   const next = {
     ...(await getCacheOptions("collections")),
   }

@@ -1,5 +1,6 @@
 "use server"
 
+import { showroom, showroomCatalog } from "@lib/showroom/catalog"
 import { sdk } from "@lib/config"
 import { OptionValueIds } from "@lib/util/product-option-filters"
 import { sortProducts } from "@lib/util/sort-products"
@@ -49,6 +50,23 @@ export const listProducts = async ({
     return {
       response: { products: [], count: 0 },
       nextPage: null,
+    }
+  }
+
+  if (showroom) {
+    const query = queryParams?.q?.toLocaleLowerCase("pt-BR")
+    const products = showroomCatalog.products.filter((product) =>
+      (!queryParams?.handle || queryParams.handle === product.handle) &&
+      (!queryParams?.id?.length || queryParams.id.includes(product.id)) &&
+      (!queryParams?.collection_id?.length || queryParams.collection_id.includes(product.collection_id ?? "")) &&
+      (!queryParams?.category_id?.length || product.categories?.some(({ id }) => queryParams.category_id?.includes(id))) &&
+      (!query || `${product.title} ${product.description ?? ""}`.toLocaleLowerCase("pt-BR").includes(query))
+    )
+
+    return {
+      response: { products: products.slice(offset, offset + limit), count: products.length },
+      nextPage: products.length > offset + limit ? _pageParam + 1 : null,
+      queryParams,
     }
   }
 

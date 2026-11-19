@@ -55,7 +55,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   return (
     <>
       <div
-        className={clx("lg:hidden inset-x-0 bottom-0 fixed z-50", {
+        className={clx("lg:hidden inset-x-0 bottom-0 pb-[env(safe-area-inset-bottom)] fixed z-50", {
           "pointer-events-none": !show,
         })}
       >
@@ -112,7 +112,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   <span>
                     {variant
                       ? Object.values(options).join(" / ")
-                      : "Select Options"}
+                      : "Escolher opções"}
                   </span>
                   <ChevronDown />
                 </div>
@@ -126,10 +126,10 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 data-testid="mobile-cart-button"
               >
                 {!variant
-                  ? "Select variant"
+                  ? "Selecione uma opção"
                   : !inStock
-                  ? "Out of stock"
-                  : "Add to cart"}
+                  ? "Esgotado"
+                  : "Adicionar à sacola"}
               </Button>
             </div>
           </div>
@@ -149,7 +149,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
             <div className="fixed inset-0 bg-gray-700 bg-opacity-75 backdrop-blur-sm" />
           </Transition.Child>
 
-          <div className="fixed bottom-0 inset-x-0">
+          <div className="fixed bottom-0 pb-[env(safe-area-inset-bottom)] inset-x-0">
             <div className="flex min-h-full h-full items-center justify-center text-center">
               <Transition.Child
                 as={Fragment}
@@ -169,7 +169,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                       onClick={close}
                       className="bg-white w-12 h-12 rounded-full text-ui-fg-base flex justify-center items-center"
                       data-testid="close-modal-button"
-                      aria-label="Close"
+                      aria-label="Fechar"
                     >
                       <X />
                     </button>

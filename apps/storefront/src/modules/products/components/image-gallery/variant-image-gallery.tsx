@@ -42,7 +42,7 @@ const VariantImageGallery = ({
     [product, variantId]
   )
 
-  return <ImageGallery images={images} />
+  return <ImageGallery images={images} title={product.title} />
 }
 
 export default VariantImageGallery

@@ -1,24 +1,13 @@
 /**
- * Store policy values kept in each region's `metadata`. The storefront renders
- * the shipping/returns pages and structured data from these keys, and merchants
- * can change them in Settings → Regions → Metadata.
+ * Demo policy values kept in region metadata. Review them in the Medusa
+ * Admin under Configurações → Regiões → Metadados before going live.
  */
-export type RegionStorePolicies = {
-  return_window_days: number;
-  free_returns: boolean;
-  shipping_rate: number;
-  handling_days_min: number;
-  handling_days_max: number;
-  transit_days_min: number;
-  transit_days_max: number;
-};
-
-export const DEFAULT_REGION_STORE_POLICIES: RegionStorePolicies = {
-  return_window_days: 30,
-  free_returns: false,
-  shipping_rate: 10,
-  handling_days_min: 0,
-  handling_days_max: 1,
-  transit_days_min: 2,
-  transit_days_max: 3,
-};
+export const DEFAULT_REGION_STORE_POLICIES = {
+  return_window_days: 7,
+  free_returns: true,
+  shipping_rate: 24.9,
+  handling_days_min: 1,
+  handling_days_max: 2,
+  transit_days_min: 4,
+  transit_days_max: 8,
+}

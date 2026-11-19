@@ -1,41 +1,29 @@
 import { HttpTypes } from "@medusajs/types"
-import { Container } from "@modules/common/components/ui"
 import Image from "next/image"
 
 type ImageGalleryProps = {
   images: HttpTypes.StoreProductImage[]
+  title: string
 }
 
-const ImageGallery = ({ images }: ImageGalleryProps) => {
+export default function ImageGallery({ images, title }: ImageGalleryProps) {
   return (
-    <div className="flex items-start relative">
-      <div className="flex flex-col flex-1 small:mx-16 gap-y-4">
-        {images.map((image, index) => {
-          return (
-            <Container
-              key={image.id}
-              className="relative aspect-[29/34] w-full overflow-hidden bg-ui-bg-subtle"
-              id={image.id}
-            >
-              {!!image.url && (
-                <Image
-                  src={image.url}
-                  priority={index <= 2 ? true : false}
-                  className="absolute inset-0 rounded-rounded"
-                  alt={`Product image ${index + 1}`}
-                  fill
-                  sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              )}
-            </Container>
-          )
-        })}
-      </div>
+    <div className="flex snap-x snap-mandatory gap-2 overflow-x-auto md:grid md:grid-cols-2 md:overflow-visible">
+      {images.map((image, index) => (
+        <figure
+          key={image.id}
+          className={`relative aspect-[4/5] shrink-0 snap-start overflow-hidden bg-ui-bg-subtle ${images.length > 1 ? "w-[88%] md:w-full" : "w-full"} ${index === 0 ? "md:col-span-2" : ""}`}
+        >
+          <Image
+            src={image.url}
+            preload={index === 0}
+            className="object-cover"
+            alt={index === 0 ? title : `${title}, foto ${index + 1}`}
+            fill
+            sizes={index === 0 ? "(max-width: 767px) 90vw, 57vw" : "(max-width: 767px) 88vw, 28vw"}
+          />
+        </figure>
+      ))}
     </div>
   )
 }
-
-export default ImageGallery

@@ -10,6 +10,7 @@ const requiredEnvs = [
 ];
 
 function checkEnvVariables() {
+  if (process.env.OC_SHOWROOM === "1") return;
   const missingEnvs = requiredEnvs.filter(function (env) {
     c;
     return !process.env[env.key];

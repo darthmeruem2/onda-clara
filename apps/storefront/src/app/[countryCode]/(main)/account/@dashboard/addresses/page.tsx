@@ -7,7 +7,7 @@ import { getRegion } from "@lib/data/regions"
 import { retrieveCustomer } from "@lib/data/customer"
 
 export const metadata: Metadata = {
-  title: "Addresses",
+  title: "Endereços",
   description: "View your addresses",
 }
 

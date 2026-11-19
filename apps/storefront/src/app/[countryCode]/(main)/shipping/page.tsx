@@ -11,8 +11,8 @@ export const dynamic = "force-static"
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: "Shipping information",
-  description: "Shipping rates and delivery times.",
+  title: "Entregas",
+  description: "Consulte as opções de frete e os prazos de entrega.",
 }
 
 export default async function ShippingPage(props: {
@@ -22,16 +22,15 @@ export default async function ShippingPage(props: {
   const { current, currencyCode } = await getStorePolicies(countryCode)
 
   return (
-    <PolicyPage title="Shipping information">
+    <PolicyPage title="Entregas">
       {current ? (
         <>
           <p>
-            Orders to {countryCode.toUpperCase()} ship with the following rates
-            and delivery times.
+            Confira as condições de referência para entregas no Brasil.
           </p>
           <ShippingSummary policies={current} currencyCode={currencyCode} />
           <p className="text-ui-fg-subtle">
-            Available shipping methods and final costs are shown at checkout.
+            As opções disponíveis para o seu CEP e o valor final aparecem na finalização da compra.
           </p>
         </>
       ) : (

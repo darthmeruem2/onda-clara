@@ -1,31 +1,31 @@
-import { Github } from "@medusajs/icons";
-import { Button, Heading } from "@modules/common/components/ui";
-const Hero = () => {
-  return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Ecommerce Starter Template
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            Powered by Medusa and Next.js
-          </Heading>
-        </span>
-        <a href="https://github.com/medusajs/dtc-starter" target="_blank">
-          <Button variant="secondary">
-            View on GitHub <Github />
-          </Button>
-        </a>
-      </div>
-    </div>
-  );
-};
+import Image from "next/image"
+import { brand } from "@lib/brand"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import styles from "../../home.module.css"
 
-export default Hero;
+export default function Hero({ href }: { href: string }) {
+  const { campaign } = brand
+
+  return (
+    <section className={styles.hero} aria-labelledby="campaign-title">
+      <Image
+        src={campaign.image}
+        alt=""
+        fill
+        preload
+        sizes="100vw"
+        className={styles.heroImage}
+      />
+      <div className={styles.heroInner}>
+        <div className={styles.heroContent}>
+          <p className={styles.heroCollection}>Coleção {campaign.title}</p>
+          <h1 id="campaign-title">{campaign.headline}</h1>
+          <p className={styles.heroDescription}>{campaign.description}</p>
+          <LocalizedClientLink href={href} className={styles.heroButton}>
+            Explorar coleção
+          </LocalizedClientLink>
+        </div>
+      </div>
+    </section>
+  )
+}
