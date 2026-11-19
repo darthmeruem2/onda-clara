@@ -18,11 +18,9 @@
 
 ## Validação
 
-- Validei a página inicial em cinco larguras entre 320 px e 1440 px no Chromium. Confirmei a animação de rolagem e a versão com movimento reduzido. Repeti as verificações do catálogo, da busca sem acento, do filtro por categoria e do link de orçamento após o refinamento.
-- Verifiquei a logo, as 20 fotos, a busca, o filtro por categoria e a página de equipamento em um navegador com viewport de celular. O link de orçamento aponta para o número publicado e preenche o nome do equipamento.
+- A Vercel publicou o refinamento do commit `74b8846`. Validei a página inicial em cinco larguras entre 320 px e 1440 px no Chromium, localmente e no domínio público. Confirmei a animação de rolagem e a versão com movimento reduzido.
+- No domínio público, as fotos e as páginas dos 20 equipamentos responderam HTTP 200. Validei a busca sem acento e o filtro por categoria. O link de orçamento aponta para o número publicado da loja e preenche o nome do equipamento.
 - Confirmei no Medusa os 20 equipamentos publicados, seis categorias, quatro itens antigos em rascunho e os pedidos de teste preservados. O painel exibiu o catálogo em português. TypeScript passou no storefront e backend.
-
-- Na publicação anterior, as 20 páginas de equipamento responderam HTTP 200 no domínio público. Repeti no domínio o teste móvel da logo, das imagens, do catálogo, da busca, do filtro e do orçamento.
 
 ## Como continuar
 
